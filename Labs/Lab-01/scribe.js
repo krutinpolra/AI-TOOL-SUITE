@@ -1,5 +1,11 @@
-// Load environment variables
-require('dotenv').config();
+// Load environment variables from root directory
+require('dotenv').config({ path: '../../.env' });
+
+// Import child_process for running git commands
+const { execSync } = require('child_process');
+
+// Import OpenAI SDK
+const OpenAI = require('openai');
 
 // Student Information Constants
 const STUDENT_NAME = "KRUTIN BHARATBHAI POLRA";
@@ -35,8 +41,119 @@ function validateApiKey() {
     return apiKey;
 }
 
-// Display identity header
-displayHeader();
+/**
+ * Gets the staged git changes using git diff --staged
+ * @returns {string} The git diff output
+ */
+function getStagedDiff() {
+    try {
+        const diff = execSync('git diff --staged', { encoding: 'utf-8' });
+        
+        if (!diff || diff.trim().length === 0) {
+            console.error('❌ No staged changes found');
+            process.exit(1);
+        }
+        
+        console.log(`✅ Diff found: ${diff.length} characters`);
+        return diff;
+    } catch (error) {
+        console.error('❌ Error running git command:', error.message);
+        process.exit(1);
+    }
+}
 
-// Validate API key
-const OPENROUTER_API_KEY = validateApiKey();
+/**
+ * Generates a commit message using OpenRouter AI
+ * @param {string} diff - The git diff output
+ * @param {string} apiKey - The OpenRouter API key
+ * @param {boolean} isCreative - Whether to use creative mode
+ * @returns {Promise<string>} The generated commit message
+ */
+async function generateCommitMessage(diff, apiKey, isCreative = false) {
+    const openai = new OpenAI({
+        baseURL: 'https://openrouter.ai/api/v1',
+        apiKey: apiKey,
+    });
+
+    // Choose system prompt based on mode
+    const systemPrompt = isCreative
+        ? `Ahoy! Ye be a 17th Century Pirate Captain, writin' entries in yer ship's log about changes to yer code treasure! 
+Analyze the git diff and craft a commit message in proper pirate slang, me hearty!
+Use sea-farin' language, pirate terminology, and maritime metaphors.
+Keep it spirited but clear enough that landlubbers can still understand what changed.
+Output ONLY the commit message in plain text, no markdown, no explanation, no quotes.
+Example style: "fix: patched the leaky hull in authentication module, arrr!"`
+        : `You are an expert at writing semantic commit messages following the Conventional Commits standard. 
+You will be given a git diff showing code changes. 
+Analyze the changes and generate a concise, meaningful commit message in the format: 'type: description'.
+
+Common types:
+- feat: A new feature
+- fix: A bug fix
+- docs: Documentation changes
+- style: Code style changes (formatting, etc.)
+- refactor: Code refactoring
+- test: Adding or updating tests
+- chore: Maintenance tasks
+
+Output ONLY the commit message in plain text, no markdown, no explanation, no quotes. 
+The message should be suitable for direct use in 'git commit -m "your message"'.`;
+
+    // Set temperature based on mode
+    const temperature = isCreative ? 1.5 : 0.1;
+
+    try {
+        const modeLabel = isCreative ? '🏴‍☠️ Creative (Pirate) Mode' : '🤖 Standard Mode';
+        console.log(`${modeLabel} - Generating commit message...`);
+        
+        const completion = await openai.chat.completions.create({
+            model: 'google/gemini-2.0-flash-exp:free',
+            messages: [
+                { role: 'system', content: systemPrompt },
+                { role: 'user', content: diff }
+            ],
+            temperature: temperature,
+        });
+        const commitMessage = completion.choices[0].message.content.trim();
+        console.log('✅ Commit message generated\n');
+        return commitMessage;
+    } catch (error) {
+        if (error.status === 429) {
+            console.error('❌ Rate limit exceeded. Please try again later or use a different model.');
+        } else {
+            console.error('❌ Error generating commit message:', error.message);
+        }
+        process.exit(1);
+    }
+}
+
+// Main execution
+async function main() {
+    // Display identity header
+    displayHeader();
+
+    // Check for creative mode flag
+    const isCreative = process.argv.includes('--creative');
+    
+    if (isCreative) {
+        console.log('🏴‍☠️ Ahoy! Creative (Pirate) Mode enabled!\n');
+    }
+
+    // Validate API key
+    const OPENROUTER_API_KEY = validateApiKey();
+
+    // Get staged git changes
+    const diff = getStagedDiff();
+
+    // Generate commit message
+    const commitMessage = await generateCommitMessage(diff, OPENROUTER_API_KEY, isCreative);
+    
+    console.log('Suggested commit message:');
+    console.log(commitMessage);
+}
+
+// Run the main function
+main().catch(error => {
+    console.error('❌ Unexpected error:', error.message);
+    process.exit(1);
+});
