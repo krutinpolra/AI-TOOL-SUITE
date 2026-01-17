@@ -7,6 +7,9 @@ const { execSync } = require('child_process');
 // Import OpenAI SDK
 const OpenAI = require('openai');
 
+// Import readline for user input
+const readline = require('readline');
+
 // Student Information Constants
 const STUDENT_NAME = "KRUTIN BHARATBHAI POLRA";
 const STUDENT_ID = "135416220";
@@ -63,6 +66,42 @@ function getStagedDiff() {
 }
 
 /**
+ * Prompts the user for confirmation
+ * @param {string} question - The question to ask
+ * @returns {Promise<string>} The user's response
+ */
+function promptUser(question) {
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+
+    return new Promise((resolve) => {
+        rl.question(question, (answer) => {
+            rl.close();
+            resolve(answer);
+        });
+    });
+}
+
+/**
+ * Executes git commit with the provided message
+ * @param {string} commitMessage - The commit message to use
+ */
+function executeCommit(commitMessage) {
+    try {
+        execSync(`git commit -m "${commitMessage.replace(/"/g, '\\"')}"`, { 
+            encoding: 'utf-8',
+            stdio: 'inherit'
+        });
+        console.log('\n✅ Commit successful!');
+    } catch (error) {
+        console.error('\n❌ Error committing changes:', error.message);
+        process.exit(1);
+    }
+}
+
+/**
  * Generates a commit message using OpenRouter AI
  * @param {string} diff - The git diff output
  * @param {string} apiKey - The OpenRouter API key
@@ -103,7 +142,7 @@ The message should be suitable for direct use in 'git commit -m "your message"'.
     const temperature = isCreative ? 1.5 : 0.1;
 
     try {
-        const modeLabel = isCreative ? '🏴‍☠️ Creative (Pirate) Mode' : '🤖 Standard Mode';
+        const modeLabel = isCreative ? 'Creative (Pirate) Mode' : 'Standard Mode';
         console.log(`${modeLabel} - Generating commit message...`);
         
         const completion = await openai.chat.completions.create({
@@ -135,8 +174,11 @@ async function main() {
     // Check for creative mode flag
     const isCreative = process.argv.includes('--creative');
     
+    // Check for auto-confirm flag
+    const autoConfirm = process.argv.includes('-y');
+    
     if (isCreative) {
-        console.log('🏴‍☠️ Ahoy! Creative (Pirate) Mode enabled!\n');
+        console.log('Ahoy! Creative (Pirate) Mode enabled!\n');
     }
 
     // Validate API key
@@ -150,6 +192,24 @@ async function main() {
     
     console.log('Suggested commit message:');
     console.log(commitMessage);
+    console.log();
+
+    // Ask for confirmation or auto-confirm
+    let shouldCommit = autoConfirm;
+    
+    if (autoConfirm) {
+        console.log('Auto-confirming due to -y flag...');
+    } else {
+        const response = await promptUser('Do you want to use this commit message? (Y/n): ');
+        shouldCommit = response.trim().toUpperCase() === 'Y' || response.trim() === '';
+    }
+
+    if (shouldCommit) {
+        executeCommit(commitMessage);
+    } else {
+        console.log('\n❌ Commit cancelled');
+        process.exit(0);
+    }
 }
 
 // Run the main function
