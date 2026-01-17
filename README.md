@@ -9,6 +9,10 @@
 
 This repository contains all labs and assignments for the AIP444 course. It is organized as a monorepo with separate folders for labs and assignments.
 
+## Lab 01 - Git Scribe
+
+An AI-powered commit message generator that uses OpenRouter API to create semantic commit messages following the Conventional Commits standard. Features both standard and creative (pirate) modes!
+
 ## Repository Structure
 
 ```
