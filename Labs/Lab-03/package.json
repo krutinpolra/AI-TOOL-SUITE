@@ -1,0 +1,17 @@
+{
+  "name": "lab-03",
+  "version": "1.0.0",
+  "description": "GitHub PR Explainer - AI-powered Pull Request analysis tool",
+  "main": "pr-explain.js",
+  "type": "module",
+  "scripts": {
+    "start": "node pr-explain.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["github", "pr", "openrouter", "ai"],
+  "author": "KRUTIN BHARATBHAI POLRA",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.3"
+  }
+}
