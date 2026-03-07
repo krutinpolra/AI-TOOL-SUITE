@@ -1,0 +1,19 @@
+{
+  "name": "lab-06",
+  "version": "1.0.0",
+  "description": "Lab 6: Semantic Search Engine for Product Catalog",
+  "type": "module",
+  "scripts": {
+    "index": "tsx indexer.ts",
+    "search": "tsx search.ts"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.4",
+    "openai": "^6.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}

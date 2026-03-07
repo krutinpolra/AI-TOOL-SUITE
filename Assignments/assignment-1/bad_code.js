@@ -1,4 +1,5 @@
 import * as fs from 'fs';
+
 // Function with unclear variable naming and type mismatch
 function getUserID(user) {
     const x = user.id;
