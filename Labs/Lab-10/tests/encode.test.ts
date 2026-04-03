@@ -1,9 +1,10 @@
-import { readFile } from 'node:fs/promises';
+import { copyFile, mkdir, readFile, rm } from 'node:fs/promises';
 import { resolve } from 'node:path';
-import { describe, expect, it, test } from 'vitest';
+import { afterEach, describe, expect, it, test } from 'vitest';
 import { decodeToBuffer, encodeBuffer, encodeFile } from '../src';
 
 const FIXTURES_DIR = resolve(__dirname, 'fixtures');
+const TEMP_DIR_WITH_SPACES = resolve(__dirname, 'temp fixtures with spaces');
 
 function fixturePath(fileName: string): string {
   return resolve(FIXTURES_DIR, fileName);
@@ -12,6 +13,10 @@ function fixturePath(fileName: string): string {
 async function readFixture(fileName: string): Promise<Buffer> {
   return readFile(fixturePath(fileName));
 }
+
+afterEach(async () => {
+  await rm(TEMP_DIR_WITH_SPACES, { recursive: true, force: true });
+});
 
 describe('encodeFile', () => {
   it('encodes a PNG file as a Data URI with the correct MIME type', async () => {
@@ -80,6 +85,18 @@ describe('encodeFile', () => {
 
   it('throws when the file is empty', async () => {
     await expect(encodeFile(fixturePath('empty.png'))).rejects.toThrow(/empty/i);
+  });
+
+  it('encodes a file from a path with spaces in the directory name', async () => {
+    await mkdir(TEMP_DIR_WITH_SPACES, { recursive: true });
+    const targetPath = resolve(TEMP_DIR_WITH_SPACES, 'copied image.png');
+    await copyFile(fixturePath('test.png'), targetPath);
+
+    const expected = await readFixture('test.png');
+    const result = await encodeFile(targetPath);
+
+    expect(result.mediaType).toBe('image/png');
+    expect(decodeToBuffer(result.raw)).toEqual(expected);
   });
 });
 

@@ -63,6 +63,24 @@ describe('parseDataURI', () => {
   it('throws when the Base64 payload is invalid', () => {
     expect(() => parseDataURI('data:image/png;base64,%%%not-base64%%%')).toThrow(/invalid base64/i);
   });
+
+  it('normalizes Base64 payloads that contain newlines', async () => {
+    const { base64, bytes } = await pngDataURI();
+    const wrappedBase64 = base64.match(/.{1,12}/g)?.join('\n') ?? base64;
+    const uri = `data:image/png;base64,${wrappedBase64}`;
+
+    const parsed = parseDataURI(uri);
+
+    expect(parsed.base64).toBe(base64);
+    expect(decodeToBuffer(uri)).toEqual(bytes);
+  });
+
+  it('throws when the Base64 payload is truncated', async () => {
+    const { base64 } = await pngDataURI();
+    const truncated = base64.slice(0, -3);
+
+    expect(() => parseDataURI(`data:image/png;base64,${truncated}`)).toThrow(/invalid base64/i);
+  });
 });
 
 describe('decodeToBuffer', () => {
