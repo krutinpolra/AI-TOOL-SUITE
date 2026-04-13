@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Application Advisor Report</title>
+    <style>
+      :root {
+        --paper: #f8f4ed;
+        --ink: #173042;
+        --muted: #597b96;
+        --panel: #ffffff;
+        --line: #d8e2e9;
+        --green: #1b9c85;
+        --amber: #e0a526;
+        --red: #d65c4f;
+        --blue: #2f6d9f;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", "Aptos", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(47,109,159,0.18), transparent 28%),
+          radial-gradient(circle at top right, rgba(27,156,133,0.16), transparent 22%),
+          linear-gradient(180deg, #fbfaf6, var(--paper));
+      }
+      .wrap {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 32px 18px 64px;
+      }
+      .hero {
+        background: linear-gradient(145deg, rgba(255,255,255,0.96), rgba(236,244,248,0.96));
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 28px;
+        display: grid;
+        grid-template-columns: 1.3fr 0.7fr;
+        gap: 20px;
+      }
+      .score {
+        border-radius: 24px;
+        padding: 18px;
+        background: linear-gradient(180deg, #fdf8ef, #fff);
+        border: 1px solid var(--line);
+      }
+      .score-number {
+        font-size: 72px;
+        line-height: 1;
+        font-weight: 700;
+      }
+      .score-band {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(47,109,159,0.1);
+        color: var(--blue);
+        font-weight: 600;
+      }
+      .section {
+        margin-top: 28px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+      }
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 18px;
+      }
+      .pill {
+        display: inline-block;
+        border-radius: 999px;
+        padding: 5px 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 10px;
+      }
+      .pill.met { background: rgba(27,156,133,0.12); color: var(--green); }
+      .pill.partial { background: rgba(224,165,38,0.12); color: #8c6900; }
+      .pill.gap { background: rgba(214,92,79,0.12); color: var(--red); }
+      .requirement.met { border-left: 6px solid var(--green); }
+      .requirement.partial { border-left: 6px solid var(--amber); }
+      .requirement.gap { border-left: 6px solid var(--red); }
+      h1, h2, h3 { margin-top: 0; }
+      ul { padding-left: 20px; margin-bottom: 0; }
+      .chart {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 16px;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      @media (max-width: 860px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+        .score-number {
+          font-size: 56px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <section class="hero">
+        <div>
+          <p class="meta">Generated 2026-04-13T21:50:03.131Z</p>
+          <h1>Software Developer 1 at Intuit</h1>
+          <p>Krutin Polra has a strong foundation in software development with diverse technical skills and relevant project experience. While there are some gaps in experience with high-demand technologies and professional experience, the candidate&#39;s collaborative skills and project work make them a plausible applicant for the Software Developer 1 role at Intuit.</p>
+          <p><strong>Encouraging take:</strong> Given your solid technical skills and project experience, this role at Intuit is a great opportunity to leverage your abilities and grow in a supportive environment. Don&#39;t hesitate to apply!</p>
+        </div>
+        <div class="score">
+          <div class="score-number">72%</div>
+          <div class="score-band">good_fit</div>
+          <p>Good fit, you meet the core requirements and should apply with a targeted story.</p>
+        </div>
+      </section>
+
+      <section class="section grid">
+        <div class="chart">
+          <h2>Fit Breakdown</h2>
+          <svg viewBox="0 0 560 132" width="100%" height="132" role="img">
+        <text x="12" y="40" font-size="13" fill="#213547">Met</text>
+        <rect x="160" y="26" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="26" width="376" height="16" rx="8" fill="#1b9c85"></rect>
+        <text x="544" y="39" font-size="12" fill="#456">7</text>
+      
+        <text x="12" y="76" font-size="13" fill="#213547">Partial</text>
+        <rect x="160" y="62" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="62" width="269" height="16" rx="8" fill="#e0a526"></rect>
+        <text x="544" y="75" font-size="12" fill="#456">5</text>
+      
+        <text x="12" y="112" font-size="13" fill="#213547">Gap</text>
+        <rect x="160" y="98" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="98" width="107" height="16" rx="8" fill="#d65c4f"></rect>
+        <text x="544" y="111" font-size="12" fill="#456">2</text>
+      </svg>
+        </div>
+        <div class="chart">
+          <h2>Market Skill Alignment</h2>
+          <svg viewBox="0 0 560 312" width="100%" height="312" role="img">
+        <text x="12" y="40" font-size="13" fill="#213547">Communication</text>
+        <rect x="160" y="26" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="26" width="376" height="16" rx="8" fill="#1b9c85"></rect>
+        <text x="544" y="39" font-size="12" fill="#456">3 on resume</text>
+      
+        <text x="12" y="76" font-size="13" fill="#213547">Java</text>
+        <rect x="160" y="62" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="62" width="376" height="16" rx="8" fill="#1b9c85"></rect>
+        <text x="544" y="75" font-size="12" fill="#456">3 on resume</text>
+      
+        <text x="12" y="112" font-size="13" fill="#213547">Problem Solving</text>
+        <rect x="160" y="98" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="98" width="376" height="16" rx="8" fill="#1b9c85"></rect>
+        <text x="544" y="111" font-size="12" fill="#456">3 on resume</text>
+      
+        <text x="12" y="148" font-size="13" fill="#213547">React</text>
+        <rect x="160" y="134" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="134" width="376" height="16" rx="8" fill="#597b96"></rect>
+        <text x="544" y="147" font-size="12" fill="#456">3 missing</text>
+      
+        <text x="12" y="184" font-size="13" fill="#213547">Ai Tools</text>
+        <rect x="160" y="170" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="170" width="251" height="16" rx="8" fill="#597b96"></rect>
+        <text x="544" y="183" font-size="12" fill="#456">2 missing</text>
+      
+        <text x="12" y="220" font-size="13" fill="#213547">C++</text>
+        <rect x="160" y="206" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="206" width="251" height="16" rx="8" fill="#1b9c85"></rect>
+        <text x="544" y="219" font-size="12" fill="#456">2 on resume</text>
+      
+        <text x="12" y="256" font-size="13" fill="#213547">Communication Skills</text>
+        <rect x="160" y="242" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="242" width="251" height="16" rx="8" fill="#597b96"></rect>
+        <text x="544" y="255" font-size="12" fill="#456">2 missing</text>
+      
+        <text x="12" y="292" font-size="13" fill="#213547">Go</text>
+        <rect x="160" y="278" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="278" width="251" height="16" rx="8" fill="#597b96"></rect>
+        <text x="544" y="291" font-size="12" fill="#456">2 missing</text>
+      </svg>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Requirement Assessment</h2>
+        <div class="grid">
+          
+        <div class="card requirement met">
+          <div class="pill met">met</div>
+          <h3>software development lifecycle</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> Experience in developing web applications and participating in the full software development lifecycle through club projects.</p>
+          <p>. </p>
+        </div>
+      
+        <div class="card requirement met">
+          <div class="pill met">met</div>
+          <h3>coding</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> Proficient in multiple programming languages including JavaScript, TypeScript, C++, and Python.</p>
+          <p>. </p>
+        </div>
+      
+        <div class="card requirement partial">
+          <div class="pill partial">partial</div>
+          <h3>testing</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> Experience in code reviews and ensuring functional requirements are met, but specific testing experience is not detailed.</p>
+          <p>Consider highlighting any testing methodologies used in projects.</p>
+        </div>
+      
+        <div class="card requirement partial">
+          <div class="pill partial">partial</div>
+          <h3>deployment</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> Experience deploying applications using cloud platforms like Azure, but specific deployment processes are not detailed.</p>
+          <p>Clarify deployment experiences in your projects.</p>
+        </div>
+      
+        <div class="card requirement met">
+          <div class="pill met">met</div>
+          <h3>clean code</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> Emphasis on writing clean, efficient, and well-documented code in project descriptions.</p>
+          <p>. </p>
+        </div>
+      
+        <div class="card requirement partial">
+          <div class="pill partial">partial</div>
+          <h3>troubleshooting</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> Collaborated with team members to troubleshoot and resolve software defects, but specific examples are limited.</p>
+          <p>Provide specific examples of troubleshooting in your projects.</p>
+        </div>
+      
+        <div class="card requirement met">
+          <div class="pill met">met</div>
+          <h3>code reviews</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> Participated in code reviews during project development.</p>
+          <p>. </p>
+        </div>
+      
+        <div class="card requirement met">
+          <div class="pill met">met</div>
+          <h3>technical documentation</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> Performed business analysis and system documentation for club projects.</p>
+          <p>. </p>
+        </div>
+      
+        <div class="card requirement met">
+          <div class="pill met">met</div>
+          <h3>team collaboration</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> Collaborated with a team of 10+ members in various projects and workshops.</p>
+          <p>. </p>
+        </div>
+      
+        <div class="card requirement gap">
+          <div class="pill gap">gap</div>
+          <h3>internship experience</h3>
+          <p><strong>Importance:</strong> important</p>
+          <p><strong>Evidence:</strong> No formal internship experience mentioned.</p>
+          <p>Consider seeking internships to strengthen your application.</p>
+        </div>
+      
+        <div class="card requirement gap">
+          <div class="pill gap">gap</div>
+          <h3>agile methodologies</h3>
+          <p><strong>Importance:</strong> important</p>
+          <p><strong>Evidence:</strong> No specific experience with agile methodologies mentioned.</p>
+          <p>Familiarize yourself with agile practices and consider mentioning any relevant coursework.</p>
+        </div>
+      
+        <div class="card requirement partial">
+          <div class="pill partial">partial</div>
+          <h3>cloud platforms</h3>
+          <p><strong>Importance:</strong> important</p>
+          <p><strong>Evidence:</strong> Experience with AWS and Microsoft Azure, but specific projects using these platforms are not detailed.</p>
+          <p>Highlight specific projects where cloud platforms were utilized.</p>
+        </div>
+      
+        <div class="card requirement met">
+          <div class="pill met">met</div>
+          <h3>database concepts</h3>
+          <p><strong>Importance:</strong> important</p>
+          <p><strong>Evidence:</strong> Experience with MongoDB and MySQL in project development.</p>
+          <p>. </p>
+        </div>
+      
+        <div class="card requirement partial">
+          <div class="pill partial">partial</div>
+          <h3>SQL</h3>
+          <p><strong>Importance:</strong> important</p>
+          <p><strong>Evidence:</strong> Experience with MySQL, but specific SQL skills are not detailed.</p>
+          <p>Consider detailing SQL queries or database management tasks.</p>
+        </div>
+      
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Resume Adaptation</h2>
+        <div class="grid">
+          
+        <div class="card">
+          <h3>Professional Summary</h3>
+          <p><strong>Change:</strong> Add a concise professional summary highlighting key skills and career goals.</p>
+          <p><strong>Why:</strong> A strong summary can capture the attention of hiring managers and provide a quick overview of qualifications.</p>
+        </div>
+      
+        <div class="card">
+          <h3>Work Experience</h3>
+          <p><strong>Change:</strong> Include specific metrics or outcomes from projects to quantify achievements and impact.</p>
+          <p><strong>Why:</strong> Quantifying achievements can make your contributions more compelling.</p>
+        </div>
+      
+        <div class="card">
+          <h3>Skills Section</h3>
+          <p><strong>Change:</strong> Incorporate relevant keywords from job postings into the resume.</p>
+          <p><strong>Why:</strong> Using industry-relevant keywords can help the resume pass through Applicant Tracking Systems (ATS) and catch the attention of recruiters.</p>
+        </div>
+      
+        <div class="card">
+          <h3>Projects</h3>
+          <p><strong>Change:</strong> Clarify deployment experiences and troubleshooting examples in project descriptions.</p>
+          <p><strong>Why:</strong> Providing specific examples can strengthen your application and demonstrate your problem-solving abilities.</p>
+        </div>
+      
+        </div>
+      </section>
+
+      <section class="section grid">
+        <div class="card">
+          <h2>Cover Letter Guidance</h2>
+          <ul><li>Emphasize your familiarity with the software development lifecycle and your coding skills in the cover letter.</li><li>Mention your collaborative experiences and how they align with Intuit&#39;s team-oriented culture.</li><li>Highlight any relevant projects that demonstrate your ability to write clean code and contribute to code reviews.</li><li>Discuss your eagerness to learn and adapt to new technologies, especially in light of Intuit&#39;s focus on innovation. </li></ul>
+        </div>
+        <div class="card">
+          <h2>Likely Interview Questions</h2>
+          <ul><li>Can you describe your experience with the software development lifecycle?</li><li>How do you ensure the code you write is clean and maintainable?</li><li>Can you provide an example of a time you collaborated with a team to troubleshoot a software issue?</li><li>What technologies are you most comfortable with, and how have you applied them in your projects?</li><li>How do you approach learning new technologies or methodologies?</li></ul>
+        </div>
+      </section>
+
+      <section class="section grid">
+        <div class="card">
+          <h2>Skills To Brush Up</h2>
+          <ul><li>Agile methodologies</li><li>Testing frameworks</li><li>Deployment processes</li></ul>
+        </div>
+        <div class="card">
+          <h2>Company Research Topics</h2>
+          <ul><li>Intuit&#39;s recent developments in AI and innovation</li><li>Company culture and values</li><li>Recent projects or products launched by Intuit</li></ul>
+        </div>
+        <div class="card">
+          <h2>Talking Points</h2>
+          <ul><li>Your project experiences and the technologies used</li><li>Your collaborative approach and leadership in team settings</li><li>Your enthusiasm for learning and adapting to new technologies, especially in the context of Intuit&#39;s focus on innovation. </li><li>Your understanding of the financial software industry and how it relates to your skills. </li></ul>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,192 @@
+{
+  "generatedAt": "2026-04-13T21:49:27.526Z",
+  "postingSlug": "software-developer-new-grad-ixl-learning-bc3f5bed",
+  "fitScore": 59,
+  "fitBand": "good_fit",
+  "scoreExplanation": "Good fit, you meet the core requirements and should apply with a targeted story.",
+  "analysis": {
+    "overallSummary": "Krutin Polra is a promising candidate for the Software Developer, New Grad position at IXL Learning. With a solid foundation in programming, particularly in Java and web technologies, Krutin's experience aligns well with the role's requirements. However, there are areas for improvement, particularly in gaining more experience with high-demand technologies like React and SQL, and enhancing the resume with a professional summary and relevant keywords.",
+    "encouragingPositioning": "Given your strong technical skills and project experience, I encourage you to apply for this role. Your background in Java and web development, along with your collaborative experience, positions you well for this opportunity at IXL Learning.",
+    "requirements": [
+      {
+        "requirement": "programming principles",
+        "category": "required_skill",
+        "importance": "core",
+        "status": "met",
+        "evidence": "Demonstrated understanding of programming principles through coursework and projects involving Java, JavaScript, and C++.",
+        "notes": ". "
+      },
+      {
+        "requirement": "Java",
+        "category": "required_skill",
+        "importance": "core",
+        "status": "met",
+        "evidence": "Proficient in Java, as evidenced by coursework and project experience.",
+        "notes": ". "
+      },
+      {
+        "requirement": "object-oriented programming",
+        "category": "required_skill",
+        "importance": "core",
+        "status": "met",
+        "evidence": "Experience with OOP concepts in projects, particularly in C++ and Java.",
+        "notes": ". "
+      },
+      {
+        "requirement": "SQL",
+        "category": "preferred_skill",
+        "importance": "important",
+        "status": "partial",
+        "evidence": "Experience with MySQL in projects, but limited exposure to SQL in a professional context.",
+        "notes": "Consider highlighting any relevant coursework or self-study in SQL."
+      },
+      {
+        "requirement": "JavaScript",
+        "category": "preferred_skill",
+        "importance": "important",
+        "status": "met",
+        "evidence": "Strong skills in JavaScript, demonstrated through multiple projects and club activities.",
+        "notes": ". "
+      },
+      {
+        "requirement": "CSS",
+        "category": "preferred_skill",
+        "importance": "important",
+        "status": "met",
+        "evidence": "Proficient in CSS, used extensively in web development projects.",
+        "notes": ". "
+      },
+      {
+        "requirement": "React",
+        "category": "preferred_skill",
+        "importance": "important",
+        "status": "gap",
+        "evidence": "Limited direct experience with React, though some exposure through workshops.",
+        "notes": "Consider taking a course or working on a personal project using React."
+      },
+      {
+        "requirement": "Linux",
+        "category": "preferred_skill",
+        "importance": "bonus",
+        "status": "gap",
+        "evidence": "No evidence of experience with Linux in the resume.",
+        "notes": "Familiarity with Linux could be beneficial; consider exploring it."
+      },
+      {
+        "requirement": "Git",
+        "category": "preferred_skill",
+        "importance": "important",
+        "status": "met",
+        "evidence": "Experience using Git for version control in projects and club activities.",
+        "notes": ". "
+      },
+      {
+        "requirement": "Design, implement, test, deploy, and refine integrations and internal tools",
+        "category": "responsibility",
+        "importance": "core",
+        "status": "partial",
+        "evidence": "Experience in developing web applications and collaborating on projects, but limited specific experience in integrations.",
+        "notes": "Highlight any relevant project work that involved similar responsibilities."
+      },
+      {
+        "requirement": "Find and use best technologies to add features to products",
+        "category": "responsibility",
+        "importance": "important",
+        "status": "partial",
+        "evidence": "Experience in selecting technologies for projects, but more examples could strengthen this area.",
+        "notes": "Consider discussing specific technologies chosen for projects."
+      },
+      {
+        "requirement": "Implement data exchange methods and standards",
+        "category": "responsibility",
+        "importance": "important",
+        "status": "gap",
+        "evidence": "No direct evidence of implementing data exchange methods in the resume.",
+        "notes": "Consider any relevant coursework or projects that may apply."
+      },
+      {
+        "requirement": "Develop prototypes in collaboration with product management and partners",
+        "category": "responsibility",
+        "importance": "important",
+        "status": "gap",
+        "evidence": "No direct evidence of developing prototypes in collaboration with product management.",
+        "notes": "Highlight any collaborative projects that involved prototyping."
+      },
+      {
+        "requirement": "Work in a fast-paced, agile environment",
+        "category": "responsibility",
+        "importance": "important",
+        "status": "partial",
+        "evidence": "Experience in a collaborative club environment, but no specific mention of agile methodologies.",
+        "notes": "Consider mentioning any agile practices used in projects."
+      },
+      {
+        "requirement": "Help mature existing and develop new standardized processes",
+        "category": "responsibility",
+        "importance": "important",
+        "status": "gap",
+        "evidence": "No evidence of experience in developing standardized processes.",
+        "notes": "Consider any relevant coursework or projects that may apply."
+      }
+    ],
+    "resumeAdaptations": [
+      {
+        "targetSection": "professional summary",
+        "change": "Add a professional summary that highlights key skills, experiences, and career goals.",
+        "why": "A strong summary can capture the attention of hiring managers and provide a quick overview of qualifications."
+      },
+      {
+        "targetSection": "work experience",
+        "change": "Incorporate specific metrics or outcomes from projects to quantify achievements and impact.",
+        "why": "Quantifying achievements can make your contributions more compelling."
+      },
+      {
+        "targetSection": "skills",
+        "change": "Align the language and keywords in your resume with those found in job postings to improve ATS compatibility.",
+        "why": "Using industry-relevant keywords can help the resume pass through Applicant Tracking Systems (ATS) and catch the attention of recruiters."
+      },
+      {
+        "targetSection": "projects",
+        "change": "Highlight any relevant coursework or self-study in SQL and React.",
+        "why": "Demonstrating proactive learning in these areas can strengthen your application."
+      }
+    ],
+    "coverLetterGuidance": [
+      "Emphasize your passion for educational technology and how your skills align with IXL Learning's mission.",
+      "Discuss your project experiences, particularly those that involved collaboration and problem-solving, to showcase your readiness for a team environment.",
+      "Mention your eagerness to learn and adapt, particularly in areas like React and SQL, to demonstrate your commitment to growth.",
+      "Highlight your leadership experience in the Seneca Software Developer Club to illustrate your teamwork and communication skills."
+    ],
+    "interviewPrep": {
+      "likelyQuestions": [
+        "Can you describe a project where you used Java and how you approached the development process?",
+        "How do you prioritize tasks when working on multiple projects?",
+        "What strategies do you use to ensure effective communication within a team?",
+        "Can you give an example of a challenge you faced in a project and how you overcame it?",
+        "How do you stay updated with new technologies and programming languages?"
+      ],
+      "skillsToBrushUp": [
+        "React",
+        "SQL",
+        "Agile methodologies"
+      ],
+      "companyResearchTopics": [
+        "Recent developments at IXL Learning, particularly the acquisition of Evan-Moor.",
+        "IXL Learning's approach to personalized learning and technology in education.",
+        "Company culture and employee satisfaction based on reviews."
+      ],
+      "talkingPoints": [
+        "Your project experiences and the technologies used, particularly Java and JavaScript.",
+        "Your collaborative work in the Seneca Software Developer Club and how it prepared you for a team environment.",
+        "Your commitment to continuous learning and improvement in software development. ",
+        "Your interest in educational technology and how it aligns with IXL Learning's mission."
+      ]
+    }
+  },
+  "scoringBreakdown": {
+    "met": 6,
+    "partial": 4,
+    "gap": 5,
+    "weightedScore": 59
+  }
+}

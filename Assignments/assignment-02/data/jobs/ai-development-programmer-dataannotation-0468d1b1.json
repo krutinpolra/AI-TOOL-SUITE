@@ -1,0 +1,121 @@
+{
+  "source": {
+    "sourcePath": "D:\\@SENECA\\SEM 6\\AIP444\\Assignments\\project-data\\backend\\job-02.pdf",
+    "sourceFileName": "job-02.pdf",
+    "sourceSha256": "0468d1b162da09463ff223469cd710c05a543ca2d0d976c83872a72af7b65782",
+    "extractedAt": "2026-04-13T21:27:29.005Z",
+    "parser": "pdf-parse",
+    "charCount": 2850,
+    "pageCount": 2
+  },
+  "jobTitle": "AI Development Programmer",
+  "companyName": "DataAnnotation",
+  "location": null,
+  "remoteStatus": "remote",
+  "requiredSkills": [
+    "programming",
+    "Kotlin",
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "C",
+    "C#",
+    "C++",
+    "React",
+    "Go",
+    "Java",
+    "Swift"
+  ],
+  "preferredSkills": [
+    "excellent writing",
+    "grammar skills"
+  ],
+  "experienceLevel": {
+    "minimumYears": null,
+    "preferredYears": null,
+    "seniority": "preferred",
+    "notes": "Previous experience as a Software Developer, Coder, Software Engineer, or Programmer is preferred."
+  },
+  "educationRequirements": {
+    "required": null,
+    "preferred": "bachelor’s degree (completed or in progress)"
+  },
+  "salaryRange": {
+    "minimum": 50,
+    "maximum": 75,
+    "currency": "USD",
+    "interval": "hour",
+    "rawText": "starting at $50-75+/hr"
+  },
+  "keyResponsibilities": [
+    "Design and solve diverse coding problems used to train AI systems with an emphasis on Android development.",
+    "Write clear, high-quality code snippets and detailed explanations.",
+    "Evaluate AI-generated code for accuracy, performance, and clarity.",
+    "Provide feedback that directly shapes the next generation of AI models."
+  ],
+  "keywordsAndDomainExpertise": [
+    "AI systems",
+    "coding",
+    "programming",
+    "data analysis",
+    "visualization"
+  ],
+  "applicationSignals": [
+    "short assessment as interview",
+    "email confirmation for paid work"
+  ],
+  "postingSummary": "Join the DataAnnotation team to develop AI systems with a flexible remote schedule.",
+  "extractionNotes": [
+    "Remote work available in US, Canada, UK, Ireland, Australia, and New Zealand."
+  ],
+  "companyResearch": {
+    "status": "completed",
+    "summary": "DataAnnotation is a software development company focused on providing a platform for remote contract work in data labeling and AI training tasks. Founded in 2021, it operates remotely from New York City and has a workforce of 5,001-10,000 employees. The company is currently unfunded and is facing legal challenges regarding labor practices, but it emphasizes a flexible work environment and competitive compensation for its employees.",
+    "sizeAndStage": "5,001-10,000 employees",
+    "industry": "Software Development",
+    "recentDevelopments": [
+      {
+        "headline": "Remote Work Model",
+        "summary": "DataAnnotation promotes a fully remote work environment, allowing employees to choose their own hours.",
+        "url": "/remote-work-model"
+      },
+      {
+        "headline": "Legal Issues",
+        "summary": "The company is currently facing a class action lawsuit from workers regarding its labor practices, which may be a concern for potential candidates.",
+        "url": "/legal-issues"
+      },
+      {
+        "headline": "Market Growth",
+        "summary": "The data annotation tools market is projected to grow significantly, indicating a robust demand for services like those offered by DataAnnotation.",
+        "url": "/market-growth"
+      }
+    ],
+    "cultureSignals": [
+      "Flexibility and remote work",
+      "Competitive pay starting at $20+ an hour",
+      "Focus on high-quality work"
+    ],
+    "applicationAngles": [
+      "Proficiency in programming languages such as Kotlin, JavaScript, TypeScript, Python, C, C#, C++, React, Go, Java, and Swift",
+      "Excellent writing and grammar skills",
+      "Interest in AI development and quality data annotation"
+    ],
+    "searchQueries": [
+      "DataAnnotation company profile",
+      "DataAnnotation recent news"
+    ],
+    "sources": [
+      {
+        "title": "DataAnnotation Company Overview",
+        "url": "/company-overview",
+        "snippet": null
+      },
+      {
+        "title": "DataAnnotation Recent Developments",
+        "url": "/recent-developments",
+        "snippet": null
+      }
+    ],
+    "failureReason": null
+  }
+}

@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Application Advisor Report</title>
+    <style>
+      :root {
+        --paper: #f8f4ed;
+        --ink: #173042;
+        --muted: #597b96;
+        --panel: #ffffff;
+        --line: #d8e2e9;
+        --green: #1b9c85;
+        --amber: #e0a526;
+        --red: #d65c4f;
+        --blue: #2f6d9f;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", "Aptos", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(47,109,159,0.18), transparent 28%),
+          radial-gradient(circle at top right, rgba(27,156,133,0.16), transparent 22%),
+          linear-gradient(180deg, #fbfaf6, var(--paper));
+      }
+      .wrap {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 32px 18px 64px;
+      }
+      .hero {
+        background: linear-gradient(145deg, rgba(255,255,255,0.96), rgba(236,244,248,0.96));
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 28px;
+        display: grid;
+        grid-template-columns: 1.3fr 0.7fr;
+        gap: 20px;
+      }
+      .score {
+        border-radius: 24px;
+        padding: 18px;
+        background: linear-gradient(180deg, #fdf8ef, #fff);
+        border: 1px solid var(--line);
+      }
+      .score-number {
+        font-size: 72px;
+        line-height: 1;
+        font-weight: 700;
+      }
+      .score-band {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(47,109,159,0.1);
+        color: var(--blue);
+        font-weight: 600;
+      }
+      .section {
+        margin-top: 28px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+      }
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 18px;
+      }
+      .pill {
+        display: inline-block;
+        border-radius: 999px;
+        padding: 5px 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 10px;
+      }
+      .pill.met { background: rgba(27,156,133,0.12); color: var(--green); }
+      .pill.partial { background: rgba(224,165,38,0.12); color: #8c6900; }
+      .pill.gap { background: rgba(214,92,79,0.12); color: var(--red); }
+      .requirement.met { border-left: 6px solid var(--green); }
+      .requirement.partial { border-left: 6px solid var(--amber); }
+      .requirement.gap { border-left: 6px solid var(--red); }
+      h1, h2, h3 { margin-top: 0; }
+      ul { padding-left: 20px; margin-bottom: 0; }
+      .chart {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 16px;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      @media (max-width: 860px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+        .score-number {
+          font-size: 56px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <section class="hero">
+        <div>
+          <p class="meta">Generated 2026-04-13T21:44:00.170Z</p>
+          <h1>React Developer at Tata Consultancy Services</h1>
+          <p>Krutin Polra has a strong foundation in web development with relevant skills and project experience, making them a plausible candidate for the React Developer role at Tata Consultancy Services. While there are some gaps in experience with certain technologies and a lack of a professional summary, the candidate&#39;s diverse skill set and project work provide a solid basis for application.</p>
+          <p><strong>Encouraging take:</strong> Given your skills in JavaScript, TypeScript, and React, along with your project experience, you should definitely consider applying for this role. Your background aligns well with the requirements, and with some minor adjustments to your resume, you can present a compelling application.</p>
+        </div>
+        <div class="score">
+          <div class="score-number">53%</div>
+          <div class="score-band">good_fit</div>
+          <p>Good fit, you meet the core requirements and should apply with a targeted story.</p>
+        </div>
+      </section>
+
+      <section class="section grid">
+        <div class="chart">
+          <h2>Fit Breakdown</h2>
+          <svg viewBox="0 0 560 132" width="100%" height="132" role="img">
+        <text x="12" y="40" font-size="13" fill="#213547">Met</text>
+        <rect x="160" y="26" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="26" width="376" height="16" rx="8" fill="#1b9c85"></rect>
+        <text x="544" y="39" font-size="12" fill="#456">7</text>
+      
+        <text x="12" y="76" font-size="13" fill="#213547">Partial</text>
+        <rect x="160" y="62" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="62" width="161" height="16" rx="8" fill="#e0a526"></rect>
+        <text x="544" y="75" font-size="12" fill="#456">3</text>
+      
+        <text x="12" y="112" font-size="13" fill="#213547">Gap</text>
+        <rect x="160" y="98" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="98" width="376" height="16" rx="8" fill="#d65c4f"></rect>
+        <text x="544" y="111" font-size="12" fill="#456">7</text>
+      </svg>
+        </div>
+        <div class="chart">
+          <h2>Market Skill Alignment</h2>
+          <svg viewBox="0 0 560 312" width="100%" height="312" role="img">
+        <text x="12" y="40" font-size="13" fill="#213547">Communication</text>
+        <rect x="160" y="26" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="26" width="376" height="16" rx="8" fill="#1b9c85"></rect>
+        <text x="544" y="39" font-size="12" fill="#456">3 on resume</text>
+      
+        <text x="12" y="76" font-size="13" fill="#213547">Java</text>
+        <rect x="160" y="62" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="62" width="376" height="16" rx="8" fill="#1b9c85"></rect>
+        <text x="544" y="75" font-size="12" fill="#456">3 on resume</text>
+      
+        <text x="12" y="112" font-size="13" fill="#213547">Problem Solving</text>
+        <rect x="160" y="98" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="98" width="376" height="16" rx="8" fill="#1b9c85"></rect>
+        <text x="544" y="111" font-size="12" fill="#456">3 on resume</text>
+      
+        <text x="12" y="148" font-size="13" fill="#213547">React</text>
+        <rect x="160" y="134" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="134" width="376" height="16" rx="8" fill="#597b96"></rect>
+        <text x="544" y="147" font-size="12" fill="#456">3 missing</text>
+      
+        <text x="12" y="184" font-size="13" fill="#213547">Ai Tools</text>
+        <rect x="160" y="170" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="170" width="251" height="16" rx="8" fill="#597b96"></rect>
+        <text x="544" y="183" font-size="12" fill="#456">2 missing</text>
+      
+        <text x="12" y="220" font-size="13" fill="#213547">C++</text>
+        <rect x="160" y="206" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="206" width="251" height="16" rx="8" fill="#1b9c85"></rect>
+        <text x="544" y="219" font-size="12" fill="#456">2 on resume</text>
+      
+        <text x="12" y="256" font-size="13" fill="#213547">Communication Skills</text>
+        <rect x="160" y="242" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="242" width="251" height="16" rx="8" fill="#597b96"></rect>
+        <text x="544" y="255" font-size="12" fill="#456">2 missing</text>
+      
+        <text x="12" y="292" font-size="13" fill="#213547">Go</text>
+        <rect x="160" y="278" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="278" width="251" height="16" rx="8" fill="#597b96"></rect>
+        <text x="544" y="291" font-size="12" fill="#456">2 missing</text>
+      </svg>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Requirement Assessment</h2>
+        <div class="grid">
+          
+        <div class="card requirement met">
+          <div class="pill met">met</div>
+          <h3>JavaScript</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> Proficient in JavaScript as indicated in the resume.</p>
+          <p>. </p>
+        </div>
+      
+        <div class="card requirement met">
+          <div class="pill met">met</div>
+          <h3>HTML5</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> Experience with HTML5 is listed in the hard skills section.</p>
+          <p>. </p>
+        </div>
+      
+        <div class="card requirement met">
+          <div class="pill met">met</div>
+          <h3>CSS3</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> CSS3 is included in the hard skills section of the resume.</p>
+          <p>. </p>
+        </div>
+      
+        <div class="card requirement partial">
+          <div class="pill partial">partial</div>
+          <h3>React.js</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> Experience with React.js is mentioned in project descriptions, but more direct experience in a professional setting would strengthen the application.</p>
+          <p>Consider emphasizing your React.js project work more prominently.</p>
+        </div>
+      
+        <div class="card requirement gap">
+          <div class="pill gap">gap</div>
+          <h3>Redux</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> No mention of Redux experience in the resume.</p>
+          <p>Consider learning Redux and adding any relevant projects or coursework.</p>
+        </div>
+      
+        <div class="card requirement gap">
+          <div class="pill gap">gap</div>
+          <h3>Flux</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> No mention of Flux experience in the resume.</p>
+          <p>Consider learning about Flux and its applications.</p>
+        </div>
+      
+        <div class="card requirement partial">
+          <div class="pill partial">partial</div>
+          <h3>ES6+</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> JavaScript skills imply familiarity with ES6+, but explicit mention is lacking.</p>
+          <p>Add specific ES6+ features you are familiar with.</p>
+        </div>
+      
+        <div class="card requirement gap">
+          <div class="pill gap">gap</div>
+          <h3>Immutable.js</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> No mention of Immutable.js experience in the resume.</p>
+          <p>Consider learning about Immutable.js and its use cases.</p>
+        </div>
+      
+        <div class="card requirement gap">
+          <div class="pill gap">gap</div>
+          <h3>Webpack</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> No mention of Webpack experience in the resume.</p>
+          <p>Consider learning Webpack and adding any relevant projects.</p>
+        </div>
+      
+        <div class="card requirement met">
+          <div class="pill met">met</div>
+          <h3>NPM</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> Experience with NPM is implied through JavaScript project work.</p>
+          <p>. </p>
+        </div>
+      
+        <div class="card requirement met">
+          <div class="pill met">met</div>
+          <h3>Git</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> Git is listed as a hard skill in the resume.</p>
+          <p>. </p>
+        </div>
+      
+        <div class="card requirement met">
+          <div class="pill met">met</div>
+          <h3>RESTful APIs</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> Experience with REST APIs is mentioned in the work experience and projects.</p>
+          <p>. </p>
+        </div>
+      
+        <div class="card requirement met">
+          <div class="pill met">met</div>
+          <h3>TypeScript</h3>
+          <p><strong>Importance:</strong> important</p>
+          <p><strong>Evidence:</strong> TypeScript is listed as a hard skill and used in projects.</p>
+          <p>. </p>
+        </div>
+      
+        <div class="card requirement gap">
+          <div class="pill gap">gap</div>
+          <h3>Jest</h3>
+          <p><strong>Importance:</strong> important</p>
+          <p><strong>Evidence:</strong> No mention of Jest experience in the resume.</p>
+          <p>Consider learning Jest for testing React applications.</p>
+        </div>
+      
+        <div class="card requirement gap">
+          <div class="pill gap">gap</div>
+          <h3>Mocha</h3>
+          <p><strong>Importance:</strong> important</p>
+          <p><strong>Evidence:</strong> No mention of Mocha experience in the resume.</p>
+          <p>Consider learning Mocha for testing.</p>
+        </div>
+      
+        <div class="card requirement partial">
+          <div class="pill partial">partial</div>
+          <h3>Agile methodologies</h3>
+          <p><strong>Importance:</strong> important</p>
+          <p><strong>Evidence:</strong> Experience in collaborative environments suggests familiarity with Agile, but explicit mention is lacking.</p>
+          <p>Add any relevant Agile experience or coursework.</p>
+        </div>
+      
+        <div class="card requirement gap">
+          <div class="pill gap">gap</div>
+          <h3>WCAG</h3>
+          <p><strong>Importance:</strong> bonus</p>
+          <p><strong>Evidence:</strong> No mention of WCAG experience in the resume.</p>
+          <p>Consider learning about WCAG and accessibility best practices.</p>
+        </div>
+      
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Resume Adaptation</h2>
+        <div class="grid">
+          
+        <div class="card">
+          <h3>professional summary</h3>
+          <p><strong>Change:</strong> Add a professional summary that highlights key skills, experiences, and career goals.</p>
+          <p><strong>Why:</strong> A strong summary can capture the attention of hiring managers and provide a quick overview of qualifications.</p>
+        </div>
+      
+        <div class="card">
+          <h3>work experience</h3>
+          <p><strong>Change:</strong> Emphasize your React.js project work more prominently, detailing specific outcomes and technologies used.</p>
+          <p><strong>Why:</strong> Highlighting relevant projects can demonstrate your practical skills and alignment with the job requirements.</p>
+        </div>
+      
+        <div class="card">
+          <h3>skills</h3>
+          <p><strong>Change:</strong> Incorporate specific metrics or outcomes from projects to quantify achievements and impact.</p>
+          <p><strong>Why:</strong> Quantifying achievements can make your resume more compelling and demonstrate your contributions.</p>
+        </div>
+      
+        <div class="card">
+          <h3>skills</h3>
+          <p><strong>Change:</strong> Add keywords from the job posting such as &#39;Redux&#39;, &#39;Webpack&#39;, and &#39;Agile methodologies&#39;.</p>
+          <p><strong>Why:</strong> Using industry-relevant keywords can help your resume pass through Applicant Tracking Systems (ATS) and catch the attention of recruiters.</p>
+        </div>
+      
+        </div>
+      </section>
+
+      <section class="section grid">
+        <div class="card">
+          <h2>Cover Letter Guidance</h2>
+          <ul><li>Highlight your project experience with React.js and how it aligns with the responsibilities of developing high-performance UI components.</li><li>Discuss your collaborative work in the Seneca Software Developer Club and how it has prepared you for teamwork in a professional setting.</li><li>Mention your eagerness to learn and adapt to new technologies, particularly those listed in the job posting.</li><li>Express your enthusiasm for working at Tata Consultancy Services and how your values align with their focus on innovation and partnerships.</li></ul>
+        </div>
+        <div class="card">
+          <h2>Likely Interview Questions</h2>
+          <ul><li>Can you describe a project where you used React.js? What challenges did you face and how did you overcome them?</li><li>How do you ensure the performance of your web applications?</li><li>Can you explain your experience with RESTful APIs and how you integrated them into your projects?</li><li>What is your experience with Agile methodologies and how do you apply them in your work?</li><li>How do you approach debugging and troubleshooting issues in your applications?</li></ul>
+        </div>
+      </section>
+
+      <section class="section grid">
+        <div class="card">
+          <h2>Skills To Brush Up</h2>
+          <ul><li>Redux</li><li>Webpack</li><li>Jest</li><li>Mocha</li><li>Agile methodologies</li></ul>
+        </div>
+        <div class="card">
+          <h2>Company Research Topics</h2>
+          <ul><li>Tata Consultancy Services&#39; recent developments and innovations in IT services.</li><li>Company culture and employee reviews to understand the work environment better.</li><li>TCS&#39;s focus on collaboration and partnerships in the tech industry.</li></ul>
+        </div>
+        <div class="card">
+          <h2>Talking Points</h2>
+          <ul><li>Your hands-on project experience and how it relates to the role of React Developer.</li><li>Your leadership experience in the Seneca Software Developer Club and its relevance to teamwork in a corporate environment.</li><li>Your commitment to continuous learning and adapting to new technologies. You can mention specific technologies you are currently learning or plan to learn. </li><li>Your understanding of TCS&#39;s mission and how you can contribute to their goals.</li></ul>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

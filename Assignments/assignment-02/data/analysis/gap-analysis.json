@@ -1,0 +1,72 @@
+{
+  "generatedAt": "2026-04-13T21:39:56.208Z",
+  "strengths": [
+    {
+      "item": "Diverse Technical Skills",
+      "evidence": "Proficient in JavaScript, TypeScript, C, C++, Python, Java, HTML5, CSS3, and various databases.",
+      "whyItMatters": "These skills align well with the market demand for software development roles, particularly in web technologies."
+    },
+    {
+      "item": "Project Experience",
+      "evidence": "Developed multiple web applications and participated in club events, showcasing practical application of skills.",
+      "whyItMatters": "Hands-on project experience is highly valued by employers and demonstrates the ability to apply theoretical knowledge."
+    },
+    {
+      "item": "Collaboration and Leadership",
+      "evidence": "Led workshops and collaborated with a team of 10+ members in a club setting.",
+      "whyItMatters": "Strong communication and teamwork skills are essential in software development roles, as highlighted by market analysis."
+    }
+  ],
+  "gaps": [
+    {
+      "item": "Lack of Experience with High-Demand Technologies",
+      "marketDemand": "Java, React, Python, AI Tools",
+      "currentResumeSignal": "Experience primarily with JavaScript, TypeScript, and C++",
+      "gapLevel": "medium_term",
+      "actionPlan": "Engage in self-directed learning or online courses focused on Java, React, and AI tools to build proficiency.",
+      "rationale": "These technologies are frequently required in job postings, and gaining experience will enhance employability."
+    },
+    {
+      "item": "Limited Professional Experience",
+      "marketDemand": "Entry to mid-level positions often require 1-3 years of experience",
+      "currentResumeSignal": "Currently a Junior Developer with limited professional experience",
+      "gapLevel": "medium_term",
+      "actionPlan": "Seek internships or part-time roles in software development to gain more professional experience.",
+      "rationale": "Real-world experience is crucial for transitioning from junior to mid-level roles."
+    },
+    {
+      "item": "Absence of a Professional Summary",
+      "marketDemand": "Clear and concise professional summaries are common in resumes",
+      "currentResumeSignal": "No professional summary present",
+      "gapLevel": "quick_win",
+      "actionPlan": "Add a professional summary that highlights key skills, experiences, and career goals.",
+      "rationale": "A strong summary can capture the attention of hiring managers and provide a quick overview of qualifications."
+    },
+    {
+      "item": "Missing Keywords from Job Postings",
+      "marketDemand": "Keywords like 'Agile Development', 'Cloud Technologies', 'Software Engineering'",
+      "currentResumeSignal": "Keywords are present but not fully aligned with job postings",
+      "gapLevel": "quick_win",
+      "actionPlan": "Incorporate relevant keywords from job postings into the resume to improve alignment.",
+      "rationale": "Using industry-relevant keywords can help the resume pass through Applicant Tracking Systems (ATS) and catch the attention of recruiters."
+    }
+  ],
+  "uniqueValue": [
+    {
+      "item": "Hands-on Project Development",
+      "evidence": "Developed several web applications and participated in workshops, demonstrating practical skills.",
+      "positioningAdvice": "Emphasize project outcomes and technologies used in applications to showcase real-world problem-solving abilities."
+    },
+    {
+      "item": "Leadership in Educational Settings",
+      "evidence": "Led workshops and contributed to club events, enhancing member skills and engagement.",
+      "positioningAdvice": "Highlight leadership experiences to differentiate from other candidates, especially in collaborative environments."
+    }
+  ],
+  "resumeMessagingRecommendations": [
+    "Add a professional summary that succinctly outlines your skills and career aspirations.",
+    "Incorporate specific metrics or outcomes from projects to quantify achievements and impact.",
+    "Align the language and keywords in your resume with those found in job postings to improve ATS compatibility."
+  ],
+  "overallReadinessSummary": "Krutin Polra has a solid foundation in software development with diverse technical skills and relevant project experience. However, to enhance marketability, it is essential to gain experience with high-demand technologies, add a professional summary, and ensure alignment with job postings through strategic keyword usage."
+}

@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Application Advisor Report</title>
+    <style>
+      :root {
+        --paper: #f8f4ed;
+        --ink: #173042;
+        --muted: #597b96;
+        --panel: #ffffff;
+        --line: #d8e2e9;
+        --green: #1b9c85;
+        --amber: #e0a526;
+        --red: #d65c4f;
+        --blue: #2f6d9f;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", "Aptos", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(47,109,159,0.18), transparent 28%),
+          radial-gradient(circle at top right, rgba(27,156,133,0.16), transparent 22%),
+          linear-gradient(180deg, #fbfaf6, var(--paper));
+      }
+      .wrap {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 32px 18px 64px;
+      }
+      .hero {
+        background: linear-gradient(145deg, rgba(255,255,255,0.96), rgba(236,244,248,0.96));
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 28px;
+        display: grid;
+        grid-template-columns: 1.3fr 0.7fr;
+        gap: 20px;
+      }
+      .score {
+        border-radius: 24px;
+        padding: 18px;
+        background: linear-gradient(180deg, #fdf8ef, #fff);
+        border: 1px solid var(--line);
+      }
+      .score-number {
+        font-size: 72px;
+        line-height: 1;
+        font-weight: 700;
+      }
+      .score-band {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(47,109,159,0.1);
+        color: var(--blue);
+        font-weight: 600;
+      }
+      .section {
+        margin-top: 28px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+      }
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 18px;
+      }
+      .pill {
+        display: inline-block;
+        border-radius: 999px;
+        padding: 5px 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 10px;
+      }
+      .pill.met { background: rgba(27,156,133,0.12); color: var(--green); }
+      .pill.partial { background: rgba(224,165,38,0.12); color: #8c6900; }
+      .pill.gap { background: rgba(214,92,79,0.12); color: var(--red); }
+      .requirement.met { border-left: 6px solid var(--green); }
+      .requirement.partial { border-left: 6px solid var(--amber); }
+      .requirement.gap { border-left: 6px solid var(--red); }
+      h1, h2, h3 { margin-top: 0; }
+      ul { padding-left: 20px; margin-bottom: 0; }
+      .chart {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 16px;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      @media (max-width: 860px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+        .score-number {
+          font-size: 56px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <section class="hero">
+        <div>
+          <p class="meta">Generated 2026-04-13T21:50:30.411Z</p>
+          <h1>Backend Engineer at Reddit</h1>
+          <p>Krutin Polra has a strong foundation in software development with relevant skills in programming languages and project experience. However, there are gaps in specific high-demand technologies and professional experience that need to be addressed to enhance candidacy for the Backend Engineer role at Reddit.</p>
+          <p><strong>Encouraging take:</strong> Given your diverse technical skills and project experience, applying for the Backend Engineer position at Reddit is a plausible step. With some targeted improvements to your resume and preparation, you can present a compelling application.</p>
+        </div>
+        <div class="score">
+          <div class="score-number">40%</div>
+          <div class="score-band">stretch</div>
+          <p>Stretch role, still worth applying if the work excites you and you position your strengths clearly.</p>
+        </div>
+      </section>
+
+      <section class="section grid">
+        <div class="chart">
+          <h2>Fit Breakdown</h2>
+          <svg viewBox="0 0 560 132" width="100%" height="132" role="img">
+        <text x="12" y="40" font-size="13" fill="#213547">Met</text>
+        <rect x="160" y="26" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="26" width="188" height="16" rx="8" fill="#1b9c85"></rect>
+        <text x="544" y="39" font-size="12" fill="#456">3</text>
+      
+        <text x="12" y="76" font-size="13" fill="#213547">Partial</text>
+        <rect x="160" y="62" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="62" width="188" height="16" rx="8" fill="#e0a526"></rect>
+        <text x="544" y="75" font-size="12" fill="#456">3</text>
+      
+        <text x="12" y="112" font-size="13" fill="#213547">Gap</text>
+        <rect x="160" y="98" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="98" width="376" height="16" rx="8" fill="#d65c4f"></rect>
+        <text x="544" y="111" font-size="12" fill="#456">6</text>
+      </svg>
+        </div>
+        <div class="chart">
+          <h2>Market Skill Alignment</h2>
+          <svg viewBox="0 0 560 312" width="100%" height="312" role="img">
+        <text x="12" y="40" font-size="13" fill="#213547">Communication</text>
+        <rect x="160" y="26" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="26" width="376" height="16" rx="8" fill="#1b9c85"></rect>
+        <text x="544" y="39" font-size="12" fill="#456">3 on resume</text>
+      
+        <text x="12" y="76" font-size="13" fill="#213547">Java</text>
+        <rect x="160" y="62" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="62" width="376" height="16" rx="8" fill="#1b9c85"></rect>
+        <text x="544" y="75" font-size="12" fill="#456">3 on resume</text>
+      
+        <text x="12" y="112" font-size="13" fill="#213547">Problem Solving</text>
+        <rect x="160" y="98" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="98" width="376" height="16" rx="8" fill="#1b9c85"></rect>
+        <text x="544" y="111" font-size="12" fill="#456">3 on resume</text>
+      
+        <text x="12" y="148" font-size="13" fill="#213547">React</text>
+        <rect x="160" y="134" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="134" width="376" height="16" rx="8" fill="#597b96"></rect>
+        <text x="544" y="147" font-size="12" fill="#456">3 missing</text>
+      
+        <text x="12" y="184" font-size="13" fill="#213547">Ai Tools</text>
+        <rect x="160" y="170" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="170" width="251" height="16" rx="8" fill="#597b96"></rect>
+        <text x="544" y="183" font-size="12" fill="#456">2 missing</text>
+      
+        <text x="12" y="220" font-size="13" fill="#213547">C++</text>
+        <rect x="160" y="206" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="206" width="251" height="16" rx="8" fill="#1b9c85"></rect>
+        <text x="544" y="219" font-size="12" fill="#456">2 on resume</text>
+      
+        <text x="12" y="256" font-size="13" fill="#213547">Communication Skills</text>
+        <rect x="160" y="242" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="242" width="251" height="16" rx="8" fill="#597b96"></rect>
+        <text x="544" y="255" font-size="12" fill="#456">2 missing</text>
+      
+        <text x="12" y="292" font-size="13" fill="#213547">Go</text>
+        <rect x="160" y="278" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="278" width="251" height="16" rx="8" fill="#597b96"></rect>
+        <text x="544" y="291" font-size="12" fill="#456">2 missing</text>
+      </svg>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Requirement Assessment</h2>
+        <div class="grid">
+          
+        <div class="card requirement gap">
+          <div class="pill gap">gap</div>
+          <h3>Go</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> No experience with Go mentioned in the resume.</p>
+          <p>Consider learning Go through online courses or projects.</p>
+        </div>
+      
+        <div class="card requirement met">
+          <div class="pill met">met</div>
+          <h3>Python</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> Proficient in Python as listed in hard skills.</p>
+          <p>. </p>
+        </div>
+      
+        <div class="card requirement gap">
+          <div class="pill gap">gap</div>
+          <h3>Scala</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> No experience with Scala mentioned in the resume.</p>
+          <p>Consider exploring Scala through tutorials or projects.</p>
+        </div>
+      
+        <div class="card requirement met">
+          <div class="pill met">met</div>
+          <h3>Java</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> Proficient in Java as listed in hard skills.</p>
+          <p>. </p>
+        </div>
+      
+        <div class="card requirement met">
+          <div class="pill met">met</div>
+          <h3>C++</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> Proficient in C++ as listed in hard skills.</p>
+          <p>. </p>
+        </div>
+      
+        <div class="card requirement gap">
+          <div class="pill gap">gap</div>
+          <h3>Ads domain experience</h3>
+          <p><strong>Importance:</strong> important</p>
+          <p><strong>Evidence:</strong> No experience in the ads domain mentioned in the resume.</p>
+          <p>Consider gaining knowledge or experience in ads technology.</p>
+        </div>
+      
+        <div class="card requirement gap">
+          <div class="pill gap">gap</div>
+          <h3>Understanding customer needs in advertising</h3>
+          <p><strong>Importance:</strong> important</p>
+          <p><strong>Evidence:</strong> No evidence of understanding customer needs in advertising.</p>
+          <p>Engage in projects or coursework related to advertising.</p>
+        </div>
+      
+        <div class="card requirement gap">
+          <div class="pill gap">gap</div>
+          <h3>Design and implement Ads products with product managers</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> No relevant experience in designing Ads products.</p>
+          <p>Seek opportunities to work on projects involving product design.</p>
+        </div>
+      
+        <div class="card requirement partial">
+          <div class="pill partial">partial</div>
+          <h3>Collaborate with platform and data teams to build new features</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> Experience collaborating in a team setting, but not specifically with platform and data teams.</p>
+          <p>Highlight any relevant collaborative projects.</p>
+        </div>
+      
+        <div class="card requirement partial">
+          <div class="pill partial">partial</div>
+          <h3>Improve operational stability and code quality</h3>
+          <p><strong>Importance:</strong> important</p>
+          <p><strong>Evidence:</strong> Experience in reviewing designs and ensuring requirements are met, but no specific mention of operational stability.</p>
+          <p>Consider emphasizing any relevant experiences.</p>
+        </div>
+      
+        <div class="card requirement gap">
+          <div class="pill gap">gap</div>
+          <h3>Deliver dashboards and data visualizations</h3>
+          <p><strong>Importance:</strong> important</p>
+          <p><strong>Evidence:</strong> No experience with dashboards or data visualizations mentioned.</p>
+          <p>Consider gaining experience in data visualization tools.</p>
+        </div>
+      
+        <div class="card requirement partial">
+          <div class="pill partial">partial</div>
+          <h3>Manage project timelines and oversee project execution</h3>
+          <p><strong>Importance:</strong> important</p>
+          <p><strong>Evidence:</strong> Experience in event planning and execution, but not specifically in managing project timelines.</p>
+          <p>Highlight any relevant project management experiences.</p>
+        </div>
+      
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Resume Adaptation</h2>
+        <div class="grid">
+          
+        <div class="card">
+          <h3>professional summary</h3>
+          <p><strong>Change:</strong> Add a professional summary that highlights key skills, experiences, and career goals.</p>
+          <p><strong>Why:</strong> A strong summary can capture the attention of hiring managers and provide a quick overview of qualifications.</p>
+        </div>
+      
+        <div class="card">
+          <h3>skills</h3>
+          <p><strong>Change:</strong> Incorporate Go and Scala into the skills section after gaining proficiency.</p>
+          <p><strong>Why:</strong> These are required skills for the role and will enhance your candidacy.</p>
+        </div>
+      
+        <div class="card">
+          <h3>work experience</h3>
+          <p><strong>Change:</strong> Highlight any collaborative projects with data teams or product managers.</p>
+          <p><strong>Why:</strong> This aligns with the responsibilities of the role and demonstrates relevant experience.</p>
+        </div>
+      
+        <div class="card">
+          <h3>projects</h3>
+          <p><strong>Change:</strong> Add any relevant projects that involve ads technology or data visualization.</p>
+          <p><strong>Why:</strong> This will strengthen your application by showcasing applicable experience.</p>
+        </div>
+      
+        </div>
+      </section>
+
+      <section class="section grid">
+        <div class="card">
+          <h2>Cover Letter Guidance</h2>
+          <ul><li>Emphasize your proficiency in Python and Java, as these are core requirements for the role.</li><li>Discuss your project experiences that demonstrate your ability to collaborate and lead, particularly in a team setting.</li><li>Mention your eagerness to learn Go and Scala, and how you plan to bridge that gap before starting the role.</li><li>Highlight any relevant coursework or self-directed learning related to ads technology or customer needs in advertising.</li></ul>
+        </div>
+        <div class="card">
+          <h2>Likely Interview Questions</h2>
+          <ul><li>Can you describe your experience with Python and Java in your projects?</li><li>How do you approach learning new programming languages like Go or Scala?</li><li>Can you provide an example of a project where you collaborated with a team to deliver a product?</li><li>What strategies do you use to ensure code quality and operational stability in your projects?</li><li>How do you understand customer needs when developing software solutions?</li></ul>
+        </div>
+      </section>
+
+      <section class="section grid">
+        <div class="card">
+          <h2>Skills To Brush Up</h2>
+          <ul><li>Go</li><li>Scala</li><li>Ads technology</li><li>Data visualization tools</li></ul>
+        </div>
+        <div class="card">
+          <h2>Company Research Topics</h2>
+          <ul><li>Recent advertising innovations at Reddit</li><li>Reddit&#39;s engineering culture and team structure</li><li>The role of ads technology in Reddit&#39;s business model</li></ul>
+        </div>
+        <div class="card">
+          <h2>Talking Points</h2>
+          <ul><li>Your diverse technical skills and project experience in software development.</li><li>Your collaborative experiences and leadership in educational settings.</li><li>Your proactive approach to learning new technologies and adapting to industry needs. </li><li>Your interest in the ads domain and how it aligns with Reddit&#39;s recent developments.</li></ul>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

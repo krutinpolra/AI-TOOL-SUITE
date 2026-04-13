@@ -1,0 +1,184 @@
+{
+  "generatedAt": "2026-04-13T21:50:03.131Z",
+  "postingSlug": "software-developer-1-intuit-c912fe2b",
+  "fitScore": 72,
+  "fitBand": "good_fit",
+  "scoreExplanation": "Good fit, you meet the core requirements and should apply with a targeted story.",
+  "analysis": {
+    "overallSummary": "Krutin Polra has a strong foundation in software development with diverse technical skills and relevant project experience. While there are some gaps in experience with high-demand technologies and professional experience, the candidate's collaborative skills and project work make them a plausible applicant for the Software Developer 1 role at Intuit.",
+    "encouragingPositioning": "Given your solid technical skills and project experience, this role at Intuit is a great opportunity to leverage your abilities and grow in a supportive environment. Don't hesitate to apply!",
+    "requirements": [
+      {
+        "requirement": "software development lifecycle",
+        "category": "required_skill",
+        "importance": "core",
+        "status": "met",
+        "evidence": "Experience in developing web applications and participating in the full software development lifecycle through club projects.",
+        "notes": ". "
+      },
+      {
+        "requirement": "coding",
+        "category": "required_skill",
+        "importance": "core",
+        "status": "met",
+        "evidence": "Proficient in multiple programming languages including JavaScript, TypeScript, C++, and Python.",
+        "notes": ". "
+      },
+      {
+        "requirement": "testing",
+        "category": "required_skill",
+        "importance": "core",
+        "status": "partial",
+        "evidence": "Experience in code reviews and ensuring functional requirements are met, but specific testing experience is not detailed.",
+        "notes": "Consider highlighting any testing methodologies used in projects."
+      },
+      {
+        "requirement": "deployment",
+        "category": "required_skill",
+        "importance": "core",
+        "status": "partial",
+        "evidence": "Experience deploying applications using cloud platforms like Azure, but specific deployment processes are not detailed.",
+        "notes": "Clarify deployment experiences in your projects."
+      },
+      {
+        "requirement": "clean code",
+        "category": "required_skill",
+        "importance": "core",
+        "status": "met",
+        "evidence": "Emphasis on writing clean, efficient, and well-documented code in project descriptions.",
+        "notes": ". "
+      },
+      {
+        "requirement": "troubleshooting",
+        "category": "required_skill",
+        "importance": "core",
+        "status": "partial",
+        "evidence": "Collaborated with team members to troubleshoot and resolve software defects, but specific examples are limited.",
+        "notes": "Provide specific examples of troubleshooting in your projects."
+      },
+      {
+        "requirement": "code reviews",
+        "category": "required_skill",
+        "importance": "core",
+        "status": "met",
+        "evidence": "Participated in code reviews during project development.",
+        "notes": ". "
+      },
+      {
+        "requirement": "technical documentation",
+        "category": "required_skill",
+        "importance": "core",
+        "status": "met",
+        "evidence": "Performed business analysis and system documentation for club projects.",
+        "notes": ". "
+      },
+      {
+        "requirement": "team collaboration",
+        "category": "required_skill",
+        "importance": "core",
+        "status": "met",
+        "evidence": "Collaborated with a team of 10+ members in various projects and workshops.",
+        "notes": ". "
+      },
+      {
+        "requirement": "internship experience",
+        "category": "preferred_skill",
+        "importance": "important",
+        "status": "gap",
+        "evidence": "No formal internship experience mentioned.",
+        "notes": "Consider seeking internships to strengthen your application."
+      },
+      {
+        "requirement": "agile methodologies",
+        "category": "preferred_skill",
+        "importance": "important",
+        "status": "gap",
+        "evidence": "No specific experience with agile methodologies mentioned.",
+        "notes": "Familiarize yourself with agile practices and consider mentioning any relevant coursework."
+      },
+      {
+        "requirement": "cloud platforms",
+        "category": "preferred_skill",
+        "importance": "important",
+        "status": "partial",
+        "evidence": "Experience with AWS and Microsoft Azure, but specific projects using these platforms are not detailed.",
+        "notes": "Highlight specific projects where cloud platforms were utilized."
+      },
+      {
+        "requirement": "database concepts",
+        "category": "preferred_skill",
+        "importance": "important",
+        "status": "met",
+        "evidence": "Experience with MongoDB and MySQL in project development.",
+        "notes": ". "
+      },
+      {
+        "requirement": "SQL",
+        "category": "preferred_skill",
+        "importance": "important",
+        "status": "partial",
+        "evidence": "Experience with MySQL, but specific SQL skills are not detailed.",
+        "notes": "Consider detailing SQL queries or database management tasks."
+      }
+    ],
+    "resumeAdaptations": [
+      {
+        "targetSection": "Professional Summary",
+        "change": "Add a concise professional summary highlighting key skills and career goals.",
+        "why": "A strong summary can capture the attention of hiring managers and provide a quick overview of qualifications."
+      },
+      {
+        "targetSection": "Work Experience",
+        "change": "Include specific metrics or outcomes from projects to quantify achievements and impact.",
+        "why": "Quantifying achievements can make your contributions more compelling."
+      },
+      {
+        "targetSection": "Skills Section",
+        "change": "Incorporate relevant keywords from job postings into the resume.",
+        "why": "Using industry-relevant keywords can help the resume pass through Applicant Tracking Systems (ATS) and catch the attention of recruiters."
+      },
+      {
+        "targetSection": "Projects",
+        "change": "Clarify deployment experiences and troubleshooting examples in project descriptions.",
+        "why": "Providing specific examples can strengthen your application and demonstrate your problem-solving abilities."
+      }
+    ],
+    "coverLetterGuidance": [
+      "Emphasize your familiarity with the software development lifecycle and your coding skills in the cover letter.",
+      "Mention your collaborative experiences and how they align with Intuit's team-oriented culture.",
+      "Highlight any relevant projects that demonstrate your ability to write clean code and contribute to code reviews.",
+      "Discuss your eagerness to learn and adapt to new technologies, especially in light of Intuit's focus on innovation. "
+    ],
+    "interviewPrep": {
+      "likelyQuestions": [
+        "Can you describe your experience with the software development lifecycle?",
+        "How do you ensure the code you write is clean and maintainable?",
+        "Can you provide an example of a time you collaborated with a team to troubleshoot a software issue?",
+        "What technologies are you most comfortable with, and how have you applied them in your projects?",
+        "How do you approach learning new technologies or methodologies?"
+      ],
+      "skillsToBrushUp": [
+        "Agile methodologies",
+        "Testing frameworks",
+        "Deployment processes"
+      ],
+      "companyResearchTopics": [
+        "Intuit's recent developments in AI and innovation",
+        "Company culture and values",
+        "Recent projects or products launched by Intuit"
+      ],
+      "talkingPoints": [
+        "Your project experiences and the technologies used",
+        "Your collaborative approach and leadership in team settings",
+        "Your enthusiasm for learning and adapting to new technologies, especially in the context of Intuit's focus on innovation. ",
+        "Your understanding of the financial software industry and how it relates to your skills. "
+      ]
+    }
+  },
+  "scoringBreakdown": {
+    "met": 7,
+    "partial": 5,
+    "gap": 2,
+    "weightedScore": 72
+  }
+}

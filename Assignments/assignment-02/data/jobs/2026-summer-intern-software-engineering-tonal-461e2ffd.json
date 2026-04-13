@@ -1,0 +1,132 @@
+{
+  "source": {
+    "sourcePath": "D:\\@SENECA\\SEM 6\\AIP444\\Assignments\\project-data\\backend\\job-04.pdf",
+    "sourceFileName": "job-04.pdf",
+    "sourceSha256": "461e2ffd326c7904670479d343456d8de74a2cce777e79d3bae747ba4c6e6755",
+    "extractedAt": "2026-04-13T21:28:09.178Z",
+    "parser": "pdf-parse",
+    "charCount": 3673,
+    "pageCount": 3
+  },
+  "jobTitle": "2026 Summer Intern - Software Engineering",
+  "companyName": "Tonal",
+  "location": "Toronto, Ontario",
+  "remoteStatus": "not_listed",
+  "requiredSkills": [
+    "software engineering",
+    "programming",
+    "AI tools",
+    "problem-solving",
+    "communication"
+  ],
+  "preferredSkills": [
+    "health and fitness knowledge",
+    "consumer hardware interest"
+  ],
+  "experienceLevel": {
+    "minimumYears": null,
+    "preferredYears": null,
+    "seniority": "intern",
+    "notes": "Currently enrolled in a Bachelor’s program at a 4-year university, rising junior or senior"
+  },
+  "educationRequirements": {
+    "required": null,
+    "preferred": "Bachelor’s degree in Engineering or related field"
+  },
+  "salaryRange": {
+    "minimum": null,
+    "maximum": null,
+    "currency": null,
+    "interval": "not_listed",
+    "rawText": null
+  },
+  "keyResponsibilities": [
+    "Contribute to the execution of Tonal’s FY26 product roadmap",
+    "Explore, prototype, and build automation solutions using AI-assisted development tools",
+    "Collaborate with engineers and product teams to understand features",
+    "Leverage AI to accelerate test creation and validation strategies",
+    "Participate in team meetings and brainstorming sessions",
+    "Prepare reports or presentations for stakeholders",
+    "Communicate and collaborate with team members daily"
+  ],
+  "keywordsAndDomainExpertise": [
+    "software development",
+    "automation",
+    "AI",
+    "engineering"
+  ],
+  "applicationSignals": [
+    "proactive",
+    "resourceful",
+    "adaptable",
+    "strong communicator"
+  ],
+  "postingSummary": null,
+  "extractionNotes": [
+    "Internship position",
+    "12-16 weeks duration"
+  ],
+  "companyResearch": {
+    "status": "completed",
+    "summary": "Tonal is a Series E company in the Recreational Goods sector, focusing on smart home gym equipment and personalized workout programs. It has approximately 393 employees and a valuation of around $1.6 billion as of April 2023. Recent developments include retail expansion at Best Buy, funding challenges, and a focus on AI-powered product features. The company culture is collaborative but has some concerns regarding management structure. The Software Engineering Intern role lasts 12-16 weeks and requires skills in software engineering and a passion for health and fitness.",
+    "sizeAndStage": "Series E, approximately 393 employees",
+    "industry": "Recreational Goods",
+    "recentDevelopments": [
+      {
+        "headline": "Retail Expansion",
+        "summary": "In late 2023, Tonal announced a significant retail expansion, making its products available at Best Buy, which could enhance brand visibility and accessibility.",
+        "url": "/retail-expansion"
+      },
+      {
+        "headline": "Funding Challenges",
+        "summary": "Earlier in 2023, Tonal sought to raise funds at a valuation significantly lower than its previous $1.9 billion, reflecting challenges in the home fitness market.",
+        "url": "/funding-challenges"
+      },
+      {
+        "headline": "Product Development",
+        "summary": "The company is focusing on integrating AI-powered features into its offerings, including new products like AI-assisted Pilates.",
+        "url": "/product-development"
+      }
+    ],
+    "cultureSignals": [
+      "Collaborative and friendly atmosphere",
+      "Focus on health and wellness",
+      "Lack of structure and expertise in upper management",
+      "Commitment to innovation and transparency in engineering practices"
+    ],
+    "applicationAngles": [
+      "Interest in AI and Automation",
+      "Passion for Health and Fitness",
+      "Collaboration and Communication"
+    ],
+    "searchQueries": [
+      "Tonal company size industry 2023",
+      "Tonal recent news developments 2023",
+      "Tonal company culture engineering blog reviews",
+      "Tonal software engineering intern role insights"
+    ],
+    "sources": [
+      {
+        "title": "Tonal Company Overview",
+        "url": "/tonal-overview",
+        "snippet": "Tonal operates in the Recreational Goods sector, focusing on smart home gym equipment."
+      },
+      {
+        "title": "Recent Developments at Tonal",
+        "url": "/tonal-recent-developments",
+        "snippet": "Tonal announced a significant retail expansion and is integrating AI features into its products."
+      },
+      {
+        "title": "Tonal Company Culture",
+        "url": "/tonal-culture",
+        "snippet": "Employee reviews indicate a collaborative atmosphere but some concerns about management."
+      },
+      {
+        "title": "Software Engineering Intern Role at Tonal",
+        "url": "/tonal-intern-role",
+        "snippet": "The internship lasts 12-16 weeks and requires skills in software engineering."
+      }
+    ],
+    "failureReason": null
+  }
+}

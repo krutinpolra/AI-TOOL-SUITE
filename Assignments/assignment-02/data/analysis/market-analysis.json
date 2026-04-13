@@ -1,0 +1,324 @@
+{
+  "aggregate": {
+    "generatedAt": "2026-04-13T21:30:03.870Z",
+    "totalPostings": 10,
+    "postingFiles": [
+      "job-04.pdf",
+      "job-02.pdf",
+      "job-08.pdf",
+      "job-09.pdf",
+      "job-10.pdf",
+      "job-06.pdf",
+      "job-03.pdf",
+      "job-05.pdf",
+      "job-07.pdf",
+      "job-01.pdf"
+    ],
+    "topRequiredSkills": [
+      {
+        "skill": "Communication",
+        "count": 3
+      },
+      {
+        "skill": "Java",
+        "count": 3
+      },
+      {
+        "skill": "Problem Solving",
+        "count": 3
+      },
+      {
+        "skill": "React",
+        "count": 3
+      },
+      {
+        "skill": "Ai Tools",
+        "count": 2
+      },
+      {
+        "skill": "C++",
+        "count": 2
+      },
+      {
+        "skill": "Communication Skills",
+        "count": 2
+      },
+      {
+        "skill": "Go",
+        "count": 2
+      },
+      {
+        "skill": "Javascript",
+        "count": 2
+      },
+      {
+        "skill": "Programming",
+        "count": 2
+      },
+      {
+        "skill": "Python",
+        "count": 2
+      },
+      {
+        "skill": "Software Engineering",
+        "count": 2
+      }
+    ],
+    "topPreferredSkills": [
+      {
+        "skill": "Git",
+        "count": 2
+      },
+      {
+        "skill": "Sql",
+        "count": 2
+      },
+      {
+        "skill": "Ads Domain Experience",
+        "count": 1
+      },
+      {
+        "skill": "Agile Development",
+        "count": 1
+      },
+      {
+        "skill": "Agile Methodologies",
+        "count": 1
+      },
+      {
+        "skill": "Applepay",
+        "count": 1
+      },
+      {
+        "skill": "Arxml",
+        "count": 1
+      },
+      {
+        "skill": "C/c++ Programming",
+        "count": 1
+      },
+      {
+        "skill": "Can Communications",
+        "count": 1
+      },
+      {
+        "skill": "Cloud Platforms",
+        "count": 1
+      },
+      {
+        "skill": "Consumer Hardware Interest",
+        "count": 1
+      },
+      {
+        "skill": "Cppu Test Framework",
+        "count": 1
+      }
+    ],
+    "topKeywords": [
+      {
+        "skill": "Software Development",
+        "count": 5
+      },
+      {
+        "skill": "Ai",
+        "count": 2
+      },
+      {
+        "skill": "Ads Technology",
+        "count": 1
+      },
+      {
+        "skill": "Ai Systems",
+        "count": 1
+      },
+      {
+        "skill": "Automation",
+        "count": 1
+      },
+      {
+        "skill": "Automotive",
+        "count": 1
+      },
+      {
+        "skill": "Backend Engineering",
+        "count": 1
+      },
+      {
+        "skill": "Cloud Computing",
+        "count": 1
+      },
+      {
+        "skill": "Coding",
+        "count": 1
+      },
+      {
+        "skill": "Collaborative Teams",
+        "count": 1
+      },
+      {
+        "skill": "Controls Engineering",
+        "count": 1
+      },
+      {
+        "skill": "Data Analysis",
+        "count": 1
+      }
+    ],
+    "remoteBreakdown": [
+      {
+        "label": "remote",
+        "count": 4
+      },
+      {
+        "label": "hybrid",
+        "count": 2
+      },
+      {
+        "label": "not_listed",
+        "count": 2
+      },
+      {
+        "label": "flexible",
+        "count": 1
+      },
+      {
+        "label": "onsite",
+        "count": 1
+      }
+    ],
+    "seniorityBreakdown": [
+      {
+        "label": "not listed",
+        "count": 5
+      },
+      {
+        "label": "entry",
+        "count": 1
+      },
+      {
+        "label": "intern",
+        "count": 1
+      },
+      {
+        "label": "mid-level",
+        "count": 1
+      },
+      {
+        "label": "new_grad",
+        "count": 1
+      },
+      {
+        "label": "preferred",
+        "count": 1
+      }
+    ],
+    "educationBreakdown": [
+      {
+        "label": "not listed",
+        "count": 10
+      }
+    ],
+    "experienceYears": {
+      "sampleSize": 2,
+      "minimum": 3,
+      "maximum": 7,
+      "average": 5,
+      "median": 5
+    },
+    "salarySnapshot": {
+      "sampleSize": 5,
+      "minimumListed": 50,
+      "maximumListed": 118000,
+      "averageMidpoint": 55314.5
+    },
+    "commonResponsibilities": [
+      {
+        "responsibility": "Adhere to best software design principles",
+        "count": 1
+      },
+      {
+        "responsibility": "Assist in the creation of technical documentation",
+        "count": 1
+      },
+      {
+        "responsibility": "Build and maintain frontend systems using React, Angular, or Vue",
+        "count": 1
+      },
+      {
+        "responsibility": "Build and ship high-quality product features",
+        "count": 1
+      },
+      {
+        "responsibility": "Building efficient, well-tested User Interface and User Experience components",
+        "count": 1
+      },
+      {
+        "responsibility": "Collaborate cross-functionally with various engineering teams",
+        "count": 1
+      },
+      {
+        "responsibility": "Collaborate to troubleshoot and resolve software defects",
+        "count": 1
+      },
+      {
+        "responsibility": "Collaborate with distributed teams in a remote environment",
+        "count": 1
+      },
+      {
+        "responsibility": "Collaborate with engineers and product teams to understand features",
+        "count": 1
+      },
+      {
+        "responsibility": "Collaborate with platform and data teams to build new features",
+        "count": 1
+      }
+    ],
+    "researchHighlights": [
+      "Interest in AI and Automation",
+      "Passion for Health and Fitness",
+      "Collaboration and Communication",
+      "Proficiency in programming languages such as Kotlin, JavaScript, TypeScript, Python, C, C#, C++, React, Go, Java, and Swift",
+      "Excellent writing and grammar skills",
+      "Interest in AI development and quality data annotation",
+      "Experience with programming languages (Go, Python, Scala, Java, C++)",
+      "Relevant projects in the advertising domain"
+    ]
+  },
+  "insights": {
+    "executiveSummary": "The current job market shows a strong demand for software development roles, particularly in AI and web technologies. Remote work opportunities are prevalent, with a notable emphasis on communication and collaboration skills. Salary data indicates a wide range, suggesting varying levels of experience and company types.",
+    "notablePatterns": [
+      {
+        "title": "High Demand for Software Development Skills",
+        "detail": "Skills such as Java, React, and Python are frequently required across multiple postings, indicating a strong demand for software developers proficient in these technologies."
+      },
+      {
+        "title": "Remote Work Opportunities",
+        "detail": "40% of job postings offer remote work options, with additional flexible arrangements, reflecting a shift towards more adaptable work environments."
+      },
+      {
+        "title": "Communication Skills are Essential",
+        "detail": "Communication is listed as a required skill in 30% of postings, highlighting its importance in collaborative software development roles."
+      },
+      {
+        "title": "Sparse Education Requirements",
+        "detail": "All job postings lack specific education requirements, suggesting that practical skills and experience may be prioritized over formal education."
+      },
+      {
+        "title": "Salary Variability",
+        "detail": "Salaries range from $50,000 to $118,000, with an average midpoint of approximately $55,314, indicating a diverse range of roles and company sizes."
+      }
+    ],
+    "candidateTakeaways": [
+      "Focus on developing strong programming skills in Java, Python, and React to align with market demand.",
+      "Enhance communication and collaboration skills, as these are frequently emphasized in job postings.",
+      "Consider remote and hybrid roles, as they make up a significant portion of available positions.",
+      "Be prepared for a wide salary range; research specific companies to understand their compensation structures better.",
+      "Stay updated on AI and automation trends, as these are increasingly relevant in job descriptions."
+    ],
+    "riskSignals": [
+      "The majority of postings do not specify seniority or education requirements, which may indicate a lack of clarity in job expectations.",
+      "Some companies are facing legal challenges or funding issues, which could affect job stability and growth opportunities.",
+      "High competition in popular skill areas like AI and software development may lead to saturation in the job market."
+    ]
+  }
+}

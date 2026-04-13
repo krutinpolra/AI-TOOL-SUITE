@@ -1,0 +1,168 @@
+{
+  "source": {
+    "sourcePath": "C:\\Users\\Krutin Polra\\OneDrive\\Desktop\\KrutinResume.pdf",
+    "sourceFileName": "KrutinResume.pdf",
+    "sourceSha256": "2a56e35654e2607b728feb50068473923bfb049be521171f1e5496cdef69498e",
+    "extractedAt": "2026-04-13T21:39:45.909Z",
+    "parser": "pdf-parse",
+    "charCount": 3537,
+    "pageCount": 1
+  },
+  "candidateName": "Krutin Polra",
+  "headline": null,
+  "professionalSummary": null,
+  "hardSkills": [
+    "JavaScript",
+    "TypeScript",
+    "C",
+    "C++",
+    "Python",
+    "Java",
+    "HTML5",
+    "CSS3",
+    "SASS/LESS",
+    "Responsive UI Design",
+    "Single-Page Applications",
+    "DOM Manipulation",
+    "REST",
+    "Web Services Development",
+    "MongoDB",
+    "MySQL",
+    "Non-relational Databases",
+    "Entity Relationship Modeling",
+    "AWS",
+    "Microsoft Azure",
+    "Git",
+    "GitHub",
+    "Atlassian Jira",
+    "Visual Studio Code",
+    "Netlify",
+    "Vercel"
+  ],
+  "softSkills": [
+    "communication",
+    "leadership",
+    "teamwork",
+    "problem solving"
+  ],
+  "workExperience": [
+    {
+      "jobTitle": "Junior Developer",
+      "company": "Seneca Software Developer Club",
+      "location": "Toronto, ON",
+      "startDate": "October 2024",
+      "endDate": "Present",
+      "durationMonths": null,
+      "responsibilities": [
+        "Collaborated cross-functionally with a team of 10+ members to develop web-application utilizing TypeScript, JavaScript, CSS, REST APIs, and databases including MongoDB and MySQL.",
+        "Contributed to club events by leading workshops on React.js, TypeScript, and API integration, fostering a learning environment and improving member skillsets.",
+        "Performed business analysis and system documentation, gathering requirements and assessing system impact for enhancements and develop mock-ups for the SSDC website.",
+        "Reviewed all the detailed designs of the SSDC website to ensure they meet functional and nonfunctional requirements.",
+        "Collaborated on event planning and execution, including the 'Coding Bootcamp' initiative, which featured hands-on workshops on trending technologies such as Docker for DevOps and Python for AI, increasing club member engagement by 40%."
+      ],
+      "achievements": [],
+      "technologies": [
+        "TypeScript",
+        "JavaScript",
+        "CSS",
+        "REST APIs",
+        "MongoDB",
+        "MySQL"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Advanced Diploma",
+      "institution": "Seneca Polytechnic",
+      "graduationDate": "April 2026",
+      "relevantCoursework": [
+        "Computer Programming and Analysis"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Responsive Web Design (Developer Certification)",
+      "issuer": "Free Code Camp",
+      "dateEarned": "December 2024",
+      "expiresOn": null,
+      "details": null
+    },
+    {
+      "name": "Volunteer contribution",
+      "issuer": "Seneca Engineering competition- 2024",
+      "dateEarned": "November 2023",
+      "expiresOn": null,
+      "details": null
+    }
+  ],
+  "projects": [
+    {
+      "name": "Met museum",
+      "description": "Developed an interactive web application to explore The Met’s art collection, integrating The Met's public API for real-time data retrieval, implementing dynamic search and filtering features, and designing a responsive UI with React.js and CSS for a seamless user experience.",
+      "technologies": [
+        "JavaScript",
+        "CSS",
+        "REST APIS",
+        "Next.js",
+        "React.js",
+        "MongoDB"
+      ],
+      "outcomes": [
+        "Interactive web application for exploring art collection"
+      ]
+    },
+    {
+      "name": "SSDC (Seneca Software Developer Club)-Website",
+      "description": "Designed and developed a responsive and dynamic website for SSDC, leveraging Next.js and Tailwind for modern UI/UX, and integrated React-DOM for seamless navigation and interactive components.",
+      "technologies": [
+        "TypeScript",
+        "Tailwind",
+        "Azure App Services"
+      ],
+      "outcomes": [
+        "Responsive and dynamic website for SSDC"
+      ]
+    },
+    {
+      "name": "Culinary Parcel",
+      "description": "Designed and developed a dynamic web application for managing meal kits, featuring user authentication, a responsive UI, and CRUD operations on meal data using MongoDB.",
+      "technologies": [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "EJS",
+        "Bootstrap"
+      ],
+      "outcomes": [
+        "Dynamic web application for managing meal kits"
+      ]
+    },
+    {
+      "name": "Assembly Line",
+      "description": "Developed an assembly line simulation using C++, implementing OOP concepts like inheritance, encapsulation, and polymorphism, while overcoming challenges with deque logic, file parsing, and order processing using FIFO queues to ensure accurate workflow management.",
+      "technologies": [
+        "C++",
+        "Queues",
+        "Threaded programming"
+      ],
+      "outcomes": [
+        "Assembly line simulation"
+      ]
+    }
+  ],
+  "accomplishments": [],
+  "keywordsAndDomainExpertise": [
+    "Web Development",
+    "Software Development",
+    "Cloud Technologies",
+    "APIs",
+    "Databases",
+    "Object-Oriented Programming"
+  ],
+  "portfolioLinks": [
+    "GitHub"
+  ],
+  "extractionNotes": []
+}

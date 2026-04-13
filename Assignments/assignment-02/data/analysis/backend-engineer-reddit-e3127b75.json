@@ -1,0 +1,169 @@
+{
+  "generatedAt": "2026-04-13T21:50:30.411Z",
+  "postingSlug": "backend-engineer-reddit-e3127b75",
+  "fitScore": 40,
+  "fitBand": "stretch",
+  "scoreExplanation": "Stretch role, still worth applying if the work excites you and you position your strengths clearly.",
+  "analysis": {
+    "overallSummary": "Krutin Polra has a strong foundation in software development with relevant skills in programming languages and project experience. However, there are gaps in specific high-demand technologies and professional experience that need to be addressed to enhance candidacy for the Backend Engineer role at Reddit.",
+    "encouragingPositioning": "Given your diverse technical skills and project experience, applying for the Backend Engineer position at Reddit is a plausible step. With some targeted improvements to your resume and preparation, you can present a compelling application.",
+    "requirements": [
+      {
+        "requirement": "Go",
+        "category": "required_skill",
+        "importance": "core",
+        "status": "gap",
+        "evidence": "No experience with Go mentioned in the resume.",
+        "notes": "Consider learning Go through online courses or projects."
+      },
+      {
+        "requirement": "Python",
+        "category": "required_skill",
+        "importance": "core",
+        "status": "met",
+        "evidence": "Proficient in Python as listed in hard skills.",
+        "notes": ". "
+      },
+      {
+        "requirement": "Scala",
+        "category": "required_skill",
+        "importance": "core",
+        "status": "gap",
+        "evidence": "No experience with Scala mentioned in the resume.",
+        "notes": "Consider exploring Scala through tutorials or projects."
+      },
+      {
+        "requirement": "Java",
+        "category": "required_skill",
+        "importance": "core",
+        "status": "met",
+        "evidence": "Proficient in Java as listed in hard skills.",
+        "notes": ". "
+      },
+      {
+        "requirement": "C++",
+        "category": "required_skill",
+        "importance": "core",
+        "status": "met",
+        "evidence": "Proficient in C++ as listed in hard skills.",
+        "notes": ". "
+      },
+      {
+        "requirement": "Ads domain experience",
+        "category": "preferred_skill",
+        "importance": "important",
+        "status": "gap",
+        "evidence": "No experience in the ads domain mentioned in the resume.",
+        "notes": "Consider gaining knowledge or experience in ads technology."
+      },
+      {
+        "requirement": "Understanding customer needs in advertising",
+        "category": "preferred_skill",
+        "importance": "important",
+        "status": "gap",
+        "evidence": "No evidence of understanding customer needs in advertising.",
+        "notes": "Engage in projects or coursework related to advertising."
+      },
+      {
+        "requirement": "Design and implement Ads products with product managers",
+        "category": "responsibility",
+        "importance": "core",
+        "status": "gap",
+        "evidence": "No relevant experience in designing Ads products.",
+        "notes": "Seek opportunities to work on projects involving product design."
+      },
+      {
+        "requirement": "Collaborate with platform and data teams to build new features",
+        "category": "responsibility",
+        "importance": "core",
+        "status": "partial",
+        "evidence": "Experience collaborating in a team setting, but not specifically with platform and data teams.",
+        "notes": "Highlight any relevant collaborative projects."
+      },
+      {
+        "requirement": "Improve operational stability and code quality",
+        "category": "responsibility",
+        "importance": "important",
+        "status": "partial",
+        "evidence": "Experience in reviewing designs and ensuring requirements are met, but no specific mention of operational stability.",
+        "notes": "Consider emphasizing any relevant experiences."
+      },
+      {
+        "requirement": "Deliver dashboards and data visualizations",
+        "category": "responsibility",
+        "importance": "important",
+        "status": "gap",
+        "evidence": "No experience with dashboards or data visualizations mentioned.",
+        "notes": "Consider gaining experience in data visualization tools."
+      },
+      {
+        "requirement": "Manage project timelines and oversee project execution",
+        "category": "responsibility",
+        "importance": "important",
+        "status": "partial",
+        "evidence": "Experience in event planning and execution, but not specifically in managing project timelines.",
+        "notes": "Highlight any relevant project management experiences."
+      }
+    ],
+    "resumeAdaptations": [
+      {
+        "targetSection": "professional summary",
+        "change": "Add a professional summary that highlights key skills, experiences, and career goals.",
+        "why": "A strong summary can capture the attention of hiring managers and provide a quick overview of qualifications."
+      },
+      {
+        "targetSection": "skills",
+        "change": "Incorporate Go and Scala into the skills section after gaining proficiency.",
+        "why": "These are required skills for the role and will enhance your candidacy."
+      },
+      {
+        "targetSection": "work experience",
+        "change": "Highlight any collaborative projects with data teams or product managers.",
+        "why": "This aligns with the responsibilities of the role and demonstrates relevant experience."
+      },
+      {
+        "targetSection": "projects",
+        "change": "Add any relevant projects that involve ads technology or data visualization.",
+        "why": "This will strengthen your application by showcasing applicable experience."
+      }
+    ],
+    "coverLetterGuidance": [
+      "Emphasize your proficiency in Python and Java, as these are core requirements for the role.",
+      "Discuss your project experiences that demonstrate your ability to collaborate and lead, particularly in a team setting.",
+      "Mention your eagerness to learn Go and Scala, and how you plan to bridge that gap before starting the role.",
+      "Highlight any relevant coursework or self-directed learning related to ads technology or customer needs in advertising."
+    ],
+    "interviewPrep": {
+      "likelyQuestions": [
+        "Can you describe your experience with Python and Java in your projects?",
+        "How do you approach learning new programming languages like Go or Scala?",
+        "Can you provide an example of a project where you collaborated with a team to deliver a product?",
+        "What strategies do you use to ensure code quality and operational stability in your projects?",
+        "How do you understand customer needs when developing software solutions?"
+      ],
+      "skillsToBrushUp": [
+        "Go",
+        "Scala",
+        "Ads technology",
+        "Data visualization tools"
+      ],
+      "companyResearchTopics": [
+        "Recent advertising innovations at Reddit",
+        "Reddit's engineering culture and team structure",
+        "The role of ads technology in Reddit's business model"
+      ],
+      "talkingPoints": [
+        "Your diverse technical skills and project experience in software development.",
+        "Your collaborative experiences and leadership in educational settings.",
+        "Your proactive approach to learning new technologies and adapting to industry needs. ",
+        "Your interest in the ads domain and how it aligns with Reddit's recent developments."
+      ]
+    }
+  },
+  "scoringBreakdown": {
+    "met": 3,
+    "partial": 3,
+    "gap": 6,
+    "weightedScore": 40
+  }
+}
