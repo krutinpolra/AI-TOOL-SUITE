@@ -7,6 +7,13 @@ import type {
   ResumeData,
 } from './schemas.js';
 import { summarizeGapLevels, topMarketSkillComparisons } from './analysis.js';
+import MarkdownIt from 'markdown-it';
+
+const markdownRenderer = new MarkdownIt({
+  html: false,
+  linkify: true,
+  typographer: true,
+});
 
 function renderBulletList(items: string[]): string {
   if (items.length === 0) {
@@ -356,6 +363,41 @@ function reportHtmlShell(title: string, subtitle: string, body: string): string 
         line-height: 1.6;
         overflow-wrap: anywhere;
       }
+      article.markdown {
+        line-height: 1.65;
+      }
+      article.markdown > :first-child {
+        margin-top: 0;
+      }
+      article.markdown h1 {
+        font-size: 24px;
+        margin: 0 0 12px;
+      }
+      article.markdown h2 {
+        font-size: 18px;
+        margin: 22px 0 10px;
+      }
+      article.markdown h3 {
+        font-size: 16px;
+        margin: 18px 0 8px;
+      }
+      article.markdown p {
+        margin: 10px 0;
+      }
+      article.markdown pre {
+        background: #fbfdff;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 14px;
+        overflow-x: auto;
+      }
+      article.markdown code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+        font-size: 0.95em;
+      }
+      article.markdown table {
+        margin-top: 12px;
+      }
       .letter-body {
         line-height: 1.65;
       }
@@ -619,10 +661,11 @@ export function renderGapAnalysisHtml(gapAnalysis: GapAnalysis): string {
 }
 
 export function renderEvaluationHtml(markdownReport: string): string {
+  const renderedMarkdown = markdownRenderer.render(markdownReport);
   return reportHtmlShell(
     'Evaluation Results',
     'Styled HTML companion to the evaluation markdown report',
-    `<section class="card"><pre class="report-text">${escapeHtml(markdownReport)}</pre></section>`
+    `<section class="card"><article class="markdown">${renderedMarkdown}</article></section>`
   );
 }
 

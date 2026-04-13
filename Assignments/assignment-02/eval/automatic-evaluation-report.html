@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Evaluation Results</title>
+    <style>
+      :root {
+        --paper: #f8f4ed;
+        --ink: #173042;
+        --muted: #597b96;
+        --panel: #ffffff;
+        --line: #d8e2e9;
+        --green: #1b9c85;
+        --amber: #e0a526;
+        --red: #d65c4f;
+        --blue: #2f6d9f;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", "Aptos", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(47,109,159,0.18), transparent 28%),
+          radial-gradient(circle at top right, rgba(27,156,133,0.16), transparent 22%),
+          linear-gradient(180deg, #fbfaf6, var(--paper));
+      }
+      .wrap {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 32px 18px 64px;
+      }
+      .hero {
+        background: linear-gradient(145deg, rgba(255,255,255,0.96), rgba(236,244,248,0.96));
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 28px;
+        margin-bottom: 28px;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .section {
+        margin-top: 28px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+      }
+      .card, .chart {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 18px;
+      }
+      .pill {
+        display: inline-block;
+        border-radius: 999px;
+        padding: 5px 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        background: rgba(47,109,159,0.12);
+        color: var(--blue);
+        margin-bottom: 10px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th, td {
+        text-align: left;
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+      pre.report-text {
+        background: #fbfdff;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 20px;
+        white-space: pre-wrap;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+      }
+      article.markdown {
+        line-height: 1.65;
+      }
+      article.markdown > :first-child {
+        margin-top: 0;
+      }
+      article.markdown h1 {
+        font-size: 24px;
+        margin: 0 0 12px;
+      }
+      article.markdown h2 {
+        font-size: 18px;
+        margin: 22px 0 10px;
+      }
+      article.markdown h3 {
+        font-size: 16px;
+        margin: 18px 0 8px;
+      }
+      article.markdown p {
+        margin: 10px 0;
+      }
+      article.markdown pre {
+        background: #fbfdff;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 14px;
+        overflow-x: auto;
+      }
+      article.markdown code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+        font-size: 0.95em;
+      }
+      article.markdown table {
+        margin-top: 12px;
+      }
+      .letter-body {
+        line-height: 1.65;
+      }
+      @media (max-width: 860px) {
+        .wrap {
+          padding: 24px 14px 56px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <section class="hero">
+        <p class="meta">Styled HTML companion to the evaluation markdown report</p>
+        <h1>Evaluation Results</h1>
+      </section>
+      <section class="card"><article class="markdown"><h1>Automatic Evaluation Results</h1>
+<p>Generated: 2026-04-13T23:01:07.799Z</p>
+<p>This automatic evaluation reruns extraction against saved posting baselines and scores saved postings against the current resume without requiring manual expectations in eval-config.json.</p>
+<h2>Automatic Extraction Consistency</h2>
+<ul>
+<li>Postings checked: 10</li>
+<li>Average scalar field accuracy: 95%</li>
+<li>Average required skill recall: 96%</li>
+<li>Average preferred skill recall: 80%</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Posting</th>
+<th>Scalar Accuracy</th>
+<th>Required Recall</th>
+<th>Preferred Recall</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026 Summer Intern - Software Engineering at Tonal</td>
+<td>100%</td>
+<td>100%</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>AI Development Programmer at DataAnnotation</td>
+<td>100%</td>
+<td>100%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>Backend Engineer at Reddit</td>
+<td>100%</td>
+<td>100%</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Embedded Controls Engineer at General Motors of Canada</td>
+<td>100%</td>
+<td>100%</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Front-End Developer at BET99</td>
+<td>100%</td>
+<td>100%</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Frontend Engineer at /</td>
+<td>75%</td>
+<td>60%</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Full Stack Engineer (Talent Pool) at /null</td>
+<td>100%</td>
+<td>100%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>Software Developer at 7shifts</td>
+<td>100%</td>
+<td>100%</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Software Developer 1 at Intuit</td>
+<td>100%</td>
+<td>100%</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Software Developer, New Grad at IXL Learning</td>
+<td>75%</td>
+<td>100%</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<h2>Automatic Fit Scoring Review</h2>
+<ul>
+<li>Postings scored: 10</li>
+<li>Average fit score: 59.7%</li>
+<li>Average required-skill match: 33.47%</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Posting</th>
+<th>Actual Score</th>
+<th>Actual Band</th>
+<th>Heuristic Score</th>
+<th>Heuristic Band</th>
+<th>Required Match</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026 Summer Intern - Software Engineering at Tonal</td>
+<td>63%</td>
+<td>good_fit</td>
+<td>40%</td>
+<td>stretch</td>
+<td>2/5</td>
+</tr>
+<tr>
+<td>AI Development Programmer at DataAnnotation</td>
+<td>55%</td>
+<td>good_fit</td>
+<td>48%</td>
+<td>stretch</td>
+<td>6/12</td>
+</tr>
+<tr>
+<td>Backend Engineer at Reddit</td>
+<td>47%</td>
+<td>stretch</td>
+<td>45%</td>
+<td>stretch</td>
+<td>3/5</td>
+</tr>
+<tr>
+<td>Embedded Controls Engineer at General Motors of Canada</td>
+<td>37%</td>
+<td>stretch</td>
+<td>11%</td>
+<td>growth_target</td>
+<td>0/5</td>
+</tr>
+<tr>
+<td>Front-End Developer at BET99</td>
+<td>47%</td>
+<td>stretch</td>
+<td>39%</td>
+<td>stretch</td>
+<td>4/8</td>
+</tr>
+<tr>
+<td>Frontend Engineer at /</td>
+<td>69%</td>
+<td>good_fit</td>
+<td>18%</td>
+<td>growth_target</td>
+<td>0/5</td>
+</tr>
+<tr>
+<td>Full Stack Engineer (Talent Pool) at /null</td>
+<td>61%</td>
+<td>good_fit</td>
+<td>16%</td>
+<td>growth_target</td>
+<td>1/12</td>
+</tr>
+<tr>
+<td>Software Developer at 7shifts</td>
+<td>76%</td>
+<td>good_fit</td>
+<td>38%</td>
+<td>stretch</td>
+<td>3/8</td>
+</tr>
+<tr>
+<td>Software Developer 1 at Intuit</td>
+<td>59%</td>
+<td>good_fit</td>
+<td>27%</td>
+<td>growth_target</td>
+<td>2/9</td>
+</tr>
+<tr>
+<td>Software Developer, New Grad at IXL Learning</td>
+<td>83%</td>
+<td>strong_fit</td>
+<td>68%</td>
+<td>good_fit</td>
+<td>2/3</td>
+</tr>
+</tbody>
+</table>
+<h2>Representative Cases</h2>
+<ul>
+<li>Strongest current match: Software Developer, New Grad at IXL Learning (83%, strong_fit)</li>
+<li>Middle-range match: Software Developer 1 at Intuit (59%, good_fit)</li>
+<li>Weakest current match: Embedded Controls Engineer at General Motors of Canada (37%, stretch)</li>
+</ul>
+<h2>Automatic Observations</h2>
+<ul>
+<li>This mode is dynamic because it discovers saved postings automatically and evaluates them against the current pipeline outputs.</li>
+<li>Extraction consistency here measures agreement with saved structured baselines, so it is useful for regression detection rather than human-ground-truth accuracy.</li>
+<li>The heuristic fit comparison is a lightweight calibration check based on skill overlap and entry-level adjustments.</li>
+<li>Run the manual config-driven evaluation as well when you want explicit human expectations and narrative failure analysis.</li>
+</ul>
+</article></section>
+    </div>
+  </body>
+</html>
