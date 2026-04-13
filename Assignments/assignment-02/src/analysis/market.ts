@@ -4,7 +4,7 @@ import { computeMarketAggregate } from '../shared/analysis.js';
 import { readJsonFile, writeJsonFile, writeTextFile } from '../shared/io.js';
 import { callStructuredModel, type AppContext } from '../shared/llm.js';
 import { buildMarketInsightsUserPrompt, marketInsightsSystemPrompt } from '../shared/prompts.js';
-import { renderMarketAnalysisMarkdown } from '../shared/reporting.js';
+import { renderMarketAnalysisHtml, renderMarketAnalysisMarkdown } from '../shared/reporting.js';
 import {
   MarketAnalysisSchema,
   MarketInsightsSchema,
@@ -17,6 +17,7 @@ import { projectRoot } from '../shared/runtime.js';
 
 const MARKET_ANALYSIS_JSON = join(projectRoot, 'data', 'analysis', 'market-analysis.json');
 const MARKET_ANALYSIS_MD = join(projectRoot, 'reports', 'market-analysis.md');
+const MARKET_ANALYSIS_HTML = join(projectRoot, 'reports', 'market-analysis.html');
 const FAILURES_PATH = join(projectRoot, 'data', 'jobs', 'failures.json');
 
 async function loadFailures(): Promise<ProcessingFailure[]> {
@@ -50,6 +51,7 @@ export async function generateMarketAnalysis(
   const failures = await loadFailures();
   await writeJsonFile(MARKET_ANALYSIS_JSON, analysis);
   await writeTextFile(MARKET_ANALYSIS_MD, renderMarketAnalysisMarkdown(analysis, failures));
+  await writeTextFile(MARKET_ANALYSIS_HTML, renderMarketAnalysisHtml(analysis, failures));
   return analysis;
 }
 
@@ -60,4 +62,5 @@ export async function loadMarketAnalysis(): Promise<MarketAnalysis> {
 export const marketOutputPaths = {
   json: MARKET_ANALYSIS_JSON,
   markdown: MARKET_ANALYSIS_MD,
+  html: MARKET_ANALYSIS_HTML,
 };

@@ -59,6 +59,9 @@ async function main() {
       `Markdown report: ${result.markdownPath}`,
       `HTML report: ${result.htmlPath}`,
       `JSON report: ${result.jsonPath}`,
+      ...result.coverLetterVariantPaths.map(
+        (path: string, index: number) => `Cover letter variant ${index + 1}: ${path}`
+      ),
       `Estimated cost: $${cost.totalEstimatedCostUsd.toFixed(4)}`,
     ].join('\n') + '\n'
   );

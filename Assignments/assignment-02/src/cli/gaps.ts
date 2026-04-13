@@ -47,6 +47,7 @@ async function main() {
       'Phase 2 complete.',
       `Resume data: Assignments/assignment-02/data/resume/resume.json`,
       `Gap report: ${gapOutputPaths.markdown}`,
+      `Gap HTML: ${gapOutputPaths.html}`,
       `Gap data: ${gapOutputPaths.json}`,
       `Estimated cost: $${cost.totalEstimatedCostUsd.toFixed(4)}`,
     ].join('\n') + '\n'

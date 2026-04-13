@@ -199,3 +199,49 @@ ${formatJsonForPrompt(marketAnalysis)}
 Gap analysis:
 ${formatJsonForPrompt(gapAnalysis)}`;
 }
+
+export function coverLetterDraftsSystemPrompt(): string {
+  return `You write tailored cover letters for a specific candidate and job posting.
+
+Rules:
+- Generate at least 2 distinct variants.
+- Each draft must sound like a real person, not a template.
+- Use only the provided posting, resume, market context, and application analysis.
+- Do not fabricate experience, certifications, employers, or outcomes.
+- The first variant should be polished and balanced.
+- The second variant should be more direct and product or impact focused.
+- Each draft should be a complete cover letter, not bullet points.
+- Keep each draft concise enough for a real application, roughly 250 to 400 words.`;
+}
+
+export function buildCoverLetterDraftsUserPrompt(
+  posting: JobPosting,
+  resume: ResumeData,
+  marketAnalysis: MarketAnalysis,
+  gapAnalysis: GapAnalysis,
+  applicationAnalysis: {
+    overallSummary: string;
+    encouragingPositioning: string;
+    requirements: unknown;
+    resumeAdaptations: unknown;
+    coverLetterGuidance: string[];
+    interviewPrep: unknown;
+  }
+): string {
+  return `Write cover letter drafts for this candidate.
+
+Target posting:
+${formatJsonForPrompt(posting)}
+
+Resume:
+${formatJsonForPrompt(resume)}
+
+Market analysis:
+${formatJsonForPrompt(marketAnalysis)}
+
+Gap analysis:
+${formatJsonForPrompt(gapAnalysis)}
+
+Application analysis:
+${formatJsonForPrompt(applicationAnalysis)}`;
+}

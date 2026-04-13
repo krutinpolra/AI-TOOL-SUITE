@@ -260,6 +260,17 @@ export const ApplicationAnalysisSchema = z.object({
   }),
 });
 
+export const CoverLetterVariantSchema = z.object({
+  variantLabel: z.string().min(1),
+  tone: z.string().min(1),
+  emphasis: z.string().min(1),
+  draft: z.string().min(200),
+});
+
+export const CoverLetterDraftsSchema = z.object({
+  drafts: z.array(CoverLetterVariantSchema).min(2).max(3),
+});
+
 export const ApplicationReportSchema = z.object({
   generatedAt: z.string().min(1),
   postingSlug: z.string().min(1),
@@ -267,6 +278,7 @@ export const ApplicationReportSchema = z.object({
   fitBand: FitBandSchema,
   scoreExplanation: z.string().min(1),
   analysis: ApplicationAnalysisSchema,
+  coverLetterDrafts: z.array(CoverLetterVariantSchema).min(2).max(3),
   scoringBreakdown: z.object({
     met: z.number().int().nonnegative(),
     partial: z.number().int().nonnegative(),

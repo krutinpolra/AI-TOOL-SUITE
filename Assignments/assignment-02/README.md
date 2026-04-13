@@ -13,11 +13,12 @@ The repo path in this workspace is `Assignments/assignment-02/`. The assignment 
   - resume adaptation suggestions
   - cover letter guidance
   - interview prep
+- Phase 3 cover letter generator that writes 2 full tailored draft variants
 - Tavily-backed company research with graceful degradation if research fails
 - Structured extraction with `Zod` validation
 - Estimated token/cost tracking per run
 - Verbose diagnostics to `stderr`
-- Self-contained HTML advisor report with inline visual charts
+- Self-contained HTML reports for market analysis, gap analysis, advisor output, and evaluation
 - Evaluation harness for extraction checks, scoring checks, and failure analysis write-up
 
 ## Stack
@@ -129,6 +130,7 @@ What it does:
 - writes:
   - `data/analysis/market-analysis.json`
   - `reports/market-analysis.md`
+  - `reports/market-analysis.html`
 
 ## Phase 2: Resume Gap Analysis
 
@@ -146,6 +148,7 @@ What it does:
 - writes:
   - `data/analysis/gap-analysis.json`
   - `reports/gap-analysis.md`
+  - `reports/gap-analysis.html`
 
 ## Phase 3: Application Advisor
 
@@ -172,8 +175,10 @@ What it does:
   - `data/analysis/<posting-slug>.json`
   - `reports/<posting-slug>.md`
   - `reports/<posting-slug>.html`
+  - `reports/<posting-slug>-cover-letter-variant-1.md`
+  - `reports/<posting-slug>-cover-letter-variant-2.md`
 
-The HTML report is self-contained and opens directly in a browser.
+The HTML reports are self-contained and open directly in a browser.
 
 ## Evaluation
 
@@ -189,9 +194,18 @@ copy eval\eval-config.example.json eval\eval-config.json
 npm run evaluate -- --config eval/eval-config.json --verbose
 ```
 
+Automatic mode without manual config:
+
+```bash
+npm run evaluate -- --auto --scoring-limit 10 --verbose
+```
+
 Outputs:
 
 - `eval/evaluation-report.md`
+- `eval/evaluation-report.html`
+- `eval/automatic-evaluation-report.md`
+- `eval/automatic-evaluation-report.html`
 
 The harness supports:
 
@@ -199,6 +213,8 @@ The harness supports:
 - scoring checks
 - manual failure-analysis entries
 - overall observations
+- automatic regression-style extraction consistency checks
+- automatic multi-posting fit-score review without a manual config file
 
 ## Safety and Reliability
 
@@ -226,9 +242,13 @@ Verbose mode logs to `stderr`:
 
 ## Extras Implemented
 
+- Extra 1: Cover Letter Generator
+  - Phase 3 now generates 2 full tailored cover letter drafts
+  - The drafts are based on fit analysis, resume strengths, and company research
+  - Each variant uses a different tone or emphasis and is saved as its own markdown file
 - Extra 3: Rich Visual Reports
-  - Phase 3 writes a self-contained HTML report
-  - Includes visual fit breakdown and market skill alignment charts
+  - Market analysis, gap analysis, application advisor, and evaluation all write styled self-contained HTML reports
+  - Phase 3 includes visual fit breakdown and market skill alignment charts
 
 ## Notes
 

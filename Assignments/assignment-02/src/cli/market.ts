@@ -56,6 +56,7 @@ async function main() {
       `Skipped from cache: ${result.skipped.length}`,
       `Saved postings total: ${result.allPostings.length}`,
       `Market report: ${marketOutputPaths.markdown}`,
+      `Market HTML: ${marketOutputPaths.html}`,
       `Market data: ${marketOutputPaths.json}`,
       `Estimated cost: $${cost.totalEstimatedCostUsd.toFixed(4)}`,
     ].join('\n') + '\n'

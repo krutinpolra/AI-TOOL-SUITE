@@ -6,7 +6,7 @@ import type {
   ProcessingFailure,
   ResumeData,
 } from './schemas.js';
-import { topMarketSkillComparisons } from './analysis.js';
+import { summarizeGapLevels, topMarketSkillComparisons } from './analysis.js';
 
 function renderBulletList(items: string[]): string {
   if (items.length === 0) {
@@ -226,6 +226,17 @@ export function renderApplicationMarkdown(report: ApplicationReport, posting: Jo
   lines.push('## Cover Letter Guidance');
   lines.push('');
   lines.push(renderBulletList(report.analysis.coverLetterGuidance));
+  lines.push('## Cover Letter Drafts');
+  lines.push('');
+  for (const draft of report.coverLetterDrafts) {
+    lines.push(`### ${draft.variantLabel}`);
+    lines.push('');
+    lines.push(`- Tone: ${draft.tone}`);
+    lines.push(`- Emphasis: ${draft.emphasis}`);
+    lines.push('');
+    lines.push(draft.draft);
+    lines.push('');
+  }
   lines.push('## Interview Prep');
   lines.push('');
   lines.push('### Likely Questions');
@@ -252,6 +263,121 @@ function escapeHtml(value: string): string {
     .replace(/'/g, '&#39;');
 }
 
+function reportHtmlShell(title: string, subtitle: string, body: string): string {
+  return `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>${escapeHtml(title)}</title>
+    <style>
+      :root {
+        --paper: #f8f4ed;
+        --ink: #173042;
+        --muted: #597b96;
+        --panel: #ffffff;
+        --line: #d8e2e9;
+        --green: #1b9c85;
+        --amber: #e0a526;
+        --red: #d65c4f;
+        --blue: #2f6d9f;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", "Aptos", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(47,109,159,0.18), transparent 28%),
+          radial-gradient(circle at top right, rgba(27,156,133,0.16), transparent 22%),
+          linear-gradient(180deg, #fbfaf6, var(--paper));
+      }
+      .wrap {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 32px 18px 64px;
+      }
+      .hero {
+        background: linear-gradient(145deg, rgba(255,255,255,0.96), rgba(236,244,248,0.96));
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 28px;
+        margin-bottom: 28px;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .section {
+        margin-top: 28px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+      }
+      .card, .chart {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 18px;
+      }
+      .pill {
+        display: inline-block;
+        border-radius: 999px;
+        padding: 5px 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        background: rgba(47,109,159,0.12);
+        color: var(--blue);
+        margin-bottom: 10px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th, td {
+        text-align: left;
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+      pre.report-text {
+        background: #fbfdff;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 20px;
+        white-space: pre-wrap;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+      }
+      .letter-body {
+        line-height: 1.65;
+      }
+      @media (max-width: 860px) {
+        .wrap {
+          padding: 24px 14px 56px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <section class="hero">
+        <p class="meta">${escapeHtml(subtitle)}</p>
+        <h1>${escapeHtml(title)}</h1>
+      </section>
+      ${body}
+    </div>
+  </body>
+</html>`;
+}
+
 function barSvg(
   items: Array<{ label: string; value: number; color: string; suffix?: string }>,
   width = 560,
@@ -276,6 +402,228 @@ function barSvg(
     .join('');
 
   return `<svg viewBox="0 0 ${width} ${height}" width="100%" height="${height}" role="img">${rows}</svg>`;
+}
+
+function simpleTableHtml(headers: string[], rows: string[][]): string {
+  const head = headers.map((header) => `<th>${escapeHtml(header)}</th>`).join('');
+  const body = rows
+    .map(
+      (row) =>
+        `<tr>${row.map((cell) => `<td>${escapeHtml(cell)}</td>`).join('')}</tr>`
+    )
+    .join('');
+  return `<table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>`;
+}
+
+export function renderMarketAnalysisHtml(
+  market: MarketAnalysis,
+  failures: ProcessingFailure[]
+): string {
+  const aggregate = market.aggregate;
+  const topRequiredChart = barSvg(
+    aggregate.topRequiredSkills.slice(0, 8).map((item) => ({
+      label: item.skill,
+      value: item.count,
+      color: '#2f6d9f',
+    }))
+  );
+  const remoteChart = barSvg(
+    aggregate.remoteBreakdown.map((item) => ({
+      label: item.label,
+      value: item.count,
+      color: '#1b9c85',
+    })),
+    520
+  );
+
+  const body = `
+    <section class="grid">
+      <div class="card"><div class="pill">Summary</div><h2>${aggregate.totalPostings}</h2><p>postings analyzed</p></div>
+      <div class="card"><div class="pill">Experience</div><h2>${aggregate.experienceYears.median ?? 'n/a'}</h2><p>median years requested</p></div>
+      <div class="card"><div class="pill">Salary</div><h2>${aggregate.salarySnapshot.averageMidpoint ?? 'n/a'}</h2><p>average midpoint</p></div>
+    </section>
+
+    <section class="section card">
+      <h2>Executive Summary</h2>
+      <p>${escapeHtml(market.insights.executiveSummary)}</p>
+    </section>
+
+    <section class="section grid">
+      <div class="chart">
+        <h2>Top Required Skills</h2>
+        ${topRequiredChart}
+      </div>
+      <div class="chart">
+        <h2>Remote Distribution</h2>
+        ${remoteChart}
+      </div>
+    </section>
+
+    <section class="section grid">
+      <div class="card">
+        <h2>Preferred Skills</h2>
+        ${simpleTableHtml(
+          ['Skill', 'Count'],
+          aggregate.topPreferredSkills.map((item) => [item.skill, String(item.count)])
+        )}
+      </div>
+      <div class="card">
+        <h2>Education Breakdown</h2>
+        ${simpleTableHtml(
+          ['Requirement', 'Count'],
+          aggregate.educationBreakdown.map((item) => [item.label, String(item.count)])
+        )}
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>Patterns and Trends</h2>
+      ${market.insights.notablePatterns
+        .map(
+          (pattern) => `
+            <h3>${escapeHtml(pattern.title)}</h3>
+            <p>${escapeHtml(pattern.detail)}</p>
+          `
+        )
+        .join('')}
+    </section>
+
+    <section class="section grid">
+      <div class="card">
+        <h2>Candidate Takeaways</h2>
+        <ul>${market.insights.candidateTakeaways
+          .map((item) => `<li>${escapeHtml(item)}</li>`)
+          .join('')}</ul>
+      </div>
+      <div class="card">
+        <h2>Risk Signals</h2>
+        <ul>${market.insights.riskSignals
+          .map((item) => `<li>${escapeHtml(item)}</li>`)
+          .join('')}</ul>
+      </div>
+      <div class="card">
+        <h2>Company Research Highlights</h2>
+        <ul>${aggregate.researchHighlights
+          .map((item) => `<li>${escapeHtml(item)}</li>`)
+          .join('')}</ul>
+      </div>
+    </section>
+
+    ${
+      failures.length > 0
+        ? `<section class="section card">
+            <h2>Processing Failures</h2>
+            ${simpleTableHtml(
+              ['Source', 'Stage', 'Message'],
+              failures.slice(-10).map((failure) => [
+                failure.sourcePath,
+                failure.stage,
+                failure.message,
+              ])
+            )}
+          </section>`
+        : ''
+    }
+  `;
+
+  return reportHtmlShell(
+    'Job Market Analysis',
+    `Generated ${aggregate.generatedAt}`,
+    body
+  );
+}
+
+export function renderGapAnalysisHtml(gapAnalysis: GapAnalysis): string {
+  const gapLevelChart = barSvg(
+    summarizeGapLevels(gapAnalysis).map((item) => ({
+      label: item.label,
+      value: item.count,
+      color:
+        item.label === 'quick_win'
+          ? '#1b9c85'
+          : item.label === 'short_term'
+            ? '#2f6d9f'
+            : item.label === 'medium_term'
+              ? '#e0a526'
+              : '#d65c4f',
+    })),
+    520
+  );
+
+  const body = `
+    <section class="grid">
+      <div class="card"><div class="pill">Readiness</div><p>${escapeHtml(
+        gapAnalysis.overallReadinessSummary
+      )}</p></div>
+      <div class="chart"><h2>Gap Levels</h2>${gapLevelChart}</div>
+    </section>
+
+    <section class="section grid">
+      <div class="card">
+        <h2>Strengths</h2>
+        ${gapAnalysis.strengths
+          .map(
+            (strength) => `
+              <h3>${escapeHtml(strength.item)}</h3>
+              <p><strong>Evidence:</strong> ${escapeHtml(strength.evidence)}</p>
+              <p>${escapeHtml(strength.whyItMatters)}</p>
+            `
+          )
+          .join('')}
+      </div>
+      <div class="card">
+        <h2>Unique Value</h2>
+        ${gapAnalysis.uniqueValue
+          .map(
+            (item) => `
+              <h3>${escapeHtml(item.item)}</h3>
+              <p><strong>Evidence:</strong> ${escapeHtml(item.evidence)}</p>
+              <p>${escapeHtml(item.positioningAdvice)}</p>
+            `
+          )
+          .join('')}
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>Triaged Gaps</h2>
+      ${gapAnalysis.gaps
+        .map(
+          (gap) => `
+            <div class="card" style="margin-bottom: 14px;">
+              <div class="pill">${escapeHtml(gap.gapLevel)}</div>
+              <h3>${escapeHtml(gap.item)}</h3>
+              <p><strong>Market demand:</strong> ${escapeHtml(gap.marketDemand)}</p>
+              <p><strong>Current resume signal:</strong> ${escapeHtml(gap.currentResumeSignal)}</p>
+              <p><strong>Action plan:</strong> ${escapeHtml(gap.actionPlan)}</p>
+              <p>${escapeHtml(gap.rationale)}</p>
+            </div>
+          `
+        )
+        .join('')}
+    </section>
+
+    <section class="section card">
+      <h2>Resume Messaging Recommendations</h2>
+      <ul>${gapAnalysis.resumeMessagingRecommendations
+        .map((item) => `<li>${escapeHtml(item)}</li>`)
+        .join('')}</ul>
+    </section>
+  `;
+
+  return reportHtmlShell(
+    'Resume Gap Analysis',
+    `Generated ${gapAnalysis.generatedAt}`,
+    body
+  );
+}
+
+export function renderEvaluationHtml(markdownReport: string): string {
+  return reportHtmlShell(
+    'Evaluation Results',
+    'Styled HTML companion to the evaluation markdown report',
+    `<section class="card"><pre class="report-text">${escapeHtml(markdownReport)}</pre></section>`
+  );
 }
 
 export function renderApplicationHtml(
@@ -338,6 +686,18 @@ export function renderApplicationHtml(
   const coverLetterItems = report.analysis.coverLetterGuidance
     .map((item) => `<li>${escapeHtml(item)}</li>`)
     .join('');
+  const coverLetterDraftCards = report.coverLetterDrafts
+    .map(
+      (draft) => `
+        <div class="card">
+          <div class="pill neutral">${escapeHtml(draft.variantLabel)}</div>
+          <h3>${escapeHtml(draft.tone)}</h3>
+          <p><strong>Emphasis:</strong> ${escapeHtml(draft.emphasis)}</p>
+          <p class="letter-body">${escapeHtml(draft.draft).replace(/\n/g, '<br>')}</p>
+        </div>
+      `
+    )
+    .join('');
   const likelyQuestions = report.analysis.interviewPrep.likelyQuestions
     .map((item) => `<li>${escapeHtml(item)}</li>`)
     .join('');
@@ -351,131 +711,20 @@ export function renderApplicationHtml(
     .map((item) => `<li>${escapeHtml(item)}</li>`)
     .join('');
 
-  return `<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Application Advisor Report</title>
-    <style>
-      :root {
-        --paper: #f8f4ed;
-        --ink: #173042;
-        --muted: #597b96;
-        --panel: #ffffff;
-        --line: #d8e2e9;
-        --green: #1b9c85;
-        --amber: #e0a526;
-        --red: #d65c4f;
-        --blue: #2f6d9f;
-      }
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        font-family: "Segoe UI", "Aptos", sans-serif;
-        color: var(--ink);
-        background:
-          radial-gradient(circle at top left, rgba(47,109,159,0.18), transparent 28%),
-          radial-gradient(circle at top right, rgba(27,156,133,0.16), transparent 22%),
-          linear-gradient(180deg, #fbfaf6, var(--paper));
-      }
-      .wrap {
-        max-width: 1180px;
-        margin: 0 auto;
-        padding: 32px 18px 64px;
-      }
-      .hero {
-        background: linear-gradient(145deg, rgba(255,255,255,0.96), rgba(236,244,248,0.96));
-        border: 1px solid var(--line);
-        border-radius: 28px;
-        padding: 28px;
-        display: grid;
-        grid-template-columns: 1.3fr 0.7fr;
-        gap: 20px;
-      }
-      .score {
-        border-radius: 24px;
-        padding: 18px;
-        background: linear-gradient(180deg, #fdf8ef, #fff);
-        border: 1px solid var(--line);
-      }
-      .score-number {
-        font-size: 72px;
-        line-height: 1;
-        font-weight: 700;
-      }
-      .score-band {
-        display: inline-block;
-        margin-top: 12px;
-        padding: 6px 10px;
-        border-radius: 999px;
-        background: rgba(47,109,159,0.1);
-        color: var(--blue);
-        font-weight: 600;
-      }
-      .section {
-        margin-top: 28px;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 16px;
-      }
-      .card {
-        background: var(--panel);
-        border: 1px solid var(--line);
-        border-radius: 20px;
-        padding: 18px;
-      }
-      .pill {
-        display: inline-block;
-        border-radius: 999px;
-        padding: 5px 10px;
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        margin-bottom: 10px;
-      }
-      .pill.met { background: rgba(27,156,133,0.12); color: var(--green); }
-      .pill.partial { background: rgba(224,165,38,0.12); color: #8c6900; }
-      .pill.gap { background: rgba(214,92,79,0.12); color: var(--red); }
-      .requirement.met { border-left: 6px solid var(--green); }
-      .requirement.partial { border-left: 6px solid var(--amber); }
-      .requirement.gap { border-left: 6px solid var(--red); }
-      h1, h2, h3 { margin-top: 0; }
-      ul { padding-left: 20px; margin-bottom: 0; }
-      .chart {
-        background: var(--panel);
-        border: 1px solid var(--line);
-        border-radius: 20px;
-        padding: 16px;
-      }
-      .meta {
-        color: var(--muted);
-        font-size: 14px;
-      }
-      @media (max-width: 860px) {
-        .hero {
-          grid-template-columns: 1fr;
-        }
-        .score-number {
-          font-size: 56px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="wrap">
-      <section class="hero">
+  return reportHtmlShell(
+    'Application Advisor Report',
+    `Generated ${report.generatedAt}`,
+    `
+      <section class="hero" style="display:grid;grid-template-columns:1.3fr 0.7fr;gap:20px;">
         <div>
-          <p class="meta">Generated ${escapeHtml(report.generatedAt)}</p>
+          <p class="meta">${escapeHtml(posting.jobTitle)} at ${escapeHtml(posting.companyName)}</p>
           <h1>${escapeHtml(posting.jobTitle)} at ${escapeHtml(posting.companyName)}</h1>
           <p>${escapeHtml(report.analysis.overallSummary)}</p>
           <p><strong>Encouraging take:</strong> ${escapeHtml(report.analysis.encouragingPositioning)}</p>
         </div>
-        <div class="score">
-          <div class="score-number">${report.fitScore}%</div>
-          <div class="score-band">${escapeHtml(report.fitBand)}</div>
+        <div class="card">
+          <div style="font-size:72px;line-height:1;font-weight:700;">${report.fitScore}%</div>
+          <div class="pill">${escapeHtml(report.fitBand)}</div>
           <p>${escapeHtml(report.scoreExplanation)}</p>
         </div>
       </section>
@@ -516,6 +765,13 @@ export function renderApplicationHtml(
         </div>
       </section>
 
+      <section class="section">
+        <h2>Cover Letter Drafts</h2>
+        <div class="grid">
+          ${coverLetterDraftCards}
+        </div>
+      </section>
+
       <section class="section grid">
         <div class="card">
           <h2>Skills To Brush Up</h2>
@@ -530,7 +786,6 @@ export function renderApplicationHtml(
           <ul>${talkingPoints}</ul>
         </div>
       </section>
-    </div>
-  </body>
-</html>`;
+    `
+  );
 }
