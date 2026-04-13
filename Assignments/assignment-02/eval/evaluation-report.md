@@ -1,6 +1,6 @@
 # Evaluation Results
 
-Generated: 2026-04-13T21:48:36.350Z
+Generated: 2026-04-13T23:20:05.123Z
 
 ## Extraction Spot-Check
 
@@ -46,7 +46,7 @@ Generated: 2026-04-13T21:48:36.350Z
 
 - Expected band: strong_fit
 - Actual band: good_fit
-- Actual score: 59%
+- Actual score: 65%
 - Agreement: no
 - Manual note: New-grad software role with strong overlap in Java, JavaScript, React, Git, and general web/software fundamentals.
 
@@ -54,7 +54,7 @@ Generated: 2026-04-13T21:48:36.350Z
 
 - Expected band: good_fit
 - Actual band: good_fit
-- Actual score: 72%
+- Actual score: 50%
 - Agreement: yes
 - Manual note: General software-development role with cloud, SQL, teamwork, and SDLC signals that mostly line up with the resume.
 

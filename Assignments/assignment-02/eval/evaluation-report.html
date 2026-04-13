@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Evaluation Results</title>
+    <style>
+      :root {
+        --paper: #f8f4ed;
+        --ink: #173042;
+        --muted: #597b96;
+        --panel: #ffffff;
+        --line: #d8e2e9;
+        --green: #1b9c85;
+        --amber: #e0a526;
+        --red: #d65c4f;
+        --blue: #2f6d9f;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", "Aptos", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(47,109,159,0.18), transparent 28%),
+          radial-gradient(circle at top right, rgba(27,156,133,0.16), transparent 22%),
+          linear-gradient(180deg, #fbfaf6, var(--paper));
+      }
+      .wrap {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 32px 18px 64px;
+      }
+      .hero {
+        background: linear-gradient(145deg, rgba(255,255,255,0.96), rgba(236,244,248,0.96));
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 28px;
+        margin-bottom: 28px;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .section {
+        margin-top: 28px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+      }
+      .card, .chart {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 18px;
+      }
+      .pill {
+        display: inline-block;
+        border-radius: 999px;
+        padding: 5px 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        background: rgba(47,109,159,0.12);
+        color: var(--blue);
+        margin-bottom: 10px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th, td {
+        text-align: left;
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+      pre.report-text {
+        background: #fbfdff;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 20px;
+        white-space: pre-wrap;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+      }
+      article.markdown {
+        line-height: 1.65;
+      }
+      article.markdown > :first-child {
+        margin-top: 0;
+      }
+      article.markdown h1 {
+        font-size: 24px;
+        margin: 0 0 12px;
+      }
+      article.markdown h2 {
+        font-size: 18px;
+        margin: 22px 0 10px;
+      }
+      article.markdown h3 {
+        font-size: 16px;
+        margin: 18px 0 8px;
+      }
+      article.markdown p {
+        margin: 10px 0;
+      }
+      article.markdown pre {
+        background: #fbfdff;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 14px;
+        overflow-x: auto;
+      }
+      article.markdown code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+        font-size: 0.95em;
+      }
+      article.markdown table {
+        margin-top: 12px;
+      }
+      .letter-body {
+        line-height: 1.65;
+      }
+      @media (max-width: 860px) {
+        .wrap {
+          padding: 24px 14px 56px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <section class="hero">
+        <p class="meta">Styled HTML companion to the evaluation markdown report</p>
+        <h1>Evaluation Results</h1>
+      </section>
+      <section class="card"><article class="markdown"><h1>Evaluation Results</h1>
+<p>Generated: 2026-04-13T23:20:05.123Z</p>
+<h2>Extraction Spot-Check</h2>
+<h3>…/project-data/backend/job-01.pdf</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>jobTitle</td>
+<td>match</td>
+</tr>
+<tr>
+<td>companyName</td>
+<td>match</td>
+</tr>
+<tr>
+<td>remoteStatus</td>
+<td>match</td>
+</tr>
+<tr>
+<td>requiredSkills</td>
+<td>match</td>
+</tr>
+<tr>
+<td>preferredSkills</td>
+<td>match</td>
+</tr>
+<tr>
+<td>minimumYears</td>
+<td>match</td>
+</tr>
+<tr>
+<td>educationRequired</td>
+<td>not specified</td>
+</tr>
+</tbody>
+</table>
+<h3>…/project-data/backend/job-05.pdf</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>jobTitle</td>
+<td>match</td>
+</tr>
+<tr>
+<td>companyName</td>
+<td>match</td>
+</tr>
+<tr>
+<td>remoteStatus</td>
+<td>match</td>
+</tr>
+<tr>
+<td>requiredSkills</td>
+<td>match</td>
+</tr>
+<tr>
+<td>preferredSkills</td>
+<td>match</td>
+</tr>
+<tr>
+<td>minimumYears</td>
+<td>match</td>
+</tr>
+<tr>
+<td>educationRequired</td>
+<td>not specified</td>
+</tr>
+</tbody>
+</table>
+<h3>…/project-data/backend/job-10.pdf</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>jobTitle</td>
+<td>match</td>
+</tr>
+<tr>
+<td>companyName</td>
+<td>match</td>
+</tr>
+<tr>
+<td>remoteStatus</td>
+<td>match</td>
+</tr>
+<tr>
+<td>requiredSkills</td>
+<td>match</td>
+</tr>
+<tr>
+<td>preferredSkills</td>
+<td>match</td>
+</tr>
+<tr>
+<td>minimumYears</td>
+<td>match</td>
+</tr>
+<tr>
+<td>educationRequired</td>
+<td>not specified</td>
+</tr>
+</tbody>
+</table>
+<h2>Scoring Check</h2>
+<h3>…/project-data/backend/job-01.pdf</h3>
+<ul>
+<li>Expected band: strong_fit</li>
+<li>Actual band: good_fit</li>
+<li>Actual score: 65%</li>
+<li>Agreement: no</li>
+<li>Manual note: New-grad software role with strong overlap in Java, JavaScript, React, Git, and general web/software fundamentals.</li>
+</ul>
+<h3>…/project-data/backend/job-07.pdf</h3>
+<ul>
+<li>Expected band: good_fit</li>
+<li>Actual band: good_fit</li>
+<li>Actual score: 50%</li>
+<li>Agreement: yes</li>
+<li>Manual note: General software-development role with cloud, SQL, teamwork, and SDLC signals that mostly line up with the resume.</li>
+</ul>
+<h3>…/project-data/backend/job-08.pdf</h3>
+<ul>
+<li>Expected band: stretch</li>
+<li>Actual band: stretch</li>
+<li>Actual score: 40%</li>
+<li>Agreement: yes</li>
+<li>Manual note: Some language overlap exists through Python, Java, and C++, but the Reddit role asks for 3+ years plus backend/ads/distributed-systems depth.</li>
+</ul>
+<h2>Failure Analysis</h2>
+<h3>Company research sometimes stores weak or incomplete source URLs</h3>
+<ul>
+<li>What happened: Some company-research outputs contain placeholder-style links like ‘/’ or short internal-looking paths instead of fully useful external URLs.</li>
+<li>Why it happened: The research-summary step relies on the LLM to restructure Tavily results, so weak source formatting can slip through when the model paraphrases or compresses search evidence.</li>
+<li>Proposed fix: Preserve Tavily URLs directly from tool output, validate that saved source URLs are absolute, and reject or flag any source that does not start with http or https.</li>
+</ul>
+<h3>Resume adaptation can drift toward unsupported keyword stuffing</h3>
+<ul>
+<li>What happened: The advisor sometimes suggests adding missing job keywords such as Redux or Webpack even when the resume does not show evidence of that experience.</li>
+<li>Why it happened: The advisor prompt prioritizes ATS alignment, but it does not sharply separate ‘reframe existing evidence’ from ‘do not add unsupported skills.’</li>
+<li>Proposed fix: Tighten the prompt so every resume suggestion must explicitly cite existing resume evidence, and split recommendations into ‘reorder/reframe’ versus ‘future learning goals.’</li>
+</ul>
+<h3>Fit scoring still depends heavily on extracted keyword overlap</h3>
+<ul>
+<li>What happened: A role can score lower than it should when the resume has adjacent experience but the exact posting terminology is different.</li>
+<li>Why it happened: The scoring model uses structured requirement items derived from extraction, so synonym gaps and imperfect normalization still affect the final fit band.</li>
+<li>Proposed fix: Add a stronger normalization layer for skills and frameworks, plus a second-pass semantic match check that groups related terms like React/React.js or REST/RESTful APIs.</li>
+</ul>
+<h2>Overall Observations</h2>
+<p>The system is strongest at producing organized structured outputs and practical applicant-facing reports from raw postings and a resume. It is also encouraging in a useful way, which helps avoid talking the candidate out of applying too early. The main weaknesses are occasional over-inference in resume tailoring, imperfect company-research source formatting, and scoring sensitivity to exact wording rather than deeper semantic equivalence.</p>
+</article></section>
+    </div>
+  </body>
+</html>

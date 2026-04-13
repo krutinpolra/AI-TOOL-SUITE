@@ -36,29 +36,11 @@
         border: 1px solid var(--line);
         border-radius: 28px;
         padding: 28px;
-        display: grid;
-        grid-template-columns: 1.3fr 0.7fr;
-        gap: 20px;
+        margin-bottom: 28px;
       }
-      .score {
-        border-radius: 24px;
-        padding: 18px;
-        background: linear-gradient(180deg, #fdf8ef, #fff);
-        border: 1px solid var(--line);
-      }
-      .score-number {
-        font-size: 72px;
-        line-height: 1;
-        font-weight: 700;
-      }
-      .score-band {
-        display: inline-block;
-        margin-top: 12px;
-        padding: 6px 10px;
-        border-radius: 999px;
-        background: rgba(47,109,159,0.1);
-        color: var(--blue);
-        font-weight: 600;
+      .meta {
+        color: var(--muted);
+        font-size: 14px;
       }
       .section {
         margin-top: 28px;
@@ -68,7 +50,7 @@
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         gap: 16px;
       }
-      .card {
+      .card, .chart {
         background: var(--panel);
         border: 1px solid var(--line);
         border-radius: 20px;
@@ -81,32 +63,74 @@
         font-size: 12px;
         text-transform: uppercase;
         letter-spacing: 0.08em;
+        background: rgba(47,109,159,0.12);
+        color: var(--blue);
         margin-bottom: 10px;
       }
-      .pill.met { background: rgba(27,156,133,0.12); color: var(--green); }
-      .pill.partial { background: rgba(224,165,38,0.12); color: #8c6900; }
-      .pill.gap { background: rgba(214,92,79,0.12); color: var(--red); }
-      .requirement.met { border-left: 6px solid var(--green); }
-      .requirement.partial { border-left: 6px solid var(--amber); }
-      .requirement.gap { border-left: 6px solid var(--red); }
-      h1, h2, h3 { margin-top: 0; }
-      ul { padding-left: 20px; margin-bottom: 0; }
-      .chart {
-        background: var(--panel);
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th, td {
+        text-align: left;
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+      pre.report-text {
+        background: #fbfdff;
         border: 1px solid var(--line);
         border-radius: 20px;
-        padding: 16px;
+        padding: 20px;
+        white-space: pre-wrap;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
       }
-      .meta {
-        color: var(--muted);
-        font-size: 14px;
+      article.markdown {
+        line-height: 1.65;
+      }
+      article.markdown > :first-child {
+        margin-top: 0;
+      }
+      article.markdown h1 {
+        font-size: 24px;
+        margin: 0 0 12px;
+      }
+      article.markdown h2 {
+        font-size: 18px;
+        margin: 22px 0 10px;
+      }
+      article.markdown h3 {
+        font-size: 16px;
+        margin: 18px 0 8px;
+      }
+      article.markdown p {
+        margin: 10px 0;
+      }
+      article.markdown pre {
+        background: #fbfdff;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 14px;
+        overflow-x: auto;
+      }
+      article.markdown code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+        font-size: 0.95em;
+      }
+      article.markdown table {
+        margin-top: 12px;
+      }
+      .letter-body {
+        line-height: 1.65;
       }
       @media (max-width: 860px) {
-        .hero {
-          grid-template-columns: 1fr;
-        }
-        .score-number {
-          font-size: 56px;
+        .wrap {
+          padding: 24px 14px 56px;
         }
       }
     </style>
@@ -114,15 +138,20 @@
   <body>
     <div class="wrap">
       <section class="hero">
+        <p class="meta">Generated 2026-04-13T23:21:46.323Z</p>
+        <h1>Application Advisor Report</h1>
+      </section>
+      
+      <section class="hero" style="display:grid;grid-template-columns:1.3fr 0.7fr;gap:20px;">
         <div>
-          <p class="meta">Generated 2026-04-13T21:50:03.131Z</p>
+          <p class="meta">Software Developer 1 at Intuit</p>
           <h1>Software Developer 1 at Intuit</h1>
-          <p>Krutin Polra has a strong foundation in software development with diverse technical skills and relevant project experience. While there are some gaps in experience with high-demand technologies and professional experience, the candidate&#39;s collaborative skills and project work make them a plausible applicant for the Software Developer 1 role at Intuit.</p>
-          <p><strong>Encouraging take:</strong> Given your solid technical skills and project experience, this role at Intuit is a great opportunity to leverage your abilities and grow in a supportive environment. Don&#39;t hesitate to apply!</p>
+          <p>Krutin Polra has a strong foundation in software development with diverse technical skills and relevant project experience. However, there are gaps in professional experience and specific skills related to AI and automation that need to be addressed to enhance competitiveness for the Software Developer 1 role at Intuit.</p>
+          <p><strong>Encouraging take:</strong> Given your solid technical skills and project experience, applying for the Software Developer 1 position at Intuit is a plausible step. Focus on showcasing your collaborative projects and eagerness to learn new technologies in your application.</p>
         </div>
-        <div class="score">
-          <div class="score-number">72%</div>
-          <div class="score-band">good_fit</div>
+        <div class="card">
+          <div style="font-size:72px;line-height:1;font-weight:700;">50%</div>
+          <div class="pill">good_fit</div>
           <p>Good fit, you meet the core requirements and should apply with a targeted story.</p>
         </div>
       </section>
@@ -133,18 +162,18 @@
           <svg viewBox="0 0 560 132" width="100%" height="132" role="img">
         <text x="12" y="40" font-size="13" fill="#213547">Met</text>
         <rect x="160" y="26" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
-        <rect x="160" y="26" width="376" height="16" rx="8" fill="#1b9c85"></rect>
-        <text x="544" y="39" font-size="12" fill="#456">7</text>
+        <rect x="160" y="26" width="251" height="16" rx="8" fill="#1b9c85"></rect>
+        <text x="544" y="39" font-size="12" fill="#456">4</text>
       
         <text x="12" y="76" font-size="13" fill="#213547">Partial</text>
         <rect x="160" y="62" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
-        <rect x="160" y="62" width="269" height="16" rx="8" fill="#e0a526"></rect>
-        <text x="544" y="75" font-size="12" fill="#456">5</text>
+        <rect x="160" y="62" width="376" height="16" rx="8" fill="#e0a526"></rect>
+        <text x="544" y="75" font-size="12" fill="#456">6</text>
       
         <text x="12" y="112" font-size="13" fill="#213547">Gap</text>
         <rect x="160" y="98" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
-        <rect x="160" y="98" width="107" height="16" rx="8" fill="#d65c4f"></rect>
-        <text x="544" y="111" font-size="12" fill="#456">2</text>
+        <rect x="160" y="98" width="251" height="16" rx="8" fill="#d65c4f"></rect>
+        <text x="544" y="111" font-size="12" fill="#456">4</text>
       </svg>
         </div>
         <div class="chart">
@@ -197,116 +226,116 @@
         <h2>Requirement Assessment</h2>
         <div class="grid">
           
-        <div class="card requirement met">
-          <div class="pill met">met</div>
+        <div class="card requirement partial">
+          <div class="pill partial">partial</div>
           <h3>software development lifecycle</h3>
           <p><strong>Importance:</strong> core</p>
-          <p><strong>Evidence:</strong> Experience in developing web applications and participating in the full software development lifecycle through club projects.</p>
-          <p>. </p>
+          <p><strong>Evidence:</strong> Experience in developing web applications and participating in the software development process through club activities.</p>
+          <p>Could strengthen by explicitly mentioning the software development lifecycle in your projects.</p>
         </div>
       
         <div class="card requirement met">
           <div class="pill met">met</div>
           <h3>coding</h3>
           <p><strong>Importance:</strong> core</p>
-          <p><strong>Evidence:</strong> Proficient in multiple programming languages including JavaScript, TypeScript, C++, and Python.</p>
-          <p>. </p>
+          <p><strong>Evidence:</strong> Proficient in multiple programming languages including JavaScript, TypeScript, Python, C, and C++.</p>
+          <p>Strong coding skills are evident.</p>
         </div>
       
-        <div class="card requirement partial">
-          <div class="pill partial">partial</div>
+        <div class="card requirement gap">
+          <div class="pill gap">gap</div>
           <h3>testing</h3>
           <p><strong>Importance:</strong> core</p>
-          <p><strong>Evidence:</strong> Experience in code reviews and ensuring functional requirements are met, but specific testing experience is not detailed.</p>
-          <p>Consider highlighting any testing methodologies used in projects.</p>
+          <p><strong>Evidence:</strong> No direct mention of testing methodologies or experience in the resume.</p>
+          <p>Consider gaining experience in testing frameworks or methodologies.</p>
         </div>
       
         <div class="card requirement partial">
           <div class="pill partial">partial</div>
           <h3>deployment</h3>
           <p><strong>Importance:</strong> core</p>
-          <p><strong>Evidence:</strong> Experience deploying applications using cloud platforms like Azure, but specific deployment processes are not detailed.</p>
-          <p>Clarify deployment experiences in your projects.</p>
+          <p><strong>Evidence:</strong> Experience with deploying applications using cloud platforms like AWS and Azure.</p>
+          <p>Could elaborate on deployment processes in your projects.</p>
         </div>
       
-        <div class="card requirement met">
-          <div class="pill met">met</div>
+        <div class="card requirement partial">
+          <div class="pill partial">partial</div>
           <h3>clean code</h3>
           <p><strong>Importance:</strong> core</p>
-          <p><strong>Evidence:</strong> Emphasis on writing clean, efficient, and well-documented code in project descriptions.</p>
-          <p>. </p>
+          <p><strong>Evidence:</strong> Experience in writing clean, efficient code is implied through project descriptions.</p>
+          <p>Explicitly mention clean code practices in your projects.</p>
         </div>
       
         <div class="card requirement partial">
           <div class="pill partial">partial</div>
           <h3>troubleshooting</h3>
           <p><strong>Importance:</strong> core</p>
-          <p><strong>Evidence:</strong> Collaborated with team members to troubleshoot and resolve software defects, but specific examples are limited.</p>
-          <p>Provide specific examples of troubleshooting in your projects.</p>
+          <p><strong>Evidence:</strong> Collaborated with team members to troubleshoot and resolve software defects in projects.</p>
+          <p>Highlight specific troubleshooting experiences.</p>
         </div>
       
-        <div class="card requirement met">
-          <div class="pill met">met</div>
+        <div class="card requirement gap">
+          <div class="pill gap">gap</div>
           <h3>code reviews</h3>
           <p><strong>Importance:</strong> core</p>
-          <p><strong>Evidence:</strong> Participated in code reviews during project development.</p>
-          <p>. </p>
+          <p><strong>Evidence:</strong> No mention of participating in code reviews in the resume.</p>
+          <p>Seek opportunities to engage in code reviews.</p>
         </div>
       
-        <div class="card requirement met">
-          <div class="pill met">met</div>
+        <div class="card requirement partial">
+          <div class="pill partial">partial</div>
           <h3>technical documentation</h3>
           <p><strong>Importance:</strong> core</p>
-          <p><strong>Evidence:</strong> Performed business analysis and system documentation for club projects.</p>
-          <p>. </p>
+          <p><strong>Evidence:</strong> Performed business analysis and system documentation for projects.</p>
+          <p>Could enhance by detailing specific documentation practices.</p>
         </div>
       
         <div class="card requirement met">
           <div class="pill met">met</div>
           <h3>team collaboration</h3>
           <p><strong>Importance:</strong> core</p>
-          <p><strong>Evidence:</strong> Collaborated with a team of 10+ members in various projects and workshops.</p>
-          <p>. </p>
+          <p><strong>Evidence:</strong> Collaborated with a team of 10+ members in project development and club activities.</p>
+          <p>Strong evidence of teamwork.</p>
         </div>
       
         <div class="card requirement gap">
           <div class="pill gap">gap</div>
           <h3>internship experience</h3>
           <p><strong>Importance:</strong> important</p>
-          <p><strong>Evidence:</strong> No formal internship experience mentioned.</p>
-          <p>Consider seeking internships to strengthen your application.</p>
+          <p><strong>Evidence:</strong> No internship experience mentioned in the resume.</p>
+          <p>Consider applying for internships to gain relevant experience.</p>
         </div>
       
         <div class="card requirement gap">
           <div class="pill gap">gap</div>
           <h3>agile methodologies</h3>
           <p><strong>Importance:</strong> important</p>
-          <p><strong>Evidence:</strong> No specific experience with agile methodologies mentioned.</p>
-          <p>Familiarize yourself with agile practices and consider mentioning any relevant coursework.</p>
+          <p><strong>Evidence:</strong> No mention of experience with agile methodologies in the resume.</p>
+          <p>Consider learning about agile practices.</p>
         </div>
       
-        <div class="card requirement partial">
-          <div class="pill partial">partial</div>
+        <div class="card requirement met">
+          <div class="pill met">met</div>
           <h3>cloud platforms</h3>
           <p><strong>Importance:</strong> important</p>
-          <p><strong>Evidence:</strong> Experience with AWS and Microsoft Azure, but specific projects using these platforms are not detailed.</p>
-          <p>Highlight specific projects where cloud platforms were utilized.</p>
+          <p><strong>Evidence:</strong> Experience with AWS and Microsoft Azure in projects.</p>
+          <p>Strong alignment with cloud platform experience.</p>
         </div>
       
         <div class="card requirement met">
           <div class="pill met">met</div>
           <h3>database concepts</h3>
           <p><strong>Importance:</strong> important</p>
-          <p><strong>Evidence:</strong> Experience with MongoDB and MySQL in project development.</p>
-          <p>. </p>
+          <p><strong>Evidence:</strong> Experience with MongoDB and MySQL in projects.</p>
+          <p>Good alignment with database concepts.</p>
         </div>
       
         <div class="card requirement partial">
           <div class="pill partial">partial</div>
           <h3>SQL</h3>
           <p><strong>Importance:</strong> important</p>
-          <p><strong>Evidence:</strong> Experience with MySQL, but specific SQL skills are not detailed.</p>
-          <p>Consider detailing SQL queries or database management tasks.</p>
+          <p><strong>Evidence:</strong> Experience with MySQL, but no specific mention of SQL skills.</p>
+          <p>Could emphasize SQL skills more clearly.</p>
         </div>
       
         </div>
@@ -317,27 +346,27 @@
         <div class="grid">
           
         <div class="card">
-          <h3>Professional Summary</h3>
-          <p><strong>Change:</strong> Add a concise professional summary highlighting key skills and career goals.</p>
-          <p><strong>Why:</strong> A strong summary can capture the attention of hiring managers and provide a quick overview of qualifications.</p>
+          <h3>professional summary</h3>
+          <p><strong>Change:</strong> Add a concise professional summary that highlights your skills, experience, and career goals.</p>
+          <p><strong>Why:</strong> This will improve the overall presentation of your resume and make it more appealing to recruiters.</p>
         </div>
       
         <div class="card">
-          <h3>Work Experience</h3>
-          <p><strong>Change:</strong> Include specific metrics or outcomes from projects to quantify achievements and impact.</p>
-          <p><strong>Why:</strong> Quantifying achievements can make your contributions more compelling.</p>
+          <h3>work experience</h3>
+          <p><strong>Change:</strong> Include specific examples of testing and code review experiences if applicable.</p>
+          <p><strong>Why:</strong> This will strengthen your application by demonstrating a comprehensive understanding of the software development lifecycle.</p>
         </div>
       
         <div class="card">
-          <h3>Skills Section</h3>
-          <p><strong>Change:</strong> Incorporate relevant keywords from job postings into the resume.</p>
-          <p><strong>Why:</strong> Using industry-relevant keywords can help the resume pass through Applicant Tracking Systems (ATS) and catch the attention of recruiters.</p>
+          <h3>skills</h3>
+          <p><strong>Change:</strong> Incorporate more relevant keywords from job postings, particularly &#39;clean code&#39;, &#39;testing&#39;, and &#39;agile methodologies&#39;.</p>
+          <p><strong>Why:</strong> This will help your resume pass through Applicant Tracking Systems (ATS) and catch the attention of hiring managers.</p>
         </div>
       
         <div class="card">
-          <h3>Projects</h3>
-          <p><strong>Change:</strong> Clarify deployment experiences and troubleshooting examples in project descriptions.</p>
-          <p><strong>Why:</strong> Providing specific examples can strengthen your application and demonstrate your problem-solving abilities.</p>
+          <h3>projects</h3>
+          <p><strong>Change:</strong> Highlight specific outcomes and technologies used in each project more clearly.</p>
+          <p><strong>Why:</strong> This will demonstrate impact and results, making your contributions more tangible.</p>
         </div>
       
         </div>
@@ -346,28 +375,50 @@
       <section class="section grid">
         <div class="card">
           <h2>Cover Letter Guidance</h2>
-          <ul><li>Emphasize your familiarity with the software development lifecycle and your coding skills in the cover letter.</li><li>Mention your collaborative experiences and how they align with Intuit&#39;s team-oriented culture.</li><li>Highlight any relevant projects that demonstrate your ability to write clean code and contribute to code reviews.</li><li>Discuss your eagerness to learn and adapt to new technologies, especially in light of Intuit&#39;s focus on innovation. </li></ul>
+          <ul><li>Emphasize your collaborative projects and how they align with Intuit&#39;s focus on teamwork and innovation.</li><li>Mention your eagerness to learn and adapt to new technologies, particularly in AI and automation, which are relevant to Intuit&#39;s recent developments.</li><li>Discuss your experience in leading workshops and community engagement, showcasing your leadership and communication skills.</li><li>Express your enthusiasm for contributing to a positive work culture and supporting small businesses, aligning with Intuit&#39;s mission.</li></ul>
         </div>
         <div class="card">
           <h2>Likely Interview Questions</h2>
-          <ul><li>Can you describe your experience with the software development lifecycle?</li><li>How do you ensure the code you write is clean and maintainable?</li><li>Can you provide an example of a time you collaborated with a team to troubleshoot a software issue?</li><li>What technologies are you most comfortable with, and how have you applied them in your projects?</li><li>How do you approach learning new technologies or methodologies?</li></ul>
+          <ul><li>Can you describe a project where you had to troubleshoot a significant issue? How did you approach it?</li><li>What coding standards do you follow to ensure clean code?</li><li>How do you prioritize tasks when working on multiple projects?</li><li>Can you give an example of how you collaborated with a team to achieve a common goal?</li><li>What technologies or methodologies are you currently learning or interested in?</li></ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Cover Letter Drafts</h2>
+        <div class="grid">
+          
+        <div class="card">
+          <div class="pill neutral">Polished and Balanced</div>
+          <h3>Professional</h3>
+          <p><strong>Emphasis:</strong> Collaboration and Learning</p>
+          <p class="letter-body">Dear Hiring Manager,<br><br>I am writing to express my interest in the Software Developer 1 position at Intuit, as advertised. With a solid foundation in software development, particularly in JavaScript, TypeScript, and various web technologies, I am excited about the opportunity to contribute to your team and support Intuit&#39;s mission of empowering small businesses.<br><br>During my time as a Junior Developer at the Seneca Software Developer Club, I collaborated with a team of over ten members to develop web applications utilizing REST APIs and databases such as MongoDB and MySQL. This experience allowed me to actively participate in the software development lifecycle, from coding to deployment, while focusing on writing clean and efficient code. Additionally, I led workshops on modern technologies like React.js and API integration, which not only enhanced my technical skills but also fostered a collaborative learning environment among club members.<br><br>I am particularly drawn to Intuit&#39;s commitment to innovation and its recent initiatives in generative AI, as I believe that leveraging AI tools can significantly enhance software development processes. I am eager to learn and apply new technologies, and I am confident that my adaptability in agile environments will allow me to thrive in your dynamic team.<br><br>Furthermore, I understand the importance of technical documentation and code reviews in ensuring high-quality software. I have experience in performing business analysis and system documentation, and I am keen to contribute to code reviews to maintain the integrity of our projects.<br><br>I am enthusiastic about the possibility of joining Intuit and contributing to a positive work culture that emphasizes teamwork and continuous learning. Thank you for considering my application. I look forward to the opportunity to discuss how my skills and experiences align with the goals of your team.<br><br>Sincerely,<br>Krutin Polra</p>
+        </div>
+      
+        <div class="card">
+          <div class="pill neutral">Direct and Impact-Focused</div>
+          <h3>Concise and Assertive</h3>
+          <p><strong>Emphasis:</strong> Skills and Contributions</p>
+          <p class="letter-body">Dear Hiring Manager,<br><br>I am excited to apply for the Software Developer 1 position at Intuit. With my strong technical skills in JavaScript, TypeScript, and cloud platforms like AWS and Azure, I am ready to contribute effectively to your team.<br><br>At the Seneca Software Developer Club, I collaborated with a diverse team to create web applications that enhanced user engagement and streamlined processes. My hands-on experience with REST APIs and databases, combined with my commitment to clean code practices, positions me well to meet the challenges of this role. I have led workshops on cutting-edge technologies, showcasing my ability to communicate complex concepts clearly and foster collaboration.<br><br>Intuit&#39;s focus on innovation, particularly in AI, resonates with my passion for leveraging technology to drive business success. I am eager to learn and implement new methodologies that can enhance our software development processes. My proactive approach to troubleshooting and problem-solving will ensure that I contribute to high-quality deliverables.<br><br>I am particularly impressed with Intuit&#39;s dedication to supporting small businesses, and I look forward to being a part of a team that shares this vision. Thank you for considering my application. I am eager to discuss how my skills can contribute to Intuit&#39;s continued success.<br><br>Best regards,<br>Krutin Polra</p>
+        </div>
+      
         </div>
       </section>
 
       <section class="section grid">
         <div class="card">
           <h2>Skills To Brush Up</h2>
-          <ul><li>Agile methodologies</li><li>Testing frameworks</li><li>Deployment processes</li></ul>
+          <ul><li>Testing methodologies and frameworks</li><li>Agile development practices</li><li>Troubleshooting techniques</li></ul>
         </div>
         <div class="card">
           <h2>Company Research Topics</h2>
-          <ul><li>Intuit&#39;s recent developments in AI and innovation</li><li>Company culture and values</li><li>Recent projects or products launched by Intuit</li></ul>
+          <ul><li>Intuit&#39;s recent generative AI initiatives and how they may impact software development.</li><li>The company&#39;s culture and values, particularly regarding innovation and support for small businesses.</li><li>Recent developments in Intuit&#39;s product offerings and how they relate to software development.</li></ul>
         </div>
         <div class="card">
           <h2>Talking Points</h2>
-          <ul><li>Your project experiences and the technologies used</li><li>Your collaborative approach and leadership in team settings</li><li>Your enthusiasm for learning and adapting to new technologies, especially in the context of Intuit&#39;s focus on innovation. </li><li>Your understanding of the financial software industry and how it relates to your skills. </li></ul>
+          <ul><li>Your diverse technical skills and how they align with the role&#39;s requirements.</li><li>Your project experiences that demonstrate your ability to work collaboratively and lead initiatives.</li><li>Your interest in AI and how you plan to integrate it into your future work.  </li><li>Your commitment to continuous learning and adapting to new technologies.</li></ul>
         </div>
       </section>
+    
     </div>
   </body>
 </html>

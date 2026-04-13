@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Job Market Analysis</title>
+    <style>
+      :root {
+        --paper: #f8f4ed;
+        --ink: #173042;
+        --muted: #597b96;
+        --panel: #ffffff;
+        --line: #d8e2e9;
+        --green: #1b9c85;
+        --amber: #e0a526;
+        --red: #d65c4f;
+        --blue: #2f6d9f;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", "Aptos", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(47,109,159,0.18), transparent 28%),
+          radial-gradient(circle at top right, rgba(27,156,133,0.16), transparent 22%),
+          linear-gradient(180deg, #fbfaf6, var(--paper));
+      }
+      .wrap {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 32px 18px 64px;
+      }
+      .hero {
+        background: linear-gradient(145deg, rgba(255,255,255,0.96), rgba(236,244,248,0.96));
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 28px;
+        margin-bottom: 28px;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .section {
+        margin-top: 28px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+      }
+      .card, .chart {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 18px;
+      }
+      .pill {
+        display: inline-block;
+        border-radius: 999px;
+        padding: 5px 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        background: rgba(47,109,159,0.12);
+        color: var(--blue);
+        margin-bottom: 10px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th, td {
+        text-align: left;
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+      pre.report-text {
+        background: #fbfdff;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 20px;
+        white-space: pre-wrap;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+      }
+      article.markdown {
+        line-height: 1.65;
+      }
+      article.markdown > :first-child {
+        margin-top: 0;
+      }
+      article.markdown h1 {
+        font-size: 24px;
+        margin: 0 0 12px;
+      }
+      article.markdown h2 {
+        font-size: 18px;
+        margin: 22px 0 10px;
+      }
+      article.markdown h3 {
+        font-size: 16px;
+        margin: 18px 0 8px;
+      }
+      article.markdown p {
+        margin: 10px 0;
+      }
+      article.markdown pre {
+        background: #fbfdff;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 14px;
+        overflow-x: auto;
+      }
+      article.markdown code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+        font-size: 0.95em;
+      }
+      article.markdown table {
+        margin-top: 12px;
+      }
+      .letter-body {
+        line-height: 1.65;
+      }
+      @media (max-width: 860px) {
+        .wrap {
+          padding: 24px 14px 56px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <section class="hero">
+        <p class="meta">Generated 2026-04-13T23:14:46.612Z</p>
+        <h1>Job Market Analysis</h1>
+      </section>
+      
+    <section class="grid">
+      <div class="card"><div class="pill">Summary</div><h2>10</h2><p>postings analyzed</p></div>
+      <div class="card"><div class="pill">Experience</div><h2>5</h2><p>median years requested</p></div>
+      <div class="card"><div class="pill">Salary</div><h2>55314.5</h2><p>average midpoint</p></div>
+    </section>
+
+    <section class="section card">
+      <h2>Executive Summary</h2>
+      <p>The job market is currently showing a strong demand for software development roles, particularly in programming languages and AI-related skills. Remote work opportunities are prevalent, with a notable portion of positions offering flexibility. However, there is a lack of clarity regarding seniority and educational requirements in many postings, which may pose challenges for job seekers.</p>
+    </section>
+
+    <section class="section grid">
+      <div class="chart">
+        <h2>Top Required Skills</h2>
+        <svg viewBox="0 0 560 312" width="100%" height="312" role="img">
+        <text x="12" y="40" font-size="13" fill="#213547">Communication</text>
+        <rect x="160" y="26" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="26" width="376" height="16" rx="8" fill="#2f6d9f"></rect>
+        <text x="544" y="39" font-size="12" fill="#456">3</text>
+      
+        <text x="12" y="76" font-size="13" fill="#213547">Java</text>
+        <rect x="160" y="62" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="62" width="376" height="16" rx="8" fill="#2f6d9f"></rect>
+        <text x="544" y="75" font-size="12" fill="#456">3</text>
+      
+        <text x="12" y="112" font-size="13" fill="#213547">Problem Solving</text>
+        <rect x="160" y="98" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="98" width="376" height="16" rx="8" fill="#2f6d9f"></rect>
+        <text x="544" y="111" font-size="12" fill="#456">3</text>
+      
+        <text x="12" y="148" font-size="13" fill="#213547">React</text>
+        <rect x="160" y="134" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="134" width="376" height="16" rx="8" fill="#2f6d9f"></rect>
+        <text x="544" y="147" font-size="12" fill="#456">3</text>
+      
+        <text x="12" y="184" font-size="13" fill="#213547">Ai Tools</text>
+        <rect x="160" y="170" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="170" width="251" height="16" rx="8" fill="#2f6d9f"></rect>
+        <text x="544" y="183" font-size="12" fill="#456">2</text>
+      
+        <text x="12" y="220" font-size="13" fill="#213547">C++</text>
+        <rect x="160" y="206" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="206" width="251" height="16" rx="8" fill="#2f6d9f"></rect>
+        <text x="544" y="219" font-size="12" fill="#456">2</text>
+      
+        <text x="12" y="256" font-size="13" fill="#213547">Communication Skills</text>
+        <rect x="160" y="242" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="242" width="251" height="16" rx="8" fill="#2f6d9f"></rect>
+        <text x="544" y="255" font-size="12" fill="#456">2</text>
+      
+        <text x="12" y="292" font-size="13" fill="#213547">Go</text>
+        <rect x="160" y="278" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="278" width="251" height="16" rx="8" fill="#2f6d9f"></rect>
+        <text x="544" y="291" font-size="12" fill="#456">2</text>
+      </svg>
+      </div>
+      <div class="chart">
+        <h2>Remote Distribution</h2>
+        <svg viewBox="0 0 520 204" width="100%" height="204" role="img">
+        <text x="12" y="40" font-size="13" fill="#213547">remote</text>
+        <rect x="160" y="26" width="336" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="26" width="336" height="16" rx="8" fill="#1b9c85"></rect>
+        <text x="504" y="39" font-size="12" fill="#456">4</text>
+      
+        <text x="12" y="76" font-size="13" fill="#213547">hybrid</text>
+        <rect x="160" y="62" width="336" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="62" width="168" height="16" rx="8" fill="#1b9c85"></rect>
+        <text x="504" y="75" font-size="12" fill="#456">2</text>
+      
+        <text x="12" y="112" font-size="13" fill="#213547">not_listed</text>
+        <rect x="160" y="98" width="336" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="98" width="168" height="16" rx="8" fill="#1b9c85"></rect>
+        <text x="504" y="111" font-size="12" fill="#456">2</text>
+      
+        <text x="12" y="148" font-size="13" fill="#213547">flexible</text>
+        <rect x="160" y="134" width="336" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="134" width="84" height="16" rx="8" fill="#1b9c85"></rect>
+        <text x="504" y="147" font-size="12" fill="#456">1</text>
+      
+        <text x="12" y="184" font-size="13" fill="#213547">onsite</text>
+        <rect x="160" y="170" width="336" height="16" rx="8" fill="#dbe7ef"></rect>
+        <rect x="160" y="170" width="84" height="16" rx="8" fill="#1b9c85"></rect>
+        <text x="504" y="183" font-size="12" fill="#456">1</text>
+      </svg>
+      </div>
+    </section>
+
+    <section class="section grid">
+      <div class="card">
+        <h2>Preferred Skills</h2>
+        <table><thead><tr><th>Skill</th><th>Count</th></tr></thead><tbody><tr><td>Git</td><td>2</td></tr><tr><td>Sql</td><td>2</td></tr><tr><td>Ads Domain Experience</td><td>1</td></tr><tr><td>Agile Development</td><td>1</td></tr><tr><td>Agile Methodologies</td><td>1</td></tr><tr><td>Applepay</td><td>1</td></tr><tr><td>Arxml</td><td>1</td></tr><tr><td>C/c++ Programming</td><td>1</td></tr><tr><td>Can Communications</td><td>1</td></tr><tr><td>Cloud Platforms</td><td>1</td></tr><tr><td>Consumer Hardware Interest</td><td>1</td></tr><tr><td>Cppu Test Framework</td><td>1</td></tr></tbody></table>
+      </div>
+      <div class="card">
+        <h2>Education Breakdown</h2>
+        <table><thead><tr><th>Requirement</th><th>Count</th></tr></thead><tbody><tr><td>not listed</td><td>10</td></tr></tbody></table>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>Patterns and Trends</h2>
+      
+            <h3>High Demand for Programming Skills</h3>
+            <p>Skills such as Java, Python, and JavaScript are frequently required across various roles, indicating a strong demand for software development expertise.</p>
+          
+            <h3>Remote Work Opportunities</h3>
+            <p>40% of job postings are fully remote, with additional hybrid options available, suggesting a shift towards flexible work environments.</p>
+          
+            <h3>Lack of Clarity in Seniority and Education Requirements</h3>
+            <p>Half of the postings do not specify seniority levels, and all postings lack educational requirements, which may complicate job seekers&#39; applications.</p>
+          
+            <h3>Focus on AI and Automation</h3>
+            <p>Several roles emphasize AI tools and automation, reflecting a growing trend in the industry towards integrating AI into software development.</p>
+          
+    </section>
+
+    <section class="section grid">
+      <div class="card">
+        <h2>Candidate Takeaways</h2>
+        <ul><li>Focus on developing strong programming skills, particularly in Java, Python, and JavaScript, as these are highly sought after.</li><li>Consider applying for remote or hybrid positions, as they make up a significant portion of the job market.</li><li>Be prepared for a lack of clarity regarding seniority and educational requirements; emphasize relevant experience and skills in applications.</li><li>Highlight any experience with AI tools or automation in your resume, as these are increasingly valued by employers.</li></ul>
+      </div>
+      <div class="card">
+        <h2>Risk Signals</h2>
+        <ul><li>The presence of many postings without listed seniority or educational requirements may indicate a lack of structured hiring processes.</li><li>Companies facing legal challenges or funding issues, such as DataAnnotation, may pose risks for job stability and growth opportunities.</li><li>The high number of required skills in postings may deter candidates who do not meet all criteria, potentially leading to a narrower applicant pool.</li></ul>
+      </div>
+      <div class="card">
+        <h2>Company Research Highlights</h2>
+        <ul><li>Interest in AI and Automation</li><li>Passion for Health and Fitness</li><li>Collaboration and Communication</li><li>Proficiency in programming languages such as Kotlin, JavaScript, TypeScript, Python, C, C#, C++, React, Go, Java, and Swift</li><li>Excellent writing and grammar skills</li><li>Interest in AI development and quality data annotation</li><li>Experience with programming languages (Go, Python, Scala, Java, C++)</li><li>Relevant projects in the advertising domain</li></ul>
+      </div>
+    </section>
+
+    
+  
+    </div>
+  </body>
+</html>

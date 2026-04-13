@@ -36,29 +36,11 @@
         border: 1px solid var(--line);
         border-radius: 28px;
         padding: 28px;
-        display: grid;
-        grid-template-columns: 1.3fr 0.7fr;
-        gap: 20px;
+        margin-bottom: 28px;
       }
-      .score {
-        border-radius: 24px;
-        padding: 18px;
-        background: linear-gradient(180deg, #fdf8ef, #fff);
-        border: 1px solid var(--line);
-      }
-      .score-number {
-        font-size: 72px;
-        line-height: 1;
-        font-weight: 700;
-      }
-      .score-band {
-        display: inline-block;
-        margin-top: 12px;
-        padding: 6px 10px;
-        border-radius: 999px;
-        background: rgba(47,109,159,0.1);
-        color: var(--blue);
-        font-weight: 600;
+      .meta {
+        color: var(--muted);
+        font-size: 14px;
       }
       .section {
         margin-top: 28px;
@@ -68,7 +50,7 @@
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         gap: 16px;
       }
-      .card {
+      .card, .chart {
         background: var(--panel);
         border: 1px solid var(--line);
         border-radius: 20px;
@@ -81,32 +63,74 @@
         font-size: 12px;
         text-transform: uppercase;
         letter-spacing: 0.08em;
+        background: rgba(47,109,159,0.12);
+        color: var(--blue);
         margin-bottom: 10px;
       }
-      .pill.met { background: rgba(27,156,133,0.12); color: var(--green); }
-      .pill.partial { background: rgba(224,165,38,0.12); color: #8c6900; }
-      .pill.gap { background: rgba(214,92,79,0.12); color: var(--red); }
-      .requirement.met { border-left: 6px solid var(--green); }
-      .requirement.partial { border-left: 6px solid var(--amber); }
-      .requirement.gap { border-left: 6px solid var(--red); }
-      h1, h2, h3 { margin-top: 0; }
-      ul { padding-left: 20px; margin-bottom: 0; }
-      .chart {
-        background: var(--panel);
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th, td {
+        text-align: left;
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+      pre.report-text {
+        background: #fbfdff;
         border: 1px solid var(--line);
         border-radius: 20px;
-        padding: 16px;
+        padding: 20px;
+        white-space: pre-wrap;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
       }
-      .meta {
-        color: var(--muted);
-        font-size: 14px;
+      article.markdown {
+        line-height: 1.65;
+      }
+      article.markdown > :first-child {
+        margin-top: 0;
+      }
+      article.markdown h1 {
+        font-size: 24px;
+        margin: 0 0 12px;
+      }
+      article.markdown h2 {
+        font-size: 18px;
+        margin: 22px 0 10px;
+      }
+      article.markdown h3 {
+        font-size: 16px;
+        margin: 18px 0 8px;
+      }
+      article.markdown p {
+        margin: 10px 0;
+      }
+      article.markdown pre {
+        background: #fbfdff;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 14px;
+        overflow-x: auto;
+      }
+      article.markdown code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+        font-size: 0.95em;
+      }
+      article.markdown table {
+        margin-top: 12px;
+      }
+      .letter-body {
+        line-height: 1.65;
       }
       @media (max-width: 860px) {
-        .hero {
-          grid-template-columns: 1fr;
-        }
-        .score-number {
-          font-size: 56px;
+        .wrap {
+          padding: 24px 14px 56px;
         }
       }
     </style>
@@ -114,15 +138,20 @@
   <body>
     <div class="wrap">
       <section class="hero">
+        <p class="meta">Generated 2026-04-13T23:21:12.259Z</p>
+        <h1>Application Advisor Report</h1>
+      </section>
+      
+      <section class="hero" style="display:grid;grid-template-columns:1.3fr 0.7fr;gap:20px;">
         <div>
-          <p class="meta">Generated 2026-04-13T21:49:27.526Z</p>
+          <p class="meta">Software Developer, New Grad at IXL Learning</p>
           <h1>Software Developer, New Grad at IXL Learning</h1>
-          <p>Krutin Polra is a promising candidate for the Software Developer, New Grad position at IXL Learning. With a solid foundation in programming, particularly in Java and web technologies, Krutin&#39;s experience aligns well with the role&#39;s requirements. However, there are areas for improvement, particularly in gaining more experience with high-demand technologies like React and SQL, and enhancing the resume with a professional summary and relevant keywords.</p>
-          <p><strong>Encouraging take:</strong> Given your strong technical skills and project experience, I encourage you to apply for this role. Your background in Java and web development, along with your collaborative experience, positions you well for this opportunity at IXL Learning.</p>
+          <p>Krutin Polra has a strong foundation in programming and web development, with relevant skills in Java, JavaScript, and various web technologies. While the candidate has project experience and soft skills that align well with the Software Developer role at IXL Learning, there are some gaps in professional experience and specific skills related to AI and automation. Overall, Krutin is a plausible candidate for the role and should consider applying while addressing the identified gaps.</p>
+          <p><strong>Encouraging take:</strong> Given your solid technical skills and project experience, this role at IXL Learning is a great opportunity to kickstart your career in software development. Your background aligns well with the requirements, and with some adjustments to your resume, you can present yourself as a strong candidate.</p>
         </div>
-        <div class="score">
-          <div class="score-number">59%</div>
-          <div class="score-band">good_fit</div>
+        <div class="card">
+          <div style="font-size:72px;line-height:1;font-weight:700;">65%</div>
+          <div class="pill">good_fit</div>
           <p>Good fit, you meet the core requirements and should apply with a targeted story.</p>
         </div>
       </section>
@@ -138,13 +167,13 @@
       
         <text x="12" y="76" font-size="13" fill="#213547">Partial</text>
         <rect x="160" y="62" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
-        <rect x="160" y="62" width="251" height="16" rx="8" fill="#e0a526"></rect>
-        <text x="544" y="75" font-size="12" fill="#456">4</text>
+        <rect x="160" y="62" width="376" height="16" rx="8" fill="#e0a526"></rect>
+        <text x="544" y="75" font-size="12" fill="#456">6</text>
       
         <text x="12" y="112" font-size="13" fill="#213547">Gap</text>
         <rect x="160" y="98" width="376" height="16" rx="8" fill="#dbe7ef"></rect>
-        <rect x="160" y="98" width="313" height="16" rx="8" fill="#d65c4f"></rect>
-        <text x="544" y="111" font-size="12" fill="#456">5</text>
+        <rect x="160" y="98" width="188" height="16" rx="8" fill="#d65c4f"></rect>
+        <text x="544" y="111" font-size="12" fill="#456">3</text>
       </svg>
         </div>
         <div class="chart">
@@ -201,7 +230,7 @@
           <div class="pill met">met</div>
           <h3>programming principles</h3>
           <p><strong>Importance:</strong> core</p>
-          <p><strong>Evidence:</strong> Demonstrated understanding of programming principles through coursework and projects involving Java, JavaScript, and C++.</p>
+          <p><strong>Evidence:</strong> Proficient in multiple programming languages including Java, JavaScript, and Python, demonstrating a solid understanding of programming principles.</p>
           <p>. </p>
         </div>
       
@@ -209,31 +238,31 @@
           <div class="pill met">met</div>
           <h3>Java</h3>
           <p><strong>Importance:</strong> core</p>
-          <p><strong>Evidence:</strong> Proficient in Java, as evidenced by coursework and project experience.</p>
-          <p>. </p>
-        </div>
-      
-        <div class="card requirement met">
-          <div class="pill met">met</div>
-          <h3>object-oriented programming</h3>
-          <p><strong>Importance:</strong> core</p>
-          <p><strong>Evidence:</strong> Experience with OOP concepts in projects, particularly in C++ and Java.</p>
+          <p><strong>Evidence:</strong> Java is listed as one of the hard skills on the resume.</p>
           <p>. </p>
         </div>
       
         <div class="card requirement partial">
           <div class="pill partial">partial</div>
+          <h3>object-oriented programming</h3>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> Experience with C++ and Java suggests familiarity with OOP concepts, but specific examples of OOP application could strengthen this.</p>
+          <p>Consider emphasizing OOP principles in your projects.</p>
+        </div>
+      
+        <div class="card requirement met">
+          <div class="pill met">met</div>
           <h3>SQL</h3>
           <p><strong>Importance:</strong> important</p>
-          <p><strong>Evidence:</strong> Experience with MySQL in projects, but limited exposure to SQL in a professional context.</p>
-          <p>Consider highlighting any relevant coursework or self-study in SQL.</p>
+          <p><strong>Evidence:</strong> Experience with MySQL and MongoDB indicates familiarity with database management.</p>
+          <p>. </p>
         </div>
       
         <div class="card requirement met">
           <div class="pill met">met</div>
           <h3>JavaScript</h3>
-          <p><strong>Importance:</strong> important</p>
-          <p><strong>Evidence:</strong> Strong skills in JavaScript, demonstrated through multiple projects and club activities.</p>
+          <p><strong>Importance:</strong> core</p>
+          <p><strong>Evidence:</strong> JavaScript is listed as a hard skill and used in multiple projects.</p>
           <p>. </p>
         </div>
       
@@ -241,31 +270,31 @@
           <div class="pill met">met</div>
           <h3>CSS</h3>
           <p><strong>Importance:</strong> important</p>
-          <p><strong>Evidence:</strong> Proficient in CSS, used extensively in web development projects.</p>
+          <p><strong>Evidence:</strong> CSS is listed as a hard skill and used in various projects.</p>
           <p>. </p>
         </div>
       
-        <div class="card requirement gap">
-          <div class="pill gap">gap</div>
+        <div class="card requirement partial">
+          <div class="pill partial">partial</div>
           <h3>React</h3>
           <p><strong>Importance:</strong> important</p>
-          <p><strong>Evidence:</strong> Limited direct experience with React, though some exposure through workshops.</p>
-          <p>Consider taking a course or working on a personal project using React.</p>
+          <p><strong>Evidence:</strong> Experience with React.js in projects, but could be highlighted more.</p>
+          <p>Consider detailing your React projects further.</p>
         </div>
       
         <div class="card requirement gap">
           <div class="pill gap">gap</div>
           <h3>Linux</h3>
           <p><strong>Importance:</strong> bonus</p>
-          <p><strong>Evidence:</strong> No evidence of experience with Linux in the resume.</p>
-          <p>Familiarity with Linux could be beneficial; consider exploring it.</p>
+          <p><strong>Evidence:</strong> No mention of Linux experience in the resume.</p>
+          <p>Consider gaining familiarity with Linux if possible.</p>
         </div>
       
         <div class="card requirement met">
           <div class="pill met">met</div>
           <h3>Git</h3>
           <p><strong>Importance:</strong> important</p>
-          <p><strong>Evidence:</strong> Experience using Git for version control in projects and club activities.</p>
+          <p><strong>Evidence:</strong> Git is listed as a hard skill.</p>
           <p>. </p>
         </div>
       
@@ -273,48 +302,48 @@
           <div class="pill partial">partial</div>
           <h3>Design, implement, test, deploy, and refine integrations and internal tools</h3>
           <p><strong>Importance:</strong> core</p>
-          <p><strong>Evidence:</strong> Experience in developing web applications and collaborating on projects, but limited specific experience in integrations.</p>
-          <p>Highlight any relevant project work that involved similar responsibilities.</p>
+          <p><strong>Evidence:</strong> Experience in developing web applications and collaborating on projects, but specific examples of integrations are lacking.</p>
+          <p>Highlight any integration work in your projects.</p>
         </div>
       
         <div class="card requirement partial">
           <div class="pill partial">partial</div>
           <h3>Find and use best technologies to add features to products</h3>
           <p><strong>Importance:</strong> important</p>
-          <p><strong>Evidence:</strong> Experience in selecting technologies for projects, but more examples could strengthen this area.</p>
-          <p>Consider discussing specific technologies chosen for projects.</p>
+          <p><strong>Evidence:</strong> Experience in developing applications using various technologies, but specific examples of feature enhancements could be added.</p>
+          <p>Consider detailing how you selected technologies for your projects.</p>
         </div>
       
-        <div class="card requirement gap">
-          <div class="pill gap">gap</div>
+        <div class="card requirement partial">
+          <div class="pill partial">partial</div>
           <h3>Implement data exchange methods and standards</h3>
           <p><strong>Importance:</strong> important</p>
-          <p><strong>Evidence:</strong> No direct evidence of implementing data exchange methods in the resume.</p>
-          <p>Consider any relevant coursework or projects that may apply.</p>
+          <p><strong>Evidence:</strong> Experience with REST APIs indicates some familiarity with data exchange methods.</p>
+          <p>Highlight specific projects where you implemented data exchange.</p>
         </div>
       
         <div class="card requirement gap">
           <div class="pill gap">gap</div>
           <h3>Develop prototypes in collaboration with product management and partners</h3>
           <p><strong>Importance:</strong> important</p>
-          <p><strong>Evidence:</strong> No direct evidence of developing prototypes in collaboration with product management.</p>
-          <p>Highlight any collaborative projects that involved prototyping.</p>
+          <p><strong>Evidence:</strong> No direct evidence of collaboration with product management or partners.</p>
+          <p>Consider any relevant experiences that could demonstrate this.</p>
         </div>
       
         <div class="card requirement partial">
           <div class="pill partial">partial</div>
-          <h3>Work in a fast-paced, agile environment</h3>
+          <h3>Work in a fast-paced, agile environment for timely delivery of solutions</h3>
           <p><strong>Importance:</strong> important</p>
-          <p><strong>Evidence:</strong> Experience in a collaborative club environment, but no specific mention of agile methodologies.</p>
-          <p>Consider mentioning any agile practices used in projects.</p>
+          <p><strong>Evidence:</strong> Experience in a collaborative club environment suggests some exposure to agile practices.</p>
+          <p>Highlight any agile methodologies used in your projects.</p>
         </div>
       
         <div class="card requirement gap">
           <div class="pill gap">gap</div>
-          <h3>Help mature existing and develop new standardized processes</h3>
+          <h3>Mature existing and develop new standardized processes around technical implementations</h3>
           <p><strong>Importance:</strong> important</p>
-          <p><strong>Evidence:</strong> No evidence of experience in developing standardized processes.</p>
-          <p>Consider any relevant coursework or projects that may apply.</p>
+          <p><strong>Evidence:</strong> No evidence of developing standardized processes.</p>
+          <p>Consider any relevant experiences that could demonstrate this.</p>
         </div>
       
         </div>
@@ -325,27 +354,27 @@
         <div class="grid">
           
         <div class="card">
-          <h3>professional summary</h3>
-          <p><strong>Change:</strong> Add a professional summary that highlights key skills, experiences, and career goals.</p>
-          <p><strong>Why:</strong> A strong summary can capture the attention of hiring managers and provide a quick overview of qualifications.</p>
+          <h3>Professional Summary</h3>
+          <p><strong>Change:</strong> Add a concise professional summary that highlights your skills, experience, and career goals.</p>
+          <p><strong>Why:</strong> This will improve the overall presentation of your resume and make it more appealing to recruiters.</p>
         </div>
       
         <div class="card">
-          <h3>work experience</h3>
-          <p><strong>Change:</strong> Incorporate specific metrics or outcomes from projects to quantify achievements and impact.</p>
-          <p><strong>Why:</strong> Quantifying achievements can make your contributions more compelling.</p>
+          <h3>Skills Section</h3>
+          <p><strong>Change:</strong> Emphasize React and AI-related skills more prominently.</p>
+          <p><strong>Why:</strong> These are important for the role and will help your resume align better with job requirements.</p>
         </div>
       
         <div class="card">
-          <h3>skills</h3>
-          <p><strong>Change:</strong> Align the language and keywords in your resume with those found in job postings to improve ATS compatibility.</p>
-          <p><strong>Why:</strong> Using industry-relevant keywords can help the resume pass through Applicant Tracking Systems (ATS) and catch the attention of recruiters.</p>
+          <h3>Project Descriptions</h3>
+          <p><strong>Change:</strong> Detail specific outcomes and technologies used in your projects, especially regarding integrations and data exchange.</p>
+          <p><strong>Why:</strong> This will showcase your practical skills and align with the responsibilities of the role.</p>
         </div>
       
         <div class="card">
-          <h3>projects</h3>
-          <p><strong>Change:</strong> Highlight any relevant coursework or self-study in SQL and React.</p>
-          <p><strong>Why:</strong> Demonstrating proactive learning in these areas can strengthen your application.</p>
+          <h3>Keywords</h3>
+          <p><strong>Change:</strong> Incorporate more relevant keywords from the job posting, such as &#39;agile&#39;, &#39;integrations&#39;, and &#39;data exchange&#39;.</p>
+          <p><strong>Why:</strong> This will help your resume pass through Applicant Tracking Systems (ATS) and catch the attention of hiring managers.</p>
         </div>
       
         </div>
@@ -354,28 +383,50 @@
       <section class="section grid">
         <div class="card">
           <h2>Cover Letter Guidance</h2>
-          <ul><li>Emphasize your passion for educational technology and how your skills align with IXL Learning&#39;s mission.</li><li>Discuss your project experiences, particularly those that involved collaboration and problem-solving, to showcase your readiness for a team environment.</li><li>Mention your eagerness to learn and adapt, particularly in areas like React and SQL, to demonstrate your commitment to growth.</li><li>Highlight your leadership experience in the Seneca Software Developer Club to illustrate your teamwork and communication skills.</li></ul>
+          <ul><li>Express your passion for education and how it aligns with IXL Learning&#39;s mission.</li><li>Highlight your project experience and how it demonstrates your ability to contribute to the team.</li><li>Mention your collaborative experiences in the Seneca Software Developer Club and how they prepare you for a team-oriented environment.</li><li>Discuss your eagerness to learn and adapt, particularly in areas like AI and automation, to meet the evolving needs of the company.</li></ul>
         </div>
         <div class="card">
           <h2>Likely Interview Questions</h2>
-          <ul><li>Can you describe a project where you used Java and how you approached the development process?</li><li>How do you prioritize tasks when working on multiple projects?</li><li>What strategies do you use to ensure effective communication within a team?</li><li>Can you give an example of a challenge you faced in a project and how you overcame it?</li><li>How do you stay updated with new technologies and programming languages?</li></ul>
+          <ul><li>Can you describe a project where you used Java and how you approached the development process?</li><li>How do you prioritize tasks when working on multiple projects?</li><li>Can you give an example of a time you collaborated with a team to solve a problem?</li><li>What technologies do you think are essential for developing educational software?</li><li>How do you stay updated with new programming languages and technologies?</li></ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Cover Letter Drafts</h2>
+        <div class="grid">
+          
+        <div class="card">
+          <div class="pill neutral">Polished and Balanced</div>
+          <h3>Professional and Enthusiastic</h3>
+          <p><strong>Emphasis:</strong> Alignment with IXL Learning&#39;s mission and collaborative spirit</p>
+          <p class="letter-body">Dear Hiring Manager,<br><br>I am writing to express my interest in the Software Developer, New Grad position at IXL Learning. With a solid foundation in programming principles and a passion for educational technology, I am excited about the opportunity to contribute to a company that is making a significant impact on learning outcomes.<br><br>I recently completed my Advanced Diploma in Computer Programming at Seneca Polytechnic, where I gained hands-on experience in Java, JavaScript, and various web development technologies. As a Junior Developer at the Seneca Software Developer Club, I collaborated with a team of over ten members to develop web applications using TypeScript, JavaScript, and REST APIs. This experience not only honed my technical skills but also fostered my ability to work in a collaborative environment, a value I understand is central to IXL Learning&#39;s culture.<br><br>I am particularly drawn to IXL Learning because of its commitment to innovation in education. I admire the recent features introduced in 2023 that enhance user engagement and learning outcomes. I am eager to bring my skills in software development and my enthusiasm for education to your team, helping to design, implement, and refine integrations and internal tools that support your mission.<br><br>I am confident that my diverse technical skills, coupled with my strong communication and teamwork abilities, make me a suitable candidate for this role. I look forward to the opportunity to discuss how I can contribute to the continued success of IXL Learning.<br><br>Thank you for considering my application. I hope to speak with you soon.<br><br>Sincerely,<br>Krutin Polra</p>
+        </div>
+      
+        <div class="card">
+          <div class="pill neutral">Direct and Impact-Focused</div>
+          <h3>Confident and Results-Oriented</h3>
+          <p><strong>Emphasis:</strong> Technical skills and project contributions</p>
+          <p class="letter-body">Dear Hiring Manager,<br><br>I am excited to apply for the Software Developer, New Grad position at IXL Learning. With a strong technical background in Java, JavaScript, and web development, I am eager to contribute to your innovative team.<br><br>During my time as a Junior Developer at the Seneca Software Developer Club, I led the development of several web applications, including a dynamic website for our club that improved member engagement by 40%. My experience with technologies such as TypeScript, REST APIs, and databases like MongoDB and MySQL has equipped me with the skills necessary to design and implement robust solutions. I am particularly proud of my work on an interactive web application that utilized The Met’s public API, showcasing my ability to integrate external data sources effectively.<br><br>At IXL Learning, I see an opportunity to leverage my skills in a fast-paced, agile environment. I am particularly drawn to the challenge of developing and refining integrations and internal tools that enhance educational outcomes. I am eager to bring my problem-solving abilities and collaborative spirit to your team, contributing to projects that make a real difference in the field of education.<br><br>Thank you for considering my application. I am looking forward to the possibility of discussing how my background and skills align with the goals of IXL Learning.<br><br>Best regards,<br>Krutin Polra</p>
+        </div>
+      
         </div>
       </section>
 
       <section class="section grid">
         <div class="card">
           <h2>Skills To Brush Up</h2>
-          <ul><li>React</li><li>SQL</li><li>Agile methodologies</li></ul>
+          <ul><li>Agile methodologies</li><li>Data exchange methods</li><li>Integrations and APIs</li></ul>
         </div>
         <div class="card">
           <h2>Company Research Topics</h2>
-          <ul><li>Recent developments at IXL Learning, particularly the acquisition of Evan-Moor.</li><li>IXL Learning&#39;s approach to personalized learning and technology in education.</li><li>Company culture and employee satisfaction based on reviews.</li></ul>
+          <ul><li>Recent developments in IXL Learning&#39;s product offerings</li><li>Company culture and values</li><li>The impact of IXL Learning on educational outcomes</li></ul>
         </div>
         <div class="card">
           <h2>Talking Points</h2>
-          <ul><li>Your project experiences and the technologies used, particularly Java and JavaScript.</li><li>Your collaborative work in the Seneca Software Developer Club and how it prepared you for a team environment.</li><li>Your commitment to continuous learning and improvement in software development. </li><li>Your interest in educational technology and how it aligns with IXL Learning&#39;s mission.</li></ul>
+          <ul><li>Your technical skills and project experience relevant to the role.</li><li>Your passion for education and how it drives your work.</li><li>Your collaborative experiences and how they prepare you for a team environment. </li><li>Your willingness to learn and adapt to new technologies, particularly in AI and automation.</li></ul>
         </div>
       </section>
+    
     </div>
   </body>
 </html>

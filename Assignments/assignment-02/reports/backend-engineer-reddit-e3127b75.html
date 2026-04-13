@@ -36,29 +36,11 @@
         border: 1px solid var(--line);
         border-radius: 28px;
         padding: 28px;
-        display: grid;
-        grid-template-columns: 1.3fr 0.7fr;
-        gap: 20px;
+        margin-bottom: 28px;
       }
-      .score {
-        border-radius: 24px;
-        padding: 18px;
-        background: linear-gradient(180deg, #fdf8ef, #fff);
-        border: 1px solid var(--line);
-      }
-      .score-number {
-        font-size: 72px;
-        line-height: 1;
-        font-weight: 700;
-      }
-      .score-band {
-        display: inline-block;
-        margin-top: 12px;
-        padding: 6px 10px;
-        border-radius: 999px;
-        background: rgba(47,109,159,0.1);
-        color: var(--blue);
-        font-weight: 600;
+      .meta {
+        color: var(--muted);
+        font-size: 14px;
       }
       .section {
         margin-top: 28px;
@@ -68,7 +50,7 @@
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         gap: 16px;
       }
-      .card {
+      .card, .chart {
         background: var(--panel);
         border: 1px solid var(--line);
         border-radius: 20px;
@@ -81,32 +63,74 @@
         font-size: 12px;
         text-transform: uppercase;
         letter-spacing: 0.08em;
+        background: rgba(47,109,159,0.12);
+        color: var(--blue);
         margin-bottom: 10px;
       }
-      .pill.met { background: rgba(27,156,133,0.12); color: var(--green); }
-      .pill.partial { background: rgba(224,165,38,0.12); color: #8c6900; }
-      .pill.gap { background: rgba(214,92,79,0.12); color: var(--red); }
-      .requirement.met { border-left: 6px solid var(--green); }
-      .requirement.partial { border-left: 6px solid var(--amber); }
-      .requirement.gap { border-left: 6px solid var(--red); }
-      h1, h2, h3 { margin-top: 0; }
-      ul { padding-left: 20px; margin-bottom: 0; }
-      .chart {
-        background: var(--panel);
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th, td {
+        text-align: left;
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+      pre.report-text {
+        background: #fbfdff;
         border: 1px solid var(--line);
         border-radius: 20px;
-        padding: 16px;
+        padding: 20px;
+        white-space: pre-wrap;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
       }
-      .meta {
-        color: var(--muted);
-        font-size: 14px;
+      article.markdown {
+        line-height: 1.65;
+      }
+      article.markdown > :first-child {
+        margin-top: 0;
+      }
+      article.markdown h1 {
+        font-size: 24px;
+        margin: 0 0 12px;
+      }
+      article.markdown h2 {
+        font-size: 18px;
+        margin: 22px 0 10px;
+      }
+      article.markdown h3 {
+        font-size: 16px;
+        margin: 18px 0 8px;
+      }
+      article.markdown p {
+        margin: 10px 0;
+      }
+      article.markdown pre {
+        background: #fbfdff;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 14px;
+        overflow-x: auto;
+      }
+      article.markdown code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+        font-size: 0.95em;
+      }
+      article.markdown table {
+        margin-top: 12px;
+      }
+      .letter-body {
+        line-height: 1.65;
       }
       @media (max-width: 860px) {
-        .hero {
-          grid-template-columns: 1fr;
-        }
-        .score-number {
-          font-size: 56px;
+        .wrap {
+          padding: 24px 14px 56px;
         }
       }
     </style>
@@ -114,15 +138,20 @@
   <body>
     <div class="wrap">
       <section class="hero">
+        <p class="meta">Generated 2026-04-13T23:22:23.518Z</p>
+        <h1>Application Advisor Report</h1>
+      </section>
+      
+      <section class="hero" style="display:grid;grid-template-columns:1.3fr 0.7fr;gap:20px;">
         <div>
-          <p class="meta">Generated 2026-04-13T21:50:30.411Z</p>
+          <p class="meta">Backend Engineer at Reddit</p>
           <h1>Backend Engineer at Reddit</h1>
-          <p>Krutin Polra has a strong foundation in software development with relevant skills in programming languages and project experience. However, there are gaps in specific high-demand technologies and professional experience that need to be addressed to enhance candidacy for the Backend Engineer role at Reddit.</p>
-          <p><strong>Encouraging take:</strong> Given your diverse technical skills and project experience, applying for the Backend Engineer position at Reddit is a plausible step. With some targeted improvements to your resume and preparation, you can present a compelling application.</p>
+          <p>Krutin has a strong foundation in programming languages and project experience, but lacks the required professional experience for the Backend Engineer role at Reddit. While there are some relevant skills, there are gaps in specific required technologies and domain experience that need to be addressed.</p>
+          <p><strong>Encouraging take:</strong> Despite some gaps, Krutin&#39;s diverse technical skills and project experience make him a plausible candidate for the Backend Engineer role. With some adjustments to the resume and targeted learning, he can enhance his application.</p>
         </div>
-        <div class="score">
-          <div class="score-number">40%</div>
-          <div class="score-band">stretch</div>
+        <div class="card">
+          <div style="font-size:72px;line-height:1;font-weight:700;">40%</div>
+          <div class="pill">stretch</div>
           <p>Stretch role, still worth applying if the work excites you and you position your strengths clearly.</p>
         </div>
       </section>
@@ -201,7 +230,7 @@
           <div class="pill gap">gap</div>
           <h3>Go</h3>
           <p><strong>Importance:</strong> core</p>
-          <p><strong>Evidence:</strong> No experience with Go mentioned in the resume.</p>
+          <p><strong>Evidence:</strong> No evidence of experience with Go in the resume.</p>
           <p>Consider learning Go through online courses or projects.</p>
         </div>
       
@@ -209,7 +238,7 @@
           <div class="pill met">met</div>
           <h3>Python</h3>
           <p><strong>Importance:</strong> core</p>
-          <p><strong>Evidence:</strong> Proficient in Python as listed in hard skills.</p>
+          <p><strong>Evidence:</strong> Python is listed as a hard skill on the resume.</p>
           <p>. </p>
         </div>
       
@@ -217,15 +246,15 @@
           <div class="pill gap">gap</div>
           <h3>Scala</h3>
           <p><strong>Importance:</strong> core</p>
-          <p><strong>Evidence:</strong> No experience with Scala mentioned in the resume.</p>
-          <p>Consider exploring Scala through tutorials or projects.</p>
+          <p><strong>Evidence:</strong> No evidence of experience with Scala in the resume.</p>
+          <p>Consider learning Scala through online resources.</p>
         </div>
       
         <div class="card requirement met">
           <div class="pill met">met</div>
           <h3>Java</h3>
           <p><strong>Importance:</strong> core</p>
-          <p><strong>Evidence:</strong> Proficient in Java as listed in hard skills.</p>
+          <p><strong>Evidence:</strong> Java is listed as a hard skill on the resume.</p>
           <p>. </p>
         </div>
       
@@ -233,7 +262,7 @@
           <div class="pill met">met</div>
           <h3>C++</h3>
           <p><strong>Importance:</strong> core</p>
-          <p><strong>Evidence:</strong> Proficient in C++ as listed in hard skills.</p>
+          <p><strong>Evidence:</strong> C++ is listed as a hard skill on the resume.</p>
           <p>. </p>
         </div>
       
@@ -241,8 +270,8 @@
           <div class="pill gap">gap</div>
           <h3>Ads domain experience</h3>
           <p><strong>Importance:</strong> important</p>
-          <p><strong>Evidence:</strong> No experience in the ads domain mentioned in the resume.</p>
-          <p>Consider gaining knowledge or experience in ads technology.</p>
+          <p><strong>Evidence:</strong> No evidence of experience in the ads domain.</p>
+          <p>Seek opportunities or projects related to advertising technology.</p>
         </div>
       
         <div class="card requirement gap">
@@ -250,7 +279,7 @@
           <h3>Understanding customer needs in advertising</h3>
           <p><strong>Importance:</strong> important</p>
           <p><strong>Evidence:</strong> No evidence of understanding customer needs in advertising.</p>
-          <p>Engage in projects or coursework related to advertising.</p>
+          <p>Consider studying customer needs in advertising through courses or literature.</p>
         </div>
       
         <div class="card requirement gap">
@@ -258,38 +287,38 @@
           <h3>Design and implement Ads products with product managers</h3>
           <p><strong>Importance:</strong> core</p>
           <p><strong>Evidence:</strong> No relevant experience in designing Ads products.</p>
-          <p>Seek opportunities to work on projects involving product design.</p>
+          <p>Focus on gaining experience in product design and collaboration.</p>
         </div>
       
         <div class="card requirement partial">
           <div class="pill partial">partial</div>
           <h3>Collaborate with platform and data teams to build new features</h3>
-          <p><strong>Importance:</strong> core</p>
-          <p><strong>Evidence:</strong> Experience collaborating in a team setting, but not specifically with platform and data teams.</p>
-          <p>Highlight any relevant collaborative projects.</p>
+          <p><strong>Importance:</strong> important</p>
+          <p><strong>Evidence:</strong> Experience collaborating in a team environment, but not specifically with platform and data teams.</p>
+          <p>Highlight any collaborative projects in the resume.</p>
         </div>
       
         <div class="card requirement partial">
           <div class="pill partial">partial</div>
           <h3>Improve operational stability and code quality</h3>
           <p><strong>Importance:</strong> important</p>
-          <p><strong>Evidence:</strong> Experience in reviewing designs and ensuring requirements are met, but no specific mention of operational stability.</p>
-          <p>Consider emphasizing any relevant experiences.</p>
+          <p><strong>Evidence:</strong> Experience in reviewing designs and ensuring requirements are met, but lacks specific examples of improving code quality.</p>
+          <p>Include any relevant experiences that demonstrate code quality improvements.</p>
         </div>
       
         <div class="card requirement gap">
           <div class="pill gap">gap</div>
           <h3>Deliver dashboards and data visualizations</h3>
           <p><strong>Importance:</strong> important</p>
-          <p><strong>Evidence:</strong> No experience with dashboards or data visualizations mentioned.</p>
-          <p>Consider gaining experience in data visualization tools.</p>
+          <p><strong>Evidence:</strong> No evidence of experience delivering dashboards or data visualizations.</p>
+          <p>Consider projects that involve data visualization.</p>
         </div>
       
         <div class="card requirement partial">
           <div class="pill partial">partial</div>
           <h3>Manage project timelines and oversee project execution</h3>
           <p><strong>Importance:</strong> important</p>
-          <p><strong>Evidence:</strong> Experience in event planning and execution, but not specifically in managing project timelines.</p>
+          <p><strong>Evidence:</strong> Experience in event planning and execution, but not in a formal project management role.</p>
           <p>Highlight any relevant project management experiences.</p>
         </div>
       
@@ -301,27 +330,27 @@
         <div class="grid">
           
         <div class="card">
-          <h3>professional summary</h3>
-          <p><strong>Change:</strong> Add a professional summary that highlights key skills, experiences, and career goals.</p>
-          <p><strong>Why:</strong> A strong summary can capture the attention of hiring managers and provide a quick overview of qualifications.</p>
+          <h3>Professional Summary</h3>
+          <p><strong>Change:</strong> Add a concise professional summary that highlights your skills, experience, and career goals.</p>
+          <p><strong>Why:</strong> This will improve the overall presentation of your resume and make it more appealing to recruiters.</p>
         </div>
       
         <div class="card">
-          <h3>skills</h3>
-          <p><strong>Change:</strong> Incorporate Go and Scala into the skills section after gaining proficiency.</p>
-          <p><strong>Why:</strong> These are required skills for the role and will enhance your candidacy.</p>
+          <h3>Skills</h3>
+          <p><strong>Change:</strong> Incorporate more relevant keywords from job postings into your resume, particularly in the skills section.</p>
+          <p><strong>Why:</strong> This will help your resume pass through Applicant Tracking Systems (ATS) and catch the attention of hiring managers.</p>
         </div>
       
         <div class="card">
-          <h3>work experience</h3>
-          <p><strong>Change:</strong> Highlight any collaborative projects with data teams or product managers.</p>
-          <p><strong>Why:</strong> This aligns with the responsibilities of the role and demonstrates relevant experience.</p>
+          <h3>Projects</h3>
+          <p><strong>Change:</strong> Highlight project outcomes more clearly to demonstrate impact and results.</p>
+          <p><strong>Why:</strong> This will showcase your practical skills and ability to lead initiatives.</p>
         </div>
       
         <div class="card">
-          <h3>projects</h3>
-          <p><strong>Change:</strong> Add any relevant projects that involve ads technology or data visualization.</p>
-          <p><strong>Why:</strong> This will strengthen your application by showcasing applicable experience.</p>
+          <h3>Education</h3>
+          <p><strong>Change:</strong> Consider adding any relevant coursework related to AI or automation if applicable.</p>
+          <p><strong>Why:</strong> This will align your skills with market trends and increase your employability.</p>
         </div>
       
         </div>
@@ -330,28 +359,50 @@
       <section class="section grid">
         <div class="card">
           <h2>Cover Letter Guidance</h2>
-          <ul><li>Emphasize your proficiency in Python and Java, as these are core requirements for the role.</li><li>Discuss your project experiences that demonstrate your ability to collaborate and lead, particularly in a team setting.</li><li>Mention your eagerness to learn Go and Scala, and how you plan to bridge that gap before starting the role.</li><li>Highlight any relevant coursework or self-directed learning related to ads technology or customer needs in advertising.</li></ul>
+          <ul><li>Emphasize your programming skills in Python, Java, and C++, and express your willingness to learn Go and Scala.</li><li>Highlight your project experience, particularly any collaborative efforts that demonstrate teamwork and problem-solving skills.</li><li>Mention your interest in the advertising domain and any relevant coursework or self-study you plan to undertake.</li><li>Discuss your soft skills, particularly communication and leadership, and how they can contribute to a collaborative engineering environment.</li></ul>
         </div>
         <div class="card">
           <h2>Likely Interview Questions</h2>
-          <ul><li>Can you describe your experience with Python and Java in your projects?</li><li>How do you approach learning new programming languages like Go or Scala?</li><li>Can you provide an example of a project where you collaborated with a team to deliver a product?</li><li>What strategies do you use to ensure code quality and operational stability in your projects?</li><li>How do you understand customer needs when developing software solutions?</li></ul>
+          <ul><li>Can you describe a project where you collaborated with a team to build a feature?</li><li>How do you approach learning a new programming language or technology?</li><li>What experience do you have with improving code quality and operational stability?</li><li>Can you explain a time when you had to understand customer needs for a project?</li><li>How do you prioritize tasks when managing project timelines?</li></ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Cover Letter Drafts</h2>
+        <div class="grid">
+          
+        <div class="card">
+          <div class="pill neutral">Polished and Balanced</div>
+          <h3>Professional</h3>
+          <p><strong>Emphasis:</strong> Experience and Skills Alignment</p>
+          <p class="letter-body">Dear Hiring Manager,<br><br>I am writing to express my interest in the Backend Engineer position at Reddit, as advertised. With a solid foundation in programming languages such as Python, Java, and C++, combined with hands-on project experience, I believe I am well-prepared to contribute to your team.<br><br>During my time as a Junior Developer at Seneca Software Developer Club, I collaborated with a diverse team to develop web applications using TypeScript, JavaScript, and REST APIs. This experience honed my ability to work cross-functionally, which aligns well with your requirement for collaboration with platform and data teams to build new features. I have also taken the initiative to lead workshops on modern technologies, fostering a collaborative learning environment that mirrors the culture at Reddit.<br><br>While I recognize that I have gaps in experience with Go and Scala, I am committed to learning these languages and have already started exploring online resources to enhance my skills. I am particularly excited about the opportunity to design and implement Ads products, as I have a keen interest in understanding customer needs in advertising. I am eager to contribute to Reddit&#39;s innovative advertising solutions and help improve operational stability and code quality.<br><br>I am drawn to Reddit not only for its impressive user engagement and advertising innovations but also for its fun and collaborative engineering environment. I am confident that my programming skills, project experience, and strong communication abilities will make me a valuable addition to your team.<br><br>Thank you for considering my application. I look forward to the opportunity to discuss how I can contribute to Reddit&#39;s success.<br><br>Sincerely,<br>Krutin Polra</p>
+        </div>
+      
+        <div class="card">
+          <div class="pill neutral">Direct and Impact-Focused</div>
+          <h3>Concise and Assertive</h3>
+          <p><strong>Emphasis:</strong> Skills and Project Outcomes</p>
+          <p class="letter-body">Dear Reddit Team,<br><br>I am excited to apply for the Backend Engineer position. With a strong background in Python, Java, and C++, along with practical experience in developing web applications, I am eager to bring my skills to Reddit’s innovative team.<br><br>In my role as a Junior Developer, I successfully collaborated on multiple projects, including a dynamic website for the Seneca Software Developer Club. This project not only improved user engagement by 40% but also showcased my ability to work effectively with cross-functional teams. I am particularly interested in contributing to the design and implementation of Ads products, as I believe my understanding of customer needs can help drive impactful advertising solutions.<br><br>I am aware of my current gaps in Go and Scala, but I am actively pursuing online courses to bridge this knowledge. My hands-on experience with REST APIs and databases like MongoDB and MySQL equips me to improve operational stability and code quality effectively.<br><br>Reddit&#39;s commitment to user engagement and recent advertising innovations inspires me, and I am eager to be part of a team that values collaboration and creativity. I am confident that my technical skills and proactive approach will contribute to the success of your backend engineering efforts.<br><br>Thank you for considering my application. I look forward to the possibility of discussing how I can contribute to Reddit&#39;s goals.<br><br>Best,<br>Krutin Polra</p>
+        </div>
+      
         </div>
       </section>
 
       <section class="section grid">
         <div class="card">
           <h2>Skills To Brush Up</h2>
-          <ul><li>Go</li><li>Scala</li><li>Ads technology</li><li>Data visualization tools</li></ul>
+          <ul><li>Go programming language</li><li>Scala programming language</li><li>Ads technology and customer needs understanding</li><li>Data visualization techniques</li></ul>
         </div>
         <div class="card">
           <h2>Company Research Topics</h2>
-          <ul><li>Recent advertising innovations at Reddit</li><li>Reddit&#39;s engineering culture and team structure</li><li>The role of ads technology in Reddit&#39;s business model</li></ul>
+          <ul><li>Recent advertising innovations at Reddit</li><li>Reddit&#39;s engineering culture and team collaboration</li><li>The role of backend engineering in social media platforms</li></ul>
         </div>
         <div class="card">
           <h2>Talking Points</h2>
-          <ul><li>Your diverse technical skills and project experience in software development.</li><li>Your collaborative experiences and leadership in educational settings.</li><li>Your proactive approach to learning new technologies and adapting to industry needs. </li><li>Your interest in the ads domain and how it aligns with Reddit&#39;s recent developments.</li></ul>
+          <ul><li>Your diverse technical skills and willingness to learn new technologies.</li><li>Your hands-on project experience and how it relates to the role.</li><li>Your understanding of the importance of collaboration in software development.</li><li>Your interest in the advertising domain and how it aligns with Reddit&#39;s recent developments.</li></ul>
         </div>
       </section>
+    
     </div>
   </body>
 </html>

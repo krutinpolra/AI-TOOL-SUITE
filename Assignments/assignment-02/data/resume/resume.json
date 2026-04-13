@@ -3,7 +3,7 @@
     "sourcePath": "C:\\Users\\Krutin Polra\\OneDrive\\Desktop\\KrutinResume.pdf",
     "sourceFileName": "KrutinResume.pdf",
     "sourceSha256": "2a56e35654e2607b728feb50068473923bfb049be521171f1e5496cdef69498e",
-    "extractedAt": "2026-04-13T21:39:45.909Z",
+    "extractedAt": "2026-04-13T23:16:17.744Z",
     "parser": "pdf-parse",
     "charCount": 3537,
     "pageCount": 1
@@ -50,8 +50,8 @@
       "jobTitle": "Junior Developer",
       "company": "Seneca Software Developer Club",
       "location": "Toronto, ON",
-      "startDate": "October 2024",
-      "endDate": "Present",
+      "startDate": "2024-10-01",
+      "endDate": null,
       "durationMonths": null,
       "responsibilities": [
         "Collaborated cross-functionally with a team of 10+ members to develop web-application utilizing TypeScript, JavaScript, CSS, REST APIs, and databases including MongoDB and MySQL.",
@@ -75,24 +75,22 @@
     {
       "degree": "Advanced Diploma",
       "institution": "Seneca Polytechnic",
-      "graduationDate": "April 2026",
-      "relevantCoursework": [
-        "Computer Programming and Analysis"
-      ]
+      "graduationDate": "2026-04-01",
+      "relevantCoursework": []
     }
   ],
   "certifications": [
     {
       "name": "Responsive Web Design (Developer Certification)",
       "issuer": "Free Code Camp",
-      "dateEarned": "December 2024",
+      "dateEarned": "2024-12-01",
       "expiresOn": null,
       "details": null
     },
     {
       "name": "Volunteer contribution",
       "issuer": "Seneca Engineering competition- 2024",
-      "dateEarned": "November 2023",
+      "dateEarned": "2023-11-01",
       "expiresOn": null,
       "details": null
     }
@@ -110,7 +108,7 @@
         "MongoDB"
       ],
       "outcomes": [
-        "Interactive web application for exploring art collection"
+        "Interactive web application for exploring art collection."
       ]
     },
     {
@@ -122,7 +120,7 @@
         "Azure App Services"
       ],
       "outcomes": [
-        "Responsive and dynamic website for SSDC"
+        "Responsive and dynamic website for SSDC."
       ]
     },
     {
@@ -136,7 +134,7 @@
         "Bootstrap"
       ],
       "outcomes": [
-        "Dynamic web application for managing meal kits"
+        "Dynamic web application for managing meal kits."
       ]
     },
     {
@@ -148,21 +146,22 @@
         "Threaded programming"
       ],
       "outcomes": [
-        "Assembly line simulation"
+        "Assembly line simulation."
       ]
     }
   ],
   "accomplishments": [],
   "keywordsAndDomainExpertise": [
+    "Computer Programming",
     "Web Development",
     "Software Development",
     "Cloud Technologies",
     "APIs",
-    "Databases",
-    "Object-Oriented Programming"
+    "Databases"
   ],
   "portfolioLinks": [
-    "GitHub"
+    "GitHub",
+    "LinkedIn"
   ],
   "extractionNotes": []
 }
