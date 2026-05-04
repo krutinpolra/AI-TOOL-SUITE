@@ -1,0 +1,75 @@
+{
+  "extractionSpotChecks": [
+    {
+      "postingPath": "D:/@SENECA/SEM 6/AIP444/AI-Capstone-Projects/Job-Search-Source-Postings/backend/job-01.pdf",
+      "expected": {
+        "jobTitle": "Software Developer, New Grad",
+        "companyName": "IXL Learning",
+        "remoteStatus": "onsite",
+        "requiredSkills": ["Java", "object-oriented programming"],
+        "preferredSkills": ["React", "Git"],
+        "minimumYears": null
+      }
+    },
+    {
+      "postingPath": "D:/@SENECA/SEM 6/AIP444/AI-Capstone-Projects/Job-Search-Source-Postings/backend/job-05.pdf",
+      "expected": {
+        "jobTitle": "Software Developer",
+        "companyName": "7shifts",
+        "remoteStatus": "hybrid",
+        "requiredSkills": ["web applications", "databases", "AI tools"],
+        "preferredSkills": ["restaurant-tech experience"],
+        "minimumYears": null
+      }
+    },
+    {
+      "postingPath": "D:/@SENECA/SEM 6/AIP444/AI-Capstone-Projects/Job-Search-Source-Postings/backend/job-10.pdf",
+      "expected": {
+        "jobTitle": "Front-End Developer",
+        "companyName": "BET99",
+        "remoteStatus": "remote",
+        "requiredSkills": ["HTML5", "JavaScript", "ReactJS"],
+        "preferredSkills": ["Docker", "Jenkins"],
+        "minimumYears": 7
+      }
+    }
+  ],
+  "scoringChecks": [
+    {
+      "postingPath": "D:/@SENECA/SEM 6/AIP444/AI-Capstone-Projects/Job-Search-Source-Postings/backend/job-01.pdf",
+      "expectedBand": "strong_fit",
+      "notes": "New-grad software role with strong overlap in Java, JavaScript, React, Git, and general web/software fundamentals."
+    },
+    {
+      "postingPath": "D:/@SENECA/SEM 6/AIP444/AI-Capstone-Projects/Job-Search-Source-Postings/backend/job-07.pdf",
+      "expectedBand": "good_fit",
+      "notes": "General software-development role with cloud, SQL, teamwork, and SDLC signals that mostly line up with the resume."
+    },
+    {
+      "postingPath": "D:/@SENECA/SEM 6/AIP444/AI-Capstone-Projects/Job-Search-Source-Postings/backend/job-08.pdf",
+      "expectedBand": "stretch",
+      "notes": "Some language overlap exists through Python, Java, and C++, but the Reddit role asks for 3+ years plus backend/ads/distributed-systems depth."
+    }
+  ],
+  "failureAnalysis": [
+    {
+      "title": "Company research sometimes stores weak or incomplete source URLs",
+      "whatHappened": "Some company-research outputs contain placeholder-style links like '/' or short internal-looking paths instead of fully useful external URLs.",
+      "whyItHappened": "The research-summary step relies on the LLM to restructure Tavily results, so weak source formatting can slip through when the model paraphrases or compresses search evidence.",
+      "proposedFix": "Preserve Tavily URLs directly from tool output, validate that saved source URLs are absolute, and reject or flag any source that does not start with http or https."
+    },
+    {
+      "title": "Resume adaptation can drift toward unsupported keyword stuffing",
+      "whatHappened": "The advisor sometimes suggests adding missing job keywords such as Redux or Webpack even when the resume does not show evidence of that experience.",
+      "whyItHappened": "The advisor prompt prioritizes ATS alignment, but it does not sharply separate 'reframe existing evidence' from 'do not add unsupported skills.'",
+      "proposedFix": "Tighten the prompt so every resume suggestion must explicitly cite existing resume evidence, and split recommendations into 'reorder/reframe' versus 'future learning goals.'"
+    },
+    {
+      "title": "Fit scoring still depends heavily on extracted keyword overlap",
+      "whatHappened": "A role can score lower than it should when the resume has adjacent experience but the exact posting terminology is different.",
+      "whyItHappened": "The scoring model uses structured requirement items derived from extraction, so synonym gaps and imperfect normalization still affect the final fit band.",
+      "proposedFix": "Add a stronger normalization layer for skills and frameworks, plus a second-pass semantic match check that groups related terms like React/React.js or REST/RESTful APIs."
+    }
+  ],
+  "overallObservations": "The system is strongest at producing organized structured outputs and practical applicant-facing reports from raw postings and a resume. It is also encouraging in a useful way, which helps avoid talking the candidate out of applying too early. The main weaknesses are occasional over-inference in resume tailoring, imperfect company-research source formatting, and scoring sensitivity to exact wording rather than deeper semantic equivalence."
+}

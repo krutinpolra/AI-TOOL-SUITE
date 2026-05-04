@@ -1,0 +1,141 @@
+{
+  "source": {
+    "sourcePath": "D:\\@SENECA\\SEM 6\\AIP444\\AI-Capstone-Projects\\Job-Search-Source-Postings\\backend\\job-03.pdf",
+    "sourceFileName": "job-03.pdf",
+    "sourceSha256": "3e25c61146035994186c8953afb956e52b8d4b98b0e35b5f22f5bab124fc6c49",
+    "extractedAt": "2026-04-13T21:27:44.393Z",
+    "parser": "pdf-parse",
+    "charCount": 762,
+    "pageCount": 1
+  },
+  "jobTitle": "Full Stack Engineer (Talent Pool)",
+  "companyName": "/null",
+  "location": "Remote",
+  "remoteStatus": "remote",
+  "requiredSkills": [
+    "frontend development",
+    "backend development",
+    "React",
+    "Angular",
+    "Vue",
+    "Node.js",
+    "Django",
+    "Spring",
+    "relational databases",
+    "NoSQL databases",
+    "communication skills",
+    "independent work"
+  ],
+  "preferredSkills": [
+    "flexible project-based work"
+  ],
+  "experienceLevel": {
+    "minimumYears": null,
+    "preferredYears": null,
+    "seniority": null,
+    "notes": null
+  },
+  "educationRequirements": {
+    "required": null,
+    "preferred": null
+  },
+  "salaryRange": {
+    "minimum": null,
+    "maximum": null,
+    "currency": null,
+    "interval": "not_listed",
+    "rawText": null
+  },
+  "keyResponsibilities": [
+    "Build and maintain frontend systems using React, Angular, or Vue",
+    "Develop backend services using Node.js, Django, or Spring",
+    "Work with relational and NoSQL databases",
+    "Collaborate with distributed teams in a remote environment",
+    "Contribute to end to end feature development across the stack"
+  ],
+  "keywordsAndDomainExpertise": [
+    "full stack",
+    "remote work",
+    "part time"
+  ],
+  "applicationSignals": [
+    "upload resume",
+    "interview",
+    "submit form"
+  ],
+  "postingSummary": null,
+  "extractionNotes": [],
+  "companyResearch": {
+    "status": "completed",
+    "summary": null,
+    "sizeAndStage": null,
+    "industry": null,
+    "recentDevelopments": [],
+    "cultureSignals": [
+      "General trends in the tech industry indicate a decline in employee sentiment and workplace satisfaction, particularly following layoffs and cost-cutting measures in 2022 and 2023.",
+      "Candidates should be prepared to discuss how they can contribute positively to team dynamics and culture, especially in a potentially challenging environment.",
+      "Issues such as declining benefits and increased demands on employees reflect broader cultural challenges in tech companies."
+    ],
+    "applicationAngles": [
+      "Emphasize adaptability and communication skills, particularly in a remote work setting.",
+      "Mention experience with flexible project-based work to resonate with current trends in the tech industry."
+    ],
+    "searchQueries": [
+      "null company Full Stack Engineer remote job",
+      "company null tech industry news culture"
+    ],
+    "sources": [
+      {
+        "title": "Senior Software Engineer - Remote Rocketship",
+        "url": "https://www.remoterocketship.com/us/company/null-null-null-null-null-null-null-null-null-8/jobs/senior-software-engineer-united-states-remote/",
+        "snippet": "Senior Full Stack Engineer at ButterflyMX focusing on building APIs and services. Responsible for leading projects, maintaining code quality, and collaborating"
+      },
+      {
+        "title": "Flexible Full Stack Developer Remote Jobs – Apply Today to Work From Home (April 12, 2026)",
+        "url": "https://www.indeed.com/q-full-stack-developer-remote-jobs.html",
+        "snippet": "[Skip to main content](https://www.indeed.com/q-full-stack-developer-remote-jobs.html#gnav-header-end). Sort by: **relevance** - [date](https://www.indeed.com/q-full-stack-developer-remote-jobs.html?sort=date). *   Salary Search: [SENIOR PRODUCT ENGINEER - FULL STACK (REMOTE OPPORTUNITY) salaries in Chicago, IL](https://www.indeed.com/career/full-stack-developer/salaries/Chicago--IL?campaignid=serp-more&fromjk=b1ba44add3be3aec&from=serp-more). *   Salary Search: [Full Stack Software Engineer (Remote) salaries in Menomonee Falls, WI](https://www.indeed.com/career/full-stack-developer/salaries/53051--WI?campaignid=serp-more&fromjk=0f02349b548b303f&from=serp-more). ## [Java Developer (Backend)]"
+      },
+      {
+        "title": "Jobs for full stack developer from Insight Global",
+        "url": "https://jobs.insightglobal.com/find_a_job/?miles=False&remote=False&srch=full+stack+developer",
+        "snippet": "Insight Global is seeking a .NET Full Stack Engineer for one of their top property management clients. The primary focus is full-stack delivery in .NET"
+      },
+      {
+        "title": "Corporate Vice President - Full Stack Engineering Lead - AI & Emerging Technologies | Remote,New York,United States | New York Life",
+        "url": "https://careers.newyorklife.com/careers/job/39607258-corporate-vice-president-full-stack-engineering-lead-ai-emerging-technologies-remote-new-york-united-states?domain=newyorklife.com&microsite=newyorklife.com",
+        "snippet": "`{\"domain\": \"newyorklife.com\", \"user\": \"Import newyorklife.com\", \"isWillingToRelocate\": false, \"isUserAuthenticated\": false, \"isUserETXCandidate\": false, \"isDomainETX\": false, \"isCareerPlannerEnabled\": false, \"isMyApplicationsEnabled\": false, \"showVeteranEmployerSignUp\": false, \"candidate\": {\"enc_id\": 0, \"fullname\": \"\", \"firstname\": \"\", \"lastname\": \"\", \"skills\": [], \"email\": \"\", \"phone\": \"\", \"location\": \"\", \"filename\": null, \"starred_positions\": [], \"resumeUrl\": \"\", \"onboardingCompleted\": false, \"isUserInPcsIjp\": false, \"linkedinUrl\": \"\"}, \"branding\": {\"hideJobCart\": false, \"hideReferralJobCart\": false, \"hide_similar_jobs\": false, \"enableTalentNetwork\": 1, \"job_insights_display\": {\"hide\": tr"
+      },
+      {
+        "title": "Full Stack jobs in Netflix",
+        "url": "http://explore.jobs.netflix.net/careers?query=Full%20Stack%20&pid=790298014713&domain=netflix.com&sort_by=relevance&triggerGoButton=false",
+        "snippet": "Full Stack Engineer 4 - Core Catalog. USA - Remote. Engineering. Full Stack Software Engineer 4 - Enterprise Engineering. USA - Remote. Engineering. Full Stack"
+      },
+      {
+        "title": "Has the general culture of the tech industry been rapidly falling since ...",
+        "url": "https://www.reddit.com/r/cscareerquestions/comments/18m77h2/has_the_general_culture_of_the_tech_industry_been/",
+        "snippet": "The general culture for many of these companies are steadily declining. From cutting benefits, to instating PIPs and general stack ranking are some common"
+      },
+      {
+        "title": "The Good Old Days of Tech Are Over | Revelio Labs",
+        "url": "https://www.reveliolabs.com/news/tech/the-good-old-days-of-tech-are-over/",
+        "snippet": "* #### **Employee sentiment in the tech industry has eroded significantly since early 2021. * #### **The observed sentiment drop mirrors macro shifts in the tech labor market: layoffs, cost-cutting, declining equity values, and return-to-office (RTO) mandates.**. This week, we take a closer look at shifting perceptions of company culture and workplace satisfaction among workers in tech after waves of layoffs in 2022 and 2023. While employees across all industries now rank their companies lower than they did in 2021, sentiment among those in tech declined far more sharply and persistently. From 2021 through early 2023, workers in tech consistently rated their companies more positively than wo"
+      },
+      {
+        "title": "The Dark Side of Tech Culture - The Way We Work",
+        "url": "https://blog.lettucework.io/the-dark-side-of-culture-20a59c5229b2",
+        "snippet": "5 Reasons the Tech Industry and Leadership Fails Culturally and How to Begin to Solve Cultural Problems Methodically and Honestly."
+      },
+      {
+        "title": "Why Big Tech Feels So Demanding Now - YouTube",
+        "url": "https://www.youtube.com/watch?v=01gkmSrh73Q",
+        "snippet": "culture, and startup perks used to define the industry. Now? It's ... AI Whistleblower: We Are Being Gaslit By AI Companies, They're Hiding The"
+      },
+      {
+        "title": "The Tech Layoff Lie: Why Your \"Corporate Culture\" is Fake - YouTube",
+        "url": "https://www.youtube.com/watch?v=CiNB-GjU3og",
+        "snippet": "Book a call: https://calendly.com/techtuaulconsulting"
+      }
+    ],
+    "failureReason": null
+  }
+}

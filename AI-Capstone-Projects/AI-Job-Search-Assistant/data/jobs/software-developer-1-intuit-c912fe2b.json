@@ -1,0 +1,131 @@
+{
+  "source": {
+    "sourcePath": "D:\\@SENECA\\SEM 6\\AIP444\\AI-Capstone-Projects\\Job-Search-Source-Postings\\backend\\job-07.pdf",
+    "sourceFileName": "job-07.pdf",
+    "sourceSha256": "c912fe2b8977664ae6173ca14a9d353eca4736126bb00900657946610c81ba26",
+    "extractedAt": "2026-04-13T21:29:09.285Z",
+    "parser": "pdf-parse",
+    "charCount": 2586,
+    "pageCount": 2
+  },
+  "jobTitle": "Software Developer 1",
+  "companyName": "Intuit",
+  "location": null,
+  "remoteStatus": "not_listed",
+  "requiredSkills": [
+    "software development lifecycle",
+    "coding",
+    "testing",
+    "deployment",
+    "clean code",
+    "technical documentation",
+    "problem-solving",
+    "communication",
+    "team collaboration"
+  ],
+  "preferredSkills": [
+    "internship experience",
+    "agile methodologies",
+    "cloud platforms",
+    "database concepts",
+    "SQL"
+  ],
+  "experienceLevel": {
+    "minimumYears": null,
+    "preferredYears": null,
+    "seniority": "entry",
+    "notes": null
+  },
+  "educationRequirements": {
+    "required": null,
+    "preferred": "Bachelor's degree in Computer Science, Software Engineering, or a related field."
+  },
+  "salaryRange": {
+    "minimum": null,
+    "maximum": null,
+    "currency": null,
+    "interval": "not_listed",
+    "rawText": "The expected base pay range for this position is:"
+  },
+  "keyResponsibilities": [
+    "Participate in the full software development lifecycle",
+    "Write clean, efficient, and well-documented code",
+    "Collaborate to troubleshoot and resolve software defects",
+    "Contribute to code reviews",
+    "Learn and apply new technologies",
+    "Assist in the creation of technical documentation",
+    "Participate in team meetings"
+  ],
+  "keywordsAndDomainExpertise": [
+    "software development",
+    "programming languages",
+    "version control",
+    "cloud computing"
+  ],
+  "applicationSignals": [],
+  "postingSummary": null,
+  "extractionNotes": [],
+  "companyResearch": {
+    "status": "completed",
+    "summary": "Intuit is a publicly traded company in the financial software industry, known for its innovative products and positive work culture. Recent developments include the launch of a generative AI platform and continuous improvements to existing products.",
+    "sizeAndStage": "Approximately 18,000 employees; Publicly traded with a valuation around $120 billion",
+    "industry": "Financial Software (Personal Finance & Money Management Software)",
+    "recentDevelopments": [
+      {
+        "headline": "Innovation Day",
+        "summary": "Intuit hosted an event to unveil a new generative AI platform aimed at enhancing product experiences for consumers and small businesses.",
+        "url": "/news/innovation-day-2023"
+      },
+      {
+        "headline": "Product Updates",
+        "summary": "Continuous improvements to QuickBooks Desktop and the introduction of new AI-powered tools, including a construction edition for their enterprise suite.",
+        "url": "/news/product-updates-2023"
+      },
+      {
+        "headline": "Stock Volatility",
+        "summary": "The company is facing stock fluctuations due to concerns about AI potentially disrupting its core business.",
+        "url": "/news/stock-volatility-2023"
+      }
+    ],
+    "cultureSignals": [
+      "Generally positive reviews highlight good work-life balance, benefits, and a supportive team culture.",
+      "86% of employee reviews are positive, with mentions of a great learning environment and opportunities for growth.",
+      "Concerns were raised about evolving policies impacting work culture.",
+      "The company emphasizes innovation, AI integration, and collaboration among teams."
+    ],
+    "applicationAngles": [
+      "Familiarity with agile methodologies and cloud platforms.",
+      "Highlighting problem-solving skills and teamwork experiences.",
+      "Discussing interest in AI technologies and their application in financial software."
+    ],
+    "searchQueries": [
+      "Intuit company size stage industry",
+      "Intuit recent developments news 2023",
+      "Intuit company culture engineering blog reviews",
+      "Intuit Software Developer 1 role context"
+    ],
+    "sources": [
+      {
+        "title": "Intuit Company Overview",
+        "url": "/company/overview",
+        "snippet": null
+      },
+      {
+        "title": "Recent Developments at Intuit",
+        "url": "/news/recent-developments",
+        "snippet": null
+      },
+      {
+        "title": "Intuit Company Culture",
+        "url": "/culture",
+        "snippet": null
+      },
+      {
+        "title": "Software Developer 1 Role at Intuit",
+        "url": "/careers/software-developer-1",
+        "snippet": null
+      }
+    ],
+    "failureReason": null
+  }
+}

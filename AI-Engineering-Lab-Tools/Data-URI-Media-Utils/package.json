@@ -1,0 +1,22 @@
+{
+  "name": "data-uri-media-utils",
+  "version": "1.0.0",
+  "description": "Utility library for encoding and decoding media files as Base64 Data URIs.",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^25.5.2",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.2"
+  },
+  "dependencies": {
+    "zod": "^4.3.6"
+  }
+}

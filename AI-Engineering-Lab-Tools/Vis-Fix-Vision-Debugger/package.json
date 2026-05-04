@@ -1,0 +1,27 @@
+{
+  "name": "vis-fix-vision-debugger",
+  "version": "1.0.0",
+  "description": "Multimodal vision debugger CLI with web-search-assisted fix suggestions",
+  "type": "module",
+  "bin": {
+    "vis-fix": "./dist/vis-fix.js"
+  },
+  "scripts": {
+    "dev": "tsx vis-fix.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/vis-fix.js"
+  },
+  "dependencies": {
+    "@tavily/core": "^0.7.2",
+    "dotenv": "^17.2.4",
+    "openai": "^6.18.0",
+    "sharp": "^0.34.3",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}

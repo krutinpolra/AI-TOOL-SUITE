@@ -7,22 +7,34 @@
 
 ## Description
 
-This repository contains all labs and assignments for the AIP444 course. It is organized as a monorepo with separate folders for labs and assignments.
+This repository is organized as an AI application portfolio for AIP444. The original course labs and assignments have been renamed into recruiter-friendly project folders so each directory communicates the actual tool, workflow, or engineering skill demonstrated.
 
-## Lab 01 - Git Scribe
+## Highlights
 
-An AI-powered commit message generator that uses OpenRouter API to create semantic commit messages following the Conventional Commits standard. Features both standard and creative (pirate) modes!
+- **AI-Capstone-Projects/AI-Code-Review-CLI** - multi-reviewer AI code review automation for staged changes or specific files.
+- **AI-Capstone-Projects/AI-Job-Search-Assistant** - end-to-end job intelligence pipeline with extraction, company research, gap analysis, reports, and evaluation.
+- **AI-Engineering-Lab-Tools/Git-Scribe-AI-Commit-CLI** - AI-powered Conventional Commit message generator.
+- **AI-Engineering-Lab-Tools/Source-Credibility-Analyzer-Agent** - agentic web research tool that scores source trustworthiness with a structured rubric.
+- **AI-Engineering-Lab-Tools/Vis-Fix-Vision-Debugger** - multimodal debugging CLI that analyzes screenshots and researches fixes.
+- **AI-Engineering-Lab-Tools/Semantic-Product-Search-Embeddings** - embedding-powered product search and ranking.
 
 ## Repository Structure
 
 ```
-assignments/
-  assignment-01/
-  ...
-labs/
-  lab-01/
-  lab-02/
-  ...
+AI-Capstone-Projects/
+  AI-Code-Review-CLI/
+  AI-Job-Search-Assistant/
+  Job-Search-Source-Postings/
+AI-Engineering-Lab-Tools/
+  Git-Scribe-AI-Commit-CLI/
+  Flashcard-Generator-CLI/
+  GitHub-PR-Explainer/
+  Flashcard-Generator-API/
+  Semantic-Product-Search-Embeddings/
+  ChromaDB-Vector-Store-Experiment/
+  Vis-Fix-Vision-Debugger/
+  Source-Credibility-Analyzer-Agent/
+  Data-URI-Media-Utils/
 .gitignore
 .env
 README.md
@@ -32,8 +44,8 @@ README.md
 
 - **`.env`** - Contains environment variables and API keys (never committed to git)
 - **`.gitignore`** - Specifies files and folders to ignore in version control
-- **`labs/`** - Contains all lab work
-- **`assignments/`** - Contains all assignment submissions
+- **`AI-Capstone-Projects/`** - Larger assignment projects with broader architecture and reporting workflows
+- **`AI-Engineering-Lab-Tools/`** - Focused AI engineering tools, CLIs, APIs, agents, and utilities
 
 ## Notes
 

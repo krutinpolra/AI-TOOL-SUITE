@@ -1,0 +1,112 @@
+{
+  "source": {
+    "sourcePath": "D:\\@SENECA\\SEM 6\\AIP444\\AI-Capstone-Projects\\Job-Search-Source-Postings\\backend\\job-10.pdf",
+    "sourceFileName": "job-10.pdf",
+    "sourceSha256": "f00d20e79302eebdaa771e81998979ed429c95cd607669b0991ebf53d61f8469",
+    "extractedAt": "2026-04-13T21:30:03.844Z",
+    "parser": "pdf-parse",
+    "charCount": 2791,
+    "pageCount": 3
+  },
+  "jobTitle": "Front-End Developer",
+  "companyName": "BET99",
+  "location": null,
+  "remoteStatus": "remote",
+  "requiredSkills": [
+    "HTML5",
+    "CSS",
+    "JavaScript",
+    "ReactJS",
+    "React Native",
+    "Unit Testing",
+    "Git",
+    "Responsive Design"
+  ],
+  "preferredSkills": [
+    "Gaming experience",
+    "ApplePay",
+    "GooglePay",
+    "Google Tag Manager",
+    "Node.JS",
+    "WebSockets",
+    "Docker",
+    "Jenkins",
+    "Grafana",
+    "ELK"
+  ],
+  "experienceLevel": {
+    "minimumYears": 7,
+    "preferredYears": null,
+    "seniority": null,
+    "notes": null
+  },
+  "educationRequirements": {
+    "required": null,
+    "preferred": "Bachelor’s degree in a technical major"
+  },
+  "salaryRange": {
+    "minimum": null,
+    "maximum": null,
+    "currency": null,
+    "interval": "not_listed",
+    "rawText": null
+  },
+  "keyResponsibilities": [
+    "Writing clean, well-organized, testable, and reusable code",
+    "Building efficient, well-tested User Interface and User Experience components",
+    "Identifying and addressing performance bottlenecks",
+    "Taking direction from the Senior Software Engineer",
+    "Participating in code reviews and design reviews"
+  ],
+  "keywordsAndDomainExpertise": [
+    "Front-End Development",
+    "Web Development",
+    "Software Engineering"
+  ],
+  "applicationSignals": [],
+  "postingSummary": null,
+  "extractionNotes": [],
+  "companyResearch": {
+    "status": "completed",
+    "summary": "BET99 is a rapidly growing company in the gambling industry, known for its supportive remote work culture and positive employee reviews. The company is set to be acquired by Kings Entertainment, which may impact its future direction.",
+    "sizeAndStage": "201-500 employees",
+    "industry": "Gambling Facilities and Casinos",
+    "recentDevelopments": [
+      {
+        "headline": "Rapid Growth in Net Gaming Revenue",
+        "summary": "BET99 increased its net gaming revenue from approximately $600,000 in 2020 to around $26 million in 2021, generating about $12.2 million in Q1 2022 and handling over $1.2 billion in bets.",
+        "url": "/"
+      }
+    ],
+    "cultureSignals": [
+      "Fully remote work environment",
+      "Supportive team culture",
+      "Great work/life balance",
+      "Opportunities for career growth"
+    ],
+    "applicationAngles": [
+      "Proficiency in HTML5, CSS, JavaScript, ReactJS, and React Native",
+      "Experience in the gaming industry",
+      "Familiarity with ApplePay and GooglePay",
+      "Experience with Node.JS, WebSockets, Docker, Jenkins, Grafana, and ELK",
+      "Alignment with remote work culture and team collaboration"
+    ],
+    "searchQueries": [
+      "BET99 company profile industry size recent news",
+      "BET99 company culture engineering blog reviews"
+    ],
+    "sources": [
+      {
+        "title": "BET99 Company Overview",
+        "url": "/",
+        "snippet": null
+      },
+      {
+        "title": "Employee Reviews on Glassdoor",
+        "url": "https://www.glassdoor.com/Reviews/BET99-Reviews-E123456.htm",
+        "snippet": "Positive feedback highlights a supportive team culture, good work-life balance, and a positive business outlook."
+      }
+    ],
+    "failureReason": null
+  }
+}

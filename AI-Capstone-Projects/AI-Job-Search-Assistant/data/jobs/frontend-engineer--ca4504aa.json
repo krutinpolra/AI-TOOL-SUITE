@@ -1,0 +1,170 @@
+{
+  "source": {
+    "sourcePath": "D:\\@SENECA\\SEM 6\\AIP444\\AI-Capstone-Projects\\Job-Search-Source-Postings\\backend\\job-06.pdf",
+    "sourceFileName": "job-06.pdf",
+    "sourceSha256": "ca4504aaaebbfea8a1a275b24f01b02bfe147c6157f11972e6a14ab667d7f420",
+    "extractedAt": "2026-04-13T21:28:44.790Z",
+    "parser": "pdf-parse",
+    "charCount": 609,
+    "pageCount": 1
+  },
+  "jobTitle": "Frontend Engineer",
+  "companyName": "/",
+  "location": null,
+  "remoteStatus": "remote",
+  "requiredSkills": [
+    "JavaScript frameworks",
+    "responsive UI development",
+    "state management",
+    "performance optimization",
+    "communication skills"
+  ],
+  "preferredSkills": [],
+  "experienceLevel": {
+    "minimumYears": null,
+    "preferredYears": null,
+    "seniority": null,
+    "notes": null
+  },
+  "educationRequirements": {
+    "required": null,
+    "preferred": null
+  },
+  "salaryRange": {
+    "minimum": 70,
+    "maximum": 150,
+    "currency": "USD",
+    "interval": "hour",
+    "rawText": "$70 - $150/hr"
+  },
+  "keyResponsibilities": [
+    "Train and evaluate AI models in Frontend Engineering",
+    "Create tasks and deliverables based on real-world scenarios",
+    "Provide domain-specific feedback to advance frontier AI research"
+  ],
+  "keywordsAndDomainExpertise": [
+    "AI",
+    "Frontend Engineering",
+    "JavaScript",
+    "UI Development"
+  ],
+  "applicationSignals": [],
+  "postingSummary": null,
+  "extractionNotes": [],
+  "companyResearch": {
+    "status": "completed",
+    "summary": null,
+    "sizeAndStage": "Remote Frontend Engineer role in a competitive job market",
+    "industry": "Technology",
+    "recentDevelopments": [
+      {
+        "headline": "Growing trend in remote frontend engineering roles",
+        "summary": "Many companies are adapting to flexible work environments, leading to an increase in remote frontend engineering positions.",
+        "url": "/"
+      },
+      {
+        "headline": "Decline in job postings for frontend engineers",
+        "summary": "Reports suggest a potential oversaturation in the market for frontend engineers, indicating a decline in job postings.",
+        "url": "/"
+      }
+    ],
+    "cultureSignals": [
+      "Collaborative culture",
+      "Focus on work-life balance",
+      "Supportive environments",
+      "Ability to manage chaos effectively",
+      "Asynchronous work styles"
+    ],
+    "applicationAngles": [
+      "Experience with JavaScript frameworks",
+      "Responsive UI development",
+      "Strong communication skills",
+      "Adaptability to remote work environments",
+      "Familiarity with performance optimization techniques",
+      "Knowledge of state management"
+    ],
+    "searchQueries": [
+      "Frontend Engineer remote job company overview",
+      "Frontend Engineer remote company culture reviews",
+      "Frontend Engineer remote job market trends 2023"
+    ],
+    "sources": [
+      {
+        "title": "Remote Frontend Engineer Salary – updated April 2026",
+        "url": "https://dailyremote.com/salaries/frontend-engineer",
+        "snippet": "Yes, Frontend Engineer positions can be fully remote. Companies such as IT Labs, TRM Labs, TRM Labs are hiring remotely for Frontend Engineer. Check out the"
+      },
+      {
+        "title": "Remote Frontend Engineer Jobs in 2026 - Wellfound",
+        "url": "https://wellfound.com/role/r/frontend-engineer",
+        "snippet": "Find the best remote Frontend Engineer jobs in 2026 on Wellfound! Apply to all of them with a single profile and get in touch with hiring"
+      },
+      {
+        "title": "Files.com hiring Front End Engineer (Remote) Job in ... - Glassdoor",
+        "url": "https://www.glassdoor.com/job-listing/front-end-engineer-remote-files-com-JV_KO0,25_KE26,35.htm?jl=1009466617405",
+        "snippet": "Location: Remote (USA or Canada-based) Type: Full-time. Compensation: $110,000 - $250,000 (subject to qualifications and experience) + equity + premium"
+      },
+      {
+        "title": "Remote Frontend Engineer Jobs – Apply Now",
+        "url": "https://www.remoterocketship.com/us/jobs/frontend-engineer/",
+        "snippet": "Search 538 frontend engineer remote jobs. Apply to flexible positions like frontend developer, web developer, UI engineer. Work anywhere."
+      },
+      {
+        "title": "Remote Front-End Programming Jobs",
+        "url": "https://weworkremotely.com/categories/remote-front-end-programming-jobs",
+        "snippet": "# Remote Front End Programming Jobs. Advance your career with specialized, in-demand remote front-end opportunities.Need to hire front-end developers quickly? ### Software Engineer, iOS Core Product. ### Senior Full Stack Developer (Go/React). ### AI Software Engineering Bootcamp. ### Frontend / Full-Stack Developer (m/w/d). ### Product Owner Frontend (all). ### Software Engineer, Web Core Product & Chrome Extension. ### Senior Frontend Engineer. ### Front End Engineer - Remote. ### React Frontend Developer. ### Senior Front End Engineer - Remote. ### Senior Frontend Developer. ### Lead Frontend Engineer. ### Senior Frontend Engineer (React / Next.js) — Full-Time, Contract. ### Senior Full S"
+      },
+      {
+        "title": "Remote People Senior Frontend Engineer Reviews",
+        "url": "https://www.glassdoor.com/Reviews/Remote-People-Senior-Frontend-Engineer-Reviews-EI_IE10218630.0,13_KO14,38.htm",
+        "snippet": "Culture, work-life balance, hard working and talented teammates who genuinely care about what they're building. You're trusted to do your job"
+      },
+      {
+        "title": "Remote Frontend Engineer Reviews",
+        "url": "https://www.glassdoor.com/Reviews/Remote-Frontend-Engineer-Reviews-EI_IE3871683.0,6_KO7,24.htm",
+        "snippet": "Nice people, chaos management ... I've been lucky to meet nice people. There's lots of money into the project. ... The requirements are chaotic, there is no fix"
+      },
+      {
+        "title": "Inside Remote Software Engineering jobs: Frontend Developer Chung Nguyen",
+        "url": "https://remote.com/blog/engineering/frontend-dev-remote-eng-story",
+        "snippet": "This series includes a collection of interviews with members of our engineering team, who will each share their background, professional journey, and story of what it’s like to work as an engineer at Remote. What won me over was Remote’s treatise on async work culture and how engineering shipped. **What is something that you have worked on at Remote that you are proud of?**. But with so many folks working at Remote, it’s intimidating to figure out whom to schedule a coffee chat with. Not too many companies that offer full-time remote work espouse an async work style, which is a shame. I, personally, like to work between 9 am and 17 pm (local), but when I was working remotely with another com"
+      },
+      {
+        "title": "Frontend Reviews (11): Pros & Cons of Working At ...",
+        "url": "https://www.glassdoor.com/Reviews/Frontend-Reviews-E4378782.htm",
+        "snippet": "Work environment & culture – Employees appreciate the approachable and social atmosphere, highlighting a supportive team passionate about design and creativity."
+      },
+      {
+        "title": "Working at Frontend: Employee Reviews",
+        "url": "https://www.indeed.com/cmp/Frontend/reviews?fcountry=ALL",
+        "snippet": "Reviews from Frontend employees about Frontend culture, salaries, benefits, work-life balance, management, job security, and more."
+      },
+      {
+        "title": "How to Find a Remote Frontend Developer Job in 2025 - Jobgether",
+        "url": "https://jobgether.com/blog/remote-frontend-developer-jobs",
+        "snippet": "AI reshaped frontend developer jobs in 2025. Learn if the role is growing or declining, plus skills, salaries, and hiring trends worldwide."
+      },
+      {
+        "title": "Flexible Remote Frontend Developer Jobs - Indeed",
+        "url": "https://www.indeed.com/q-remote-frontend-developer-jobs.html",
+        "snippet": "Browse 1110 Remote Frontend Developer job openings. Discover flexible, work-from-home opportunities on Indeed in fields like tech, admin, and customer service."
+      },
+      {
+        "title": "Best Remote Front End Developer Jobs 2026 - Built In",
+        "url": "https://builtin.com/jobs/remote/dev-engineering/front-end",
+        "snippet": "Search the best Remote Front End Developer Jobs from top companies & startups. New jobs added daily."
+      },
+      {
+        "title": "Remote 4 Day Work Week Frontend Jobs - Hiring now - 4dayweek.io",
+        "url": "https://4dayweek.io/remote-jobs/frontend",
+        "snippet": "Find your next role at the #1 job board for jobs with a shorter work week e.g. 4 day week at full pay. Explore remote jobs at the most flexible companies."
+      },
+      {
+        "title": "Frontend engineers were the biggest declining software job in 2025",
+        "url": "https://www.reddit.com/r/webdev/comments/1oqsm24/frontend_engineers_were_the_biggest_declining/",
+        "snippet": "Job postings for frontend engineers in '25 went down almost -10%. Mobile engineers also went down -5.73%. Everything else is either holding"
+      }
+    ],
+    "failureReason": null
+  }
+}

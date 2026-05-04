@@ -1,0 +1,142 @@
+{
+  "source": {
+    "sourcePath": "D:\\@SENECA\\SEM 6\\AIP444\\AI-Capstone-Projects\\Job-Search-Source-Postings\\backend\\job-09.pdf",
+    "sourceFileName": "job-09.pdf",
+    "sourceSha256": "9e1ac677bf07acc61204f1197818994bc5d8002b501ea5beda733f185edb2ef1",
+    "extractedAt": "2026-04-13T21:29:46.713Z",
+    "parser": "pdf-parse",
+    "charCount": 6708,
+    "pageCount": 5
+  },
+  "jobTitle": "Embedded Controls Engineer",
+  "companyName": "General Motors of Canada",
+  "location": "Markham Elevation Centre / Oshawa Elevation Centre",
+  "remoteStatus": "hybrid",
+  "requiredSkills": [
+    "Mechatronics",
+    "Software Engineering",
+    "Electrical Engineering",
+    "Mechanical Engineering",
+    "Computer Engineering"
+  ],
+  "preferredSkills": [
+    "C/C++ programming",
+    "Python scripting",
+    "ETAS",
+    "INCA",
+    "MDA",
+    "JIRA",
+    "GIT",
+    "Agile development",
+    "CppU Test framework",
+    "SIL/HIL testing",
+    "CAN communications",
+    "LIN communications",
+    "ARXML",
+    "Ethernet communications",
+    "Software architecture principles",
+    "Formula SAE",
+    "Ecocar"
+  ],
+  "experienceLevel": {
+    "minimumYears": null,
+    "preferredYears": null,
+    "seniority": null,
+    "notes": "Graduating between December 2025 and August 2026"
+  },
+  "educationRequirements": {
+    "required": null,
+    "preferred": "Bachelor’s or Master’s degree in relevant fields"
+  },
+  "salaryRange": {
+    "minimum": 73900,
+    "maximum": 110900,
+    "currency": "USD",
+    "interval": "year",
+    "rawText": "$73,900 to $110,900"
+  },
+  "keyResponsibilities": [
+    "Deliver high-quality software solutions for embedded Controls systems on EVs and PHEVs",
+    "Design, develop and implement Physics and Controls requirements",
+    "Adhere to best software design principles",
+    "Collaborate cross-functionally with various engineering teams",
+    "Test & demonstrate software functionality",
+    "Supply common solutions across all GM owned software",
+    "Document requirements for design solutions",
+    "Utilize automated test tools to verify functionality",
+    "Function as an inclusive Agile Scrum team member",
+    "Participate in software planning events"
+  ],
+  "keywordsAndDomainExpertise": [
+    "automotive",
+    "software development",
+    "embedded systems",
+    "controls engineering"
+  ],
+  "applicationSignals": [],
+  "postingSummary": null,
+  "extractionNotes": [
+    "Hybrid work arrangement",
+    "No sponsorship available for candidates"
+  ],
+  "companyResearch": {
+    "status": "completed",
+    "summary": null,
+    "sizeAndStage": "Approximately 5,000 to 10,000 employees",
+    "industry": "Automotive (specifically Engine, Turbine, and Power Transmission Equipment)",
+    "recentDevelopments": [
+      {
+        "headline": "GM Canada Announces C$63 Million Investment in Oshawa Assembly",
+        "summary": "GM Canada announced a C$63 million investment in the Oshawa Assembly for next-generation truck production.",
+        "url": "/news/gm-canada-investment-oshawa"
+      },
+      {
+        "headline": "GM Reports Q4 2023 Financial Performance",
+        "summary": "In Q4 2023, GM reported revenues of $43 billion and a net income of $2.1 billion.",
+        "url": "/news/gm-q4-2023-financials"
+      },
+      {
+        "headline": "Canadian Auto Industry Production Increase",
+        "summary": "The Canadian auto industry is experiencing a production increase, reversing a five-year decline.",
+        "url": "/news/canadian-auto-industry-production-increase"
+      }
+    ],
+    "cultureSignals": [
+      "Strong engineering culture",
+      "Collaborative atmosphere",
+      "Positive ratings for work-life balance",
+      "Diversity initiatives",
+      "Supportive culture"
+    ],
+    "applicationAngles": [
+      "Highlight experience with Agile development",
+      "Emphasize skills in embedded systems",
+      "Discuss alignment with GM's collaborative culture",
+      "Express enthusiasm for GM's recent investments"
+    ],
+    "searchQueries": [
+      "General Motors of Canada company size industry",
+      "General Motors of Canada recent developments news 2023",
+      "General Motors of Canada company culture engineering blog reviews",
+      "General Motors of Canada Embedded Controls Engineer role context"
+    ],
+    "sources": [
+      {
+        "title": "GM Canada Investment Announcement",
+        "url": "/news/gm-canada-investment-oshawa",
+        "snippet": null
+      },
+      {
+        "title": "GM Q4 2023 Financial Performance",
+        "url": "/news/gm-q4-2023-financials",
+        "snippet": null
+      },
+      {
+        "title": "Canadian Auto Industry Trends",
+        "url": "/news/canadian-auto-industry-production-increase",
+        "snippet": null
+      }
+    ],
+    "failureReason": null
+  }
+}

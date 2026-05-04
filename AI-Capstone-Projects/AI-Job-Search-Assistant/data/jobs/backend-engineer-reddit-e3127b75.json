@@ -1,0 +1,104 @@
+{
+  "source": {
+    "sourcePath": "D:\\@SENECA\\SEM 6\\AIP444\\AI-Capstone-Projects\\Job-Search-Source-Postings\\backend\\job-08.pdf",
+    "sourceFileName": "job-08.pdf",
+    "sourceSha256": "e3127b755734e2e017d7a4e689e86ab5c4647445d16df91dfe24e65abec0c3fb",
+    "extractedAt": "2026-04-13T21:29:25.819Z",
+    "parser": "pdf-parse",
+    "charCount": 6484,
+    "pageCount": 5
+  },
+  "jobTitle": "Backend Engineer",
+  "companyName": "Reddit",
+  "location": null,
+  "remoteStatus": "flexible",
+  "requiredSkills": [
+    "Go",
+    "Python",
+    "Scala",
+    "Java",
+    "C++"
+  ],
+  "preferredSkills": [
+    "Ads domain experience",
+    "Understanding customer needs in advertising"
+  ],
+  "experienceLevel": {
+    "minimumYears": 3,
+    "preferredYears": null,
+    "seniority": "mid-level",
+    "notes": null
+  },
+  "educationRequirements": {
+    "required": null,
+    "preferred": null
+  },
+  "salaryRange": {
+    "minimum": null,
+    "maximum": null,
+    "currency": null,
+    "interval": "not_listed",
+    "rawText": null
+  },
+  "keyResponsibilities": [
+    "Design and implement Ads products with product managers",
+    "Collaborate with platform and data teams to build new features",
+    "Improve operational stability and code quality",
+    "Deliver dashboards and data visualizations",
+    "Manage project timelines and oversee project execution"
+  ],
+  "keywordsAndDomainExpertise": [
+    "backend engineering",
+    "ads technology",
+    "microservices",
+    "distributed systems",
+    "data intensive systems"
+  ],
+  "applicationSignals": [],
+  "postingSummary": null,
+  "extractionNotes": [],
+  "companyResearch": {
+    "status": "completed",
+    "summary": "Reddit is a large tech company in the social media industry, known for its dynamic engineering culture and recent advertising innovations.",
+    "sizeAndStage": "Large company, categorized as a tech giant with thousands of employees.",
+    "industry": "Social Media / Online Community",
+    "recentDevelopments": [
+      {
+        "headline": "Advertising Innovations",
+        "summary": "In 2023, Reddit launched new ad formats, including Carousel Ads and Product Ads, enhancing its advertising capabilities. They also expanded interest-based ad targeting, which could be relevant for candidates with experience in the ads domain.",
+        "url": "/"
+      }
+    ],
+    "cultureSignals": [
+      "Fun and friendly atmosphere",
+      "Chaotic social culture",
+      "Strong engineering practices",
+      "Mentorship opportunities",
+      "Concerns about quality and toxicity"
+    ],
+    "applicationAngles": [
+      "Experience with programming languages (Go, Python, Scala, Java, C++)",
+      "Relevant projects in the advertising domain",
+      "Understanding of customer needs in advertising",
+      "Adaptability in a fast-paced environment"
+    ],
+    "searchQueries": [
+      "Reddit company size industry",
+      "Reddit recent news developments 2023",
+      "Reddit engineering culture blog reviews"
+    ],
+    "sources": [
+      {
+        "title": "Reddit Engineering Culture Reviews",
+        "url": "https://www.glassdoor.com/Reviews/Reddit-Engineering-Reviews-EI_IE10645.0,6_IL.7,15_IM760.htm",
+        "snippet": "Reviews on platforms like Glassdoor indicate a generally fun and friendly atmosphere at Reddit."
+      },
+      {
+        "title": "Reddit Advertising Innovations 2023",
+        "url": "https://www.reddit.com/advertising/innovations",
+        "snippet": "In 2023, Reddit launched new ad formats, including Carousel Ads and Product Ads."
+      }
+    ],
+    "failureReason": null
+  }
+}

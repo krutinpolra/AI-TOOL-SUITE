@@ -1,0 +1,121 @@
+{
+  "source": {
+    "sourcePath": "D:\\@SENECA\\SEM 6\\AIP444\\AI-Capstone-Projects\\Job-Search-Source-Postings\\backend\\job-01.pdf",
+    "sourceFileName": "job-01.pdf",
+    "sourceSha256": "bc3f5bedaeb4c3bf80f09fa3139325ca5d825db9e7b1d7398c7d618c6cc01d6e",
+    "extractedAt": "2026-04-13T21:27:07.925Z",
+    "parser": "pdf-parse",
+    "charCount": 4289,
+    "pageCount": 3
+  },
+  "jobTitle": "Software Developer, New Grad",
+  "companyName": "IXL Learning",
+  "location": "Toronto, ON",
+  "remoteStatus": "onsite",
+  "requiredSkills": [
+    "Java",
+    "object-oriented programming",
+    "programming principles"
+  ],
+  "preferredSkills": [
+    "SQL",
+    "JavaScript",
+    "CSS",
+    "React",
+    "Linux",
+    "Git"
+  ],
+  "experienceLevel": {
+    "minimumYears": null,
+    "preferredYears": null,
+    "seniority": "new_grad",
+    "notes": null
+  },
+  "educationRequirements": {
+    "required": null,
+    "preferred": "Bachelor's or advanced degree in computer science or a related discipline"
+  },
+  "salaryRange": {
+    "minimum": 90000,
+    "maximum": 92000,
+    "currency": "CAD",
+    "interval": "year",
+    "rawText": "$90,000 to $92,000 CAD + benefits"
+  },
+  "keyResponsibilities": [
+    "Design, implement, test, deploy, and refine integrations and internal tools",
+    "Find and use best technologies to add features to products",
+    "Implement data exchange methods and standards",
+    "Develop prototypes in collaboration with product management and partners",
+    "Work in a fast-paced, agile environment for timely delivery of solutions",
+    "Mature existing and develop new standardized processes around technical implementations"
+  ],
+  "keywordsAndDomainExpertise": [
+    "EdTech",
+    "integrations",
+    "software development",
+    "education technology"
+  ],
+  "applicationSignals": [],
+  "postingSummary": null,
+  "extractionNotes": [],
+  "companyResearch": {
+    "status": "completed",
+    "summary": "IXL Learning is a significant player in the Educational Software industry, known for its personalized learning platform used by over 17 million students globally. The company has introduced numerous updates in 2023, focusing on improving educational tools and expanding offerings.",
+    "sizeAndStage": "Approximately 1,500 employees, founded in 1998",
+    "industry": "Educational Software",
+    "recentDevelopments": [
+      {
+        "headline": "Universal Screener in Spanish and New Diagnostic Reports",
+        "summary": "Introduced a universal screener in Spanish and new diagnostic reports for schools.",
+        "url": "/news/universal-screener-spanish-diagnostic-reports"
+      },
+      {
+        "headline": "Over 1,700 New Skills Added",
+        "summary": "Added over 1,700 new skills to their platform, totaling 73,133 skills available.",
+        "url": "/news/new-skills-added"
+      },
+      {
+        "headline": "Enhanced Features for Teachers",
+        "summary": "Enhanced features for teachers, including the ability to hide games for specific students.",
+        "url": "/news/enhanced-features-teachers"
+      }
+    ],
+    "cultureSignals": [
+      "62% of reviews on Comparably are positive",
+      "81% satisfaction reported by the engineering team",
+      "Glassdoor rating of 3.1 out of 5",
+      "Flexibility and rewarding work environment"
+    ],
+    "applicationAngles": [
+      "Familiarity with Java and object-oriented programming",
+      "Experience with SQL, JavaScript, CSS, and React",
+      "Understanding of educational technology and passion for improving learning outcomes",
+      "Adaptability and collaboration skills"
+    ],
+    "searchQueries": [
+      "IXL Learning company size industry",
+      "IXL Learning recent news developments 2023",
+      "IXL Learning company culture engineering blog reviews",
+      "IXL Learning software developer new grad role insights"
+    ],
+    "sources": [
+      {
+        "title": "Comparably Reviews",
+        "url": "https://www.comparably.com/companies/ixl-learning",
+        "snippet": "62% of reviews are positive, with engineering team satisfaction at 81%."
+      },
+      {
+        "title": "Glassdoor Reviews",
+        "url": "https://www.glassdoor.com/Overview/Working-at-IXL-Learning-EI_IE32967.11,24.htm",
+        "snippet": "Glassdoor rating of 3.1 out of 5."
+      },
+      {
+        "title": "IXL Learning News",
+        "url": "https://www.ixl.com/news",
+        "snippet": "Recent updates and developments from IXL Learning."
+      }
+    ],
+    "failureReason": null
+  }
+}
