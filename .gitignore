@@ -1,5 +1,6 @@
 # Dependencies
 node_modules/
+ai-for-programmers-winter-2026/
 
 # Environment variables
 .env
